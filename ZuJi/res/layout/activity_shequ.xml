@@ -322,7 +322,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
-                                android:text="#美食#"
+                                android:text="#手机摄影#"
                                 android:textColor="@android:color/white" />
                         </RelativeLayout>
                     </RelativeLayout>

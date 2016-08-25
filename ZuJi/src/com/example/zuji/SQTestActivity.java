@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Window;
 import android.widget.LinearLayout;
 
-public class MainActivity extends FragmentActivity {
+public class SQTestActivity extends FragmentActivity {
 	LinearLayout linearlayout;
 	FragmentManager fm;
 
@@ -16,6 +17,7 @@ public class MainActivity extends FragmentActivity {
 		// TODO Auto-generated method stub
 
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		linearlayout = (LinearLayout) findViewById(R.id.mainlinearlayout);
 		fm = getSupportFragmentManager();

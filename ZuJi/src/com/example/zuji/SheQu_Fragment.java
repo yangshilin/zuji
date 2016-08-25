@@ -5,33 +5,34 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.text.style.ClickableSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class SheQu_Fragment extends Fragment {
 	RadioGroup shequ_randiogroup;
 	RadioButton guangchang;
 	RadioButton guanzhu;
 	ImageView write;
+	ImageView xiaobian1;
+	RelativeLayout tag1;
+	RelativeLayout tag2;
+	RelativeLayout tag3;
+	ListView guanzhu_listview;
 	LinearLayout layout_guangchang;
 	LinearLayout layout_guanzhu;
 	LayoutInflater inflater;
@@ -52,18 +53,38 @@ public class SheQu_Fragment extends Fragment {
 		guangchang = (RadioButton) v.findViewById(R.id.shequ_guangchang);
 		guanzhu = (RadioButton) v.findViewById(R.id.guanzhu);
 		write = (ImageView) v.findViewById(R.id.shequ_write);
+		xiaobian1 = (ImageView) v.findViewById(R.id.xiaobian1);
 		write.setOnClickListener(clickListener);
+		xiaobian1.setOnClickListener(clickListener);
 		layout_guangchang = (LinearLayout) v
 				.findViewById(R.id.layout_guangchang);
 		layout_guanzhu = (LinearLayout) v.findViewById(R.id.layout_guanzhu);
 		layout_guanzhu.setVisibility(layout_guanzhu.GONE);
 		listview = (ListView) v.findViewById(R.id.guanzhu_listview);
+
+		listview.setOnItemClickListener(itemClickListener);
 		getData();
 		listview.setAdapter(new GuanZhuAdapater(getActivity(), data,
 				R.layout.guanzhu_listview_item, from, to));
+		tag1 = (RelativeLayout) v.findViewById(R.id.tag1);
+		tag1.setOnClickListener(clickListener);
+		tag2 = (RelativeLayout) v.findViewById(R.id.tag2);
+		tag2.setOnClickListener(clickListener);
+		tag3 = (RelativeLayout) v.findViewById(R.id.tag3);
+		tag3.setOnClickListener(clickListener);
 		return v;
 	}
 
+	OnItemClickListener itemClickListener = new OnItemClickListener() {
+
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view,
+				final int position, long id) {
+			Toast.makeText(getActivity(), "" + position, 0).show();
+			ImageView share = (ImageView) view.findViewById(R.id.share);
+			share.setOnClickListener(clickListener);
+		}
+	};
 	OnClickListener clickListener = new OnClickListener() {
 
 		@Override
@@ -73,7 +94,24 @@ public class SheQu_Fragment extends Fragment {
 				Intent intent = new Intent(getActivity(), DynamicActivity.class);
 				startActivity(intent);
 				break;
+			case R.id.tag1:
+				Intent intent_meishi = new Intent(getActivity(),
+						MeiShiActivity.class);
+				startActivity(intent_meishi);
+				break;
+			case R.id.tag2:
+				Intent intent_chongqing = new Intent(getActivity(),
+						ChongQingActivity.class);
+				startActivity(intent_chongqing);
+				break;
+			case R.id.tag3:
+				break;
+			case R.id.share:
 
+				break;
+			case R.id.xiaobian1:
+				startActivity(new Intent(getActivity(),DynamicSiBuSheYingActivity.class));
+				break;
 			default:
 				break;
 			}
