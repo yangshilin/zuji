@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/edittext_shurukuang"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/travel_seek_background" >
+
+            <EditText
+                android:id="@+id/seek_edittext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/travel_seek_edittext_background"
+                android:hint="搜索"
+                android:paddingLeft="40dp"
+                android:textColorHint="@color/qianhuise"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/seek_edittext_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/travel_seek_edittext_seek"
+                android:src="@drawable/homepage" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/seek_quxiao_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/edittext_shurukuang"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/travel_seek_quxiao_btn"
+            android:paddingBottom="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="9dp"
+            android:text="取消"
+            android:textColor="@color/deepgray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/see_tuijian_didian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/edittext_shurukuang"
+            android:layout_below="@id/edittext_shurukuang"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/travel_seek_tuijia_travel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="玉龙雪山"
+            android:textColor="@color/deepgray" />
+
+        <TextView
+            android:id="@+id/see_tuijian_didian_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/see_tuijian_didian"
+            android:layout_below="@id/edittext_shurukuang"
+            android:layout_marginLeft="140dp"
+            android:background="@drawable/travel_seek_tuijia_travel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="桂林山水"
+            android:textColor="@color/deepgray" />
+
+        <TextView
+            android:id="@+id/see_tuijian_didian_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edittext_shurukuang"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/see_tuijian_didian_two"
+            android:background="@drawable/travel_seek_tuijia_travel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="神农架"
+            android:textColor="@color/deepgray" />
+
+        <TextView
+            android:id="@+id/see_tuijian_didian_frou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/seek_quxiao_btn"
+            android:layout_below="@id/edittext_shurukuang"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/travel_seek_tuijia_travel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="九寨沟"
+            android:textColor="@color/deepgray" />
+
+        <TextView
+            android:id="@+id/see_tuijian_didian_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/edittext_shurukuang"
+            android:layout_below="@id/see_tuijian_didian"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/travel_seek_tuijia_travel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="珠穆朗玛峰"
+            android:textColor="@color/deepgray" />
+    </RelativeLayout>
+
+    <!--
+    <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginLeft="15dp"
+         android:layout_marginRight="15dp"
+         android:layout_marginTop="20dp"
+         >
+         
+         <RelativeLayout 
+             android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+         <TextView
+	 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="玉龙雪山"
+	    android:textSize="15sp"
+	    android:textColor="@color/deepgray"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="5dp"
+	    android:paddingRight="10dp"
+	    android:paddingBottom="5dp"
+	    android:background="@drawable/travel_seek_tuijia_travel"
+	    android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+    
+         
+          <RelativeLayout 
+             android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1.2">
+	<TextView
+	  
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="桂林山水"
+	    android:textSize="15sp"
+	    android:textColor="@color/deepgray"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="5dp"
+	    android:paddingRight="10dp"
+	    android:paddingBottom="5dp"
+	    android:background="@drawable/travel_seek_tuijia_travel"
+	    android:layout_centerInParent="true"/>
+	</RelativeLayout>
+	
+	 <RelativeLayout 
+             android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1.2">
+	<TextView
+	    
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="神农架"
+	    android:textSize="15sp"
+	    android:textColor="@color/deepgray"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="5dp"
+	    android:paddingRight="10dp"
+	    android:paddingBottom="5dp"
+	    android:background="@drawable/travel_seek_tuijia_travel"
+	   android:layout_centerInParent="true"/>
+	</RelativeLayout>
+	
+	 <RelativeLayout 
+             android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1">
+	<TextView
+		
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="九寨沟"
+	    android:textSize="15sp"
+	    android:textColor="@color/deepgray"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="5dp"
+	    android:paddingRight="10dp"
+	    android:paddingBottom="5dp"
+	    android:background="@drawable/travel_seek_tuijia_travel"
+	    android:layout_alignParentRight="true"/>
+	</RelativeLayout> 
+
+     </LinearLayout>
+    -->
+
+</LinearLayout>
