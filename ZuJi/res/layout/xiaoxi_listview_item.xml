@@ -26,12 +26,15 @@
             android:orientation="vertical" >
 
             <TextView
+                style="@style/textSize2"
+                android:id="@+id/name_xiaoxi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="@string/zuji" />
 
             <TextView
+                android:id="@+id/text_xiaoxi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/duihua"

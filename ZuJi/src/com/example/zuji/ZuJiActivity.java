@@ -19,20 +19,26 @@ import com.example.zuji.adapter.ZuJiAdapter;
 import com.example.zuji.javaclass.ZuJi;
 
 public class ZuJiActivity extends Activity {
-	ListView zujiListView;
-	ZuJiAdapter zujiAdapter;
-	List<ZuJi> zujiList;
+	private ListView zujiListView= null;
+	private ZuJiAdapter zujiAdapter= null;
+	private List<ZuJi> zujiList= null;
 	
 	
 	ImageButton zujiReturn;
-	EditText zujieEditText;
-	TextView fasongText;
+	private EditText zujieEditText= null;
+	private TextView fasongText= null;
     @Override  
     public void onCreate(Bundle savedInstanceState) {  
         super.onCreate(savedInstanceState);  
         requestWindowFeature(Window.FEATURE_NO_TITLE);  
         setContentView(R.layout.zuji); 
         
+        zujiReturn=(ImageButton)this.findViewById(R.id.zuji_return);
+        zujieEditText=(EditText)this.findViewById(R.id.zuji_edittext);
+        fasongText=(TextView)this.findViewById(R.id.zuji_fasong);
+        zujiListView=(ListView)this.findViewById(R.id.dianzan_listview);
+        
+
         zujiList =new ArrayList<ZuJi>();
         ZuJi zuji=null;
         for(int i=0;i<2;i++){
@@ -41,21 +47,20 @@ public class ZuJiActivity extends Activity {
         		zuji.setComeMsg(false);
         		zuji.setContent("hollo");
         		zuji.setZujiTime("2016-08-22 15:12:32");
+        	}else{
+        		zuji.setComeMsg(true);
+        		zuji.setContent("Hello,nice to meet you!");
+        		zuji.setZujiTime("2016-08-22 15:12:32");
         	}
         	zujiList.add(zuji);
         }
         
-        
-        
         zujiAdapter = new ZuJiAdapter(ZuJiActivity.this,zujiList);
         zujiListView.setAdapter(zujiAdapter);
         
-        zujiReturn=(ImageButton)findViewById(R.id.zuji_return);
-        zujieEditText=(EditText)findViewById(R.id.zuji_edittext);
-        fasongText=(TextView)findViewById(R.id.zuji_fasong);
         
         zujiReturn.setOnClickListener(onClickListener);
-        zujieEditText.setOnClickListener(onClickListener);
+        //zujieEditText.setOnClickListener(onClickListener);
         fasongText.setOnClickListener(onClickListener);
         
     }
@@ -67,12 +72,12 @@ public class ZuJiActivity extends Activity {
 			switch (v.getId()){
 			case R.id.zuji_return:
 				break;
-			case R.id.zuji_edittext:
-				break;
+			/*case R.id.zuji_edittext:
+				break;*/
 			case R.id.zuji_fasong:
 				if (!zujieEditText.getText().toString().equals("")) {  
                     //发送消息  
-                    send();  
+                    getData();  
                 }else {  
                     Toast.makeText(ZuJiActivity.this, "发送消息不能为空", Toast.LENGTH_SHORT).show();  
                 }  
@@ -82,12 +87,13 @@ public class ZuJiActivity extends Activity {
 			}
 		}
     };
-    private void send(){
+    private void getData(){
     	ZuJi zuji=new ZuJi();
     	zuji.setZujiTime("2016-08-22 15:16:34");
     	zuji.setContent(zujieEditText.getText().toString());
     	zuji.setComeMsg(false);
     	zujiList.add(zuji);
+    	
     	zujiAdapter.notifyDataSetChanged();
     	zujiListView.setSelection(zujiList.size()-1);
     	zujieEditText.setText("");

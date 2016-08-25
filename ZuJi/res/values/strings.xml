@@ -8,6 +8,7 @@
     <string name="zuijin">最近联系人</string>
     <string name="pinglun">评论</string>
     <string name="dianzan">点赞</string>
+    <string name="zande">赞的</string>
     <string name="tongzhi">通知</string>
     <string name="tidao">提到你的</string>
     <string name="zuji">足迹</string>
@@ -18,8 +19,36 @@
     <string name="huifu">回复</string>
     <string name="fasong">发送</string>
     <string name="tidaole">提到了</string>
+    <string name="geren">个人头像</string>
+    <string name="paizhao">拍照</string>
+    <string name="cong">从个人相册选择</string>
+    <string name="baocun">保存图片</string>
+    <string name="quxiao">取消</string>
     <string name="guanzhu">关注了</string>
+    <string name="shezhimima">设置足迹密码</string>
+    <string name="shoujihao">手机号/足迹号</string>
+    <string name="zujihao">足迹号</string>
+    <string name="qing">请设置足迹密码</string>
+    <string name="shezhi">设置</string>
+    <string name="gerenziliao">个人资料</string>
+    <string name="zhanghao">账号管理</string>
+    <string name="qingkong">清空缓存</string>
+    <string name="gongkai">公开地理位置</string>
+    <string name="gongkaiwode">公开我的收藏</string>
+    <string name="guanyuwomen">关于我们</string>
+    <string name="jiance">检测更新</string>
+    <string name="yijian">意见反馈</string>
+    <string name="mima">密码</string>
+    <string name="caidan">菜单</string>
+    <string name="sd">s</string>
+    <string name="queren">确认密码</string>
+    <string name="zaici">请再次确认</string>
     <string name="ni">你</string>
+    <string name="guanyu">关于足迹</string>
+    <string name="banben">v.1.1.1.001</string>
+    <string name="gongneng">功能介绍</string>
+    <string name="bangzhu">帮助</string>
+    <string name="fankiu">反馈</string>
     <string name="dui">对我而言可爱的她</string>
     <string name="shijian">10分钟前</string>
     <string name="zushiye">祖师爷:</string>
@@ -27,5 +56,8 @@
     <string name="nide">你的动态</string>
     <string name="pingjia">心悦君兮知不知</string>
     <string name="duihua">没有你，良辰美景更与何人说。</string>
+    <string name="xieyi">足迹软件许可及服务协议</string>
+    <string name="bianhao">copyright@ 2009-20105 Tencent All Ringhts Reserved</string>
+    
 
 </resources>

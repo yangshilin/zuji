@@ -44,7 +44,7 @@
             android:lineSpacingExtra="2dp"  
             android:maxWidth="200dp"  
             android:textColor="@color/white"  
-            android:textSize="14sp"
+            style="@style/textSize2"
             android:text="dgjsiarek" />  
           <!--android:background="@drawable/chatfrom_bg"
              android:focusable 是否聚焦
