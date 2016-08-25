@@ -3,8 +3,10 @@
 
     <color name="gray">#ECECEC</color>
     <color name="blue_green">#2EB8C2</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
 	<color name="blue">#32C1FB</color>
+	<color name="white">#FFFFFF</color>
 	<color name="gray_white">#bfbfbf</color>
+	  <color name="lvse">#2EB8C2</color>
+    <color name="black">#000000</color>
+    <color name="hui">#ECECEC</color>
 </resources>
