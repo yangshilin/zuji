@@ -25,17 +25,12 @@ public class GeRenTouXiangActivity extends Activity {
 	private final int xuanze = 1;
 	private final int baocun = 2;
 	private final int quxiao = 3;
-	
-	
+
 	ImageButton touxiangReturn;
 	LinearLayout xuanzedialog;
-	
-	
-	
+
 	AlertDialog menuDialog;
 	GridView gridview;
-	SimpleAdapter simpleAdapter;
-	List<Map<String, Object>> list;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,66 +64,47 @@ public class GeRenTouXiangActivity extends Activity {
 			}
 		}
 	};
+	public void show(){
+	
+	}
 
 	public void showMenu() {
 		gridview = (GridView) findViewById(R.id.touxiang_griview);
-
-		/*String[] from = { "paizhao_touxiang" };
-		int[] to = { R.id.paizhao_touxiang };
-		simpleAdapter = new SimpleAdapter(this, data(),
-				R.layout.gerentouxiang_menu, from, to);*/
-
 		gridview.setGravity(Gravity.BOTTOM);
-		ArrayList<HashMap<String, Object>> item = new ArrayList<HashMap<String, Object>>();
-	
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			for(int i=0;i<2;i++){
-				map.put("ItemText", String.valueOf(i));
-				item.add(map);
-			}
-			/*map.put("ItemText", "拍照");
-			map = new HashMap<String, Object>();
-			item.add(map);
-			map.put("ItemText", "从相册中选择");
-			map = new HashMap<String, Object>();
-			item.add(map);
-			map.put("ItemText", "保存");
-			map = new HashMap<String, Object>();
-			item.add(map);
-			map.put("ItemText", "取消");*/
-			
-	
-		SimpleAdapter items = new SimpleAdapter(this, item,
+		ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("ItemText", "拍照");
+		list.add(map);
+		SimpleAdapter adapter = new SimpleAdapter(this, list,
 				R.layout.gerentouxiang_menu, new String[] { "ItemText" },
 				new int[] { R.id.paizhao_touxiang });
-		gridview.setAdapter(items);
+		gridview.setAdapter(adapter);
 		gridview.setOnItemClickListener(onItemClickListener);
 	}
-
 	OnItemClickListener onItemClickListener = new OnItemClickListener() {
-
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			// TODO Auto-generated method stub
-			HashMap<String, Object> item = (HashMap<String, Object>) parent
-					.getItemAtPosition(position);
-			setTitle((String) item.get("ItemText"));
 			switch (position) {
 			case paizhao:
-				Intent intent=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
+				Intent intent = new Intent(GeRenTouXiangActivity.this,
+						SheZhiActivity.class);
 				startActivity(intent);
 				break;
 			case xuanze:
-				Intent intent2=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
+				Intent intent2 = new Intent(GeRenTouXiangActivity.this,
+						SheZhiActivity.class);
 				startActivity(intent2);
 				break;
 			case baocun:
-				Intent intent3=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
+				Intent intent3 = new Intent(GeRenTouXiangActivity.this,
+						SheZhiActivity.class);
 				startActivity(intent3);
 				break;
 			case quxiao:
-				Intent intent4=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
+				Intent intent4 = new Intent(GeRenTouXiangActivity.this,
+						SheZhiActivity.class);
 				startActivity(intent4);
 				break;
 			default:
@@ -138,21 +114,4 @@ public class GeRenTouXiangActivity extends Activity {
 
 	};
 
-	/*private List<Map<String, Object>> data() {
-		list = new ArrayList<Map<String, Object>>();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("paizhao_touxiang", "拍照");
-		list.add(map);
-		map = new HashMap<String, Object>();
-		map.put("paizhao_touxiang", "拍照");
-		list.add(map);
-		map = new HashMap<String, Object>();
-		map.put("paizhao_touxiang", "拍照");
-		list.add(map);
-		map = new HashMap<String, Object>();
-		map.put("paizhao_touxiang", "拍照");
-		list.add(map);
-		return list;
-
-	}*/
 }

@@ -21,11 +21,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.zuji.DianZanActivity"></activity>
-        <activity android:name="com.example.zuji.PingLunActivity"></activity>
-        <activity android:name="com.example.zuji.TiDaoActivity"></activity>
-        <activity android:name="com.example.zuji.TongZhiActivity"></activity>
-      <activity android:name="com.example.zuji.ZuJiActivity"></activity> 
+        <activity android:name="com.example.zuji.DianZanActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.PingLunActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.TiDaoActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.TongZhiActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.ZuJiActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.SheZhiActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.ShezhiMimaActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.GuanYuActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.Activity" >
+        </activity>
     </application>
 
 </manifest>
