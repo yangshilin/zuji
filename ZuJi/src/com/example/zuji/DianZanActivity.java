@@ -3,6 +3,7 @@ package com.example.zuji;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,7 +43,7 @@ public class DianZanActivity extends Activity{
 				// TODO Auto-generated method stub
 				switch (v.getId()){
 				case R.id.return_dianzan:
-					Intent intent=new Intent(DianZanActivity.this,XiaoXiActivity.class);
+					Intent intent=new Intent(DianZanActivity.this,Fragment_XiaoXi.class);
 					startActivity(intent);
 					break;
 				default:

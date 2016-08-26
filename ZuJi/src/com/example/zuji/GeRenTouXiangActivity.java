@@ -82,10 +82,11 @@ public class GeRenTouXiangActivity extends Activity {
 		ArrayList<HashMap<String, Object>> item = new ArrayList<HashMap<String, Object>>();
 	
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			for(int i=0;i<4;i++){
-				
+			for(int i=0;i<2;i++){
+				map.put("ItemText", String.valueOf(i));
+				item.add(map);
 			}
-			map.put("ItemText", "拍照");
+			/*map.put("ItemText", "拍照");
 			map = new HashMap<String, Object>();
 			item.add(map);
 			map.put("ItemText", "从相册中选择");
@@ -94,8 +95,8 @@ public class GeRenTouXiangActivity extends Activity {
 			map.put("ItemText", "保存");
 			map = new HashMap<String, Object>();
 			item.add(map);
-			map.put("ItemText", "取消");
-			item.add(map);
+			map.put("ItemText", "取消");*/
+			
 	
 		SimpleAdapter items = new SimpleAdapter(this, item,
 				R.layout.gerentouxiang_menu, new String[] { "ItemText" },
@@ -115,19 +116,19 @@ public class GeRenTouXiangActivity extends Activity {
 			setTitle((String) item.get("ItemText"));
 			switch (position) {
 			case paizhao:
-				Intent intent=new Intent(GeRenTouXiangActivity.this,ZuJiActivity.class);
+				Intent intent=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
 				startActivity(intent);
 				break;
 			case xuanze:
-				Intent intent2=new Intent(GeRenTouXiangActivity.this,ZuJiActivity.class);
+				Intent intent2=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
 				startActivity(intent2);
 				break;
 			case baocun:
-				Intent intent3=new Intent(GeRenTouXiangActivity.this,ZuJiActivity.class);
+				Intent intent3=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
 				startActivity(intent3);
 				break;
 			case quxiao:
-				Intent intent4=new Intent(GeRenTouXiangActivity.this,ZuJiActivity.class);
+				Intent intent4=new Intent(GeRenTouXiangActivity.this,SheZhiActivity.class);
 				startActivity(intent4);
 				break;
 			default:
