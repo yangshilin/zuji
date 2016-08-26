@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="homepage">首页</string>
+    <string name="community">社区</string>
+    <string name="message">消息</string>
+    <string name="my">我的</string>
+    <string name="chuangkou_content">每个窗口都是一个\n独特的视觉系统</string>
+    <string name="publicpraise_title">口碑风景</string>
+    <string name="hot_yingji_title">热门影集</string>
+    <string name="comment_name">左手倒影</string>
+    <string name="junmo">君莫笑</string>
+    <string name="yonghu_id">ID:123456789</string>
+    <string name="hot_content_title">四季灿烂每时每刻</string>
+    <string name="shouye_content_title">片单 |每个窗口都是一个独特的视觉系统</string>
+    <string name="shouye_zuoze_name">作者：kitty</string>
+    <string name="shouye_zhuanzai_shengming">本文为足迹编辑部独家稿件，未经允许请勿转载</string>
+    <string name="shouye_zuji_content_miaoshu">视觉传达设计系在其发展历史上形成了在国内外具有广泛影响的师资队伍和学术带头人，其师资队伍的整体实力可以成为东北地区高校艺术设计教学的领军团队，老、中、青教学梯队建设比较合理，骨干教师均具有丰富的教学经验，其教学、科研成果在国内同类院校的相关领域中占有重要的学术地位。在社会需求旺盛，招生量连年提高的形势下，对离、退休及校外教师资源的合理利用是保证教学质量、推动学科建设的重要环节。对校外教师资源使用将建立国内外两套机制，一方面建立聘请国际知名 的外国学者前来讲学、交流及互访的机制，另一方面与国内相关院校及学者建立客座教师的互助机制，确保各学科的知识融汇和更新频率与国内外相关领域同步。</string>
+    <string name="zuji_tuijian">足迹推荐</string>
+    <string name="zuji_content_title">黄河之水天上来，奔流到海不复回</string>
+    <string name="zuji_content_scenery_miaoshu">\t\t壶口瀑布，国家级风景名胜区，国家AAAA级旅游景区，国家地质公园。 东濒山洗省临汾市吉县壶口镇，西临陕西省延安市宜川县壶口乡，为两省共有旅游景区。北距山西太原387千米;南距陕西西安449千米。\n\t\t壶口瀑布是中国第二大瀑布，世界上最大的黄色瀑布。在水量很大的夏季，壶口瀑布气势恢宏；而到了冬季，整个水面全部冰冻，结出罕见的巨大冰瀑。\n\t\t2014年12月6日前后，由于受持续降温天气影响，黄河壶口瀑布出现流凌、冰挂景观。</string>
+    <string name="zuji_tuijian_content_title">五岳归来不看山，黄山归来不看岳</string>
+    <string name="zuji_tuijian_content_scenery_miaoshu">\t\t黄山，世界文化与自然双重遗产、世界地质公园、国家AAAAA级旅游风景区、国家级风景名胜区、全国文明风景旅游区示范点。\n\t\t黄山位于安徽省南部黄山市境内（景区由市直辖），是安徽省旅游的标志，系中国十大风景名胜中唯一的山岳风光。\n\t\t黄山原名黟山，因峰岩青黑，遥望苍黛而名。后因传说轩辕黄帝曾在此炼丹，故改名为"黄山"。明朝旅行家徐霞客登临黄山时候，曾对黄山的秀丽赞叹：“博海内外之名山，无如徽之黄山，天下无山，关止矣！”被后人引申为“五岳归来不看山，黄山归来不看岳”。</string>
     <string name="xiaoxi">消息</string>
     <string name="zuijin">最近联系人</string>
     <string name="pinglun">评论</string>
@@ -55,36 +75,18 @@
     <string name="duihua">没有你，良辰美景更与何人说。</string>
     <string name="xieyi">足迹软件许可及服务协议</string>
     <string name="bianhao">copyright@ 2009-20105 Tencent All Ringhts Reserved</string>
-    <string name="app_name">足迹</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="homepage">首页</string>
-    <string name="community">社区</string>
-    <string name="message">消息</string>
-    <string name="my">我的</string>
-    <string name="chuangkou_content">每个窗口都是一个\n独特的视觉系统</string>
-    
- <!-- \n 换行 -->
-    <!-- \t空格一个字符 -->
-    <string name="publicpraise_title">口碑风景</string>
-    <string name="hot_yingji_title">热门影集</string>
-    <string name="comment_name">左手倒影</string>
-    <string name="junmo">君莫笑</string>
-    <string name="yonghu_id">ID:123456789</string>
-    <string name="hot_content_title">四季灿烂每时每刻</string>
-    <string name="shouye_content_title">片单 |每个窗口都是一个独特的视觉系统</string>
-    <string name="shouye_zuoze_name">作者：kitty</string>
-    <string name="shouye_zhuanzai_shengming">本文为足迹编辑部独家稿件，未经允许请勿转载</string>
-    <string name="shouye_zuji_content_miaoshu">视觉传达设计系在其发展历史上形成了在国内外具有广泛影响的师资队伍和学术带头人，其师资队伍的整体实力可以成为东北地区高校艺术设计教学的领军团队，老、中、青教学梯队建设比较合理，骨干教师均具有丰富的教学经验，其教学、科研成果在国内同类院校的相关领域中占有重要的学术地位。在社会需求旺盛，招生量连年提高的形势下，对离、退休及校外教师资源的合理利用是保证教学质量、推动学科建设的重要环节。对校外教师资源使用将建立国内外两套机制，一方面建立聘请国际知名 的外国学者前来讲学、交流及互访的机制，另一方面与国内相关院校及学者建立客座教师的互助机制，确保各学科的知识融汇和更新频率与国内外相关领域同步。</string>
-    <string name="zuji_tuijian">足迹推荐</string>
-    <string name="zuji_content_title">黄河之水天上来，奔流到海不复回</string>
-    <string name="zuji_content_scenery_miaoshu">\t\t壶口瀑布，国家级风景名胜区，国家AAAA级旅游景区，国家地质公园。 东濒山洗省临汾市吉县壶口镇，西临陕西省延安市宜川县壶口乡，为两省共有旅游景区。北距山西太原387千米;南距陕西西安449千米。\n\t\t壶口瀑布是中国第二大瀑布，世界上最大的黄色瀑布。在水量很大的夏季，壶口瀑布气势恢宏；而到了冬季，整个水面全部冰冻，结出罕见的巨大冰瀑。\n\t\t2014年12月6日前后，由于受持续降温天气影响，黄河壶口瀑布出现流凌、冰挂景观。</string>
-    <string name="zuji_tuijian_content_title">五岳归来不看山，黄山归来不看岳</string>
-    <string name="zuji_tuijian_content_scenery_miaoshu">\t\t黄山，世界文化与自然双重遗产、世界地质公园、国家AAAAA级旅游风景区、国家级风景名胜区、全国文明风景旅游区示范点。\n\t\t黄山位于安徽省南部黄山市境内（景区由市直辖），是安徽省旅游的标志，系中国十大风景名胜中唯一的山岳风光。\n\t\t黄山原名黟山，因峰岩青黑，遥望苍黛而名。后因传说轩辕黄帝曾在此炼丹，故改名为"黄山"。明朝旅行家徐霞客登临黄山时候，曾对黄山的秀丽赞叹：“博海内外之名山，无如徽之黄山，天下无山，关止矣！”被后人引申为“五岳归来不看山，黄山归来不看岳”。</string>
-	<string name="step1">fdgh</string>
-	<string name="step2">fdgh</string>
-	<string name="step3">fdgh</string>
-	<string name="step4">fdgh</string>
-	
-	
+    <string name="step1">\t\t倒影有很多种形式，从风光摄影到微距摄影都有，不过这里有一些通用的基础技术，可以帮助你做得更好。
+\n\t\t出于对景深的考虑，试试选用小光圈比如f/11或更小的。这样有助于强化倒影效果。
+\n\t\t对焦点取决于主体和其倒影之间的距离。首先，尝试对主体对焦，然后试着对倒影对焦。二者的结果会稍有不同，如何取舍就取决于你想强调的部分了。
+\n\t\t最后，考虑光线的角度以及对倒影的影响。在影棚环境下你可以控制这些来强调倒影，但是在自然环境中你需要尝试不同的视角来寻找最佳的拍摄角度。</string>
+    <string name="step2">\t\t大自然所拥有的壮丽、色彩、及图案令人惊叹，下面这幅照片是雪山倒映在寂静的湖面上。这样的场景是摄影师梦寐以求的，但如何才能把其中的美丽最大地表达出来，拍摄出一张精美的作品呢？
+\n\t\t首先，在光线最佳的时刻拍摄，早晨或者日落之前。一定要带上三脚架，并且使用各种滤镜。偏振镜可以帮你消除水面的反光，ND镜(中灰密度镜)可以用来防止天空过曝。
+\n\t\t试试使用稍长时间的快门，让流水呈现出柔滑的质感。同时，也要注意景深、光线角度和对焦的问题。</string>
+    <string name="step3">\t\t倒影照片不一定非是有带水面的风光照片，在我们的日常生活中就存在大量的反光表面，比如镜子、玻璃、金属、陶瓷器，甚至刷了漆的木材。
+\n\t\t重要的是要记住，反光的表面不吸收光线，所以如果使用人造光源，一定要仔细考虑角度和光量的问题。你可能会想试试从上方或后方打光。
+\n\t\t要确保拍摄体的表面干净，没有划痕或指纹，特别是在倒影的位置。平面相对较好处理一些。
+\n\t\t一旦选定了拍摄表面，试试不同的主体，看看哪种反射效果是你要的。可以尝试任何你喜欢的东西，不过形状越有趣的东西，倒影的效果越好。</string>
+    <string name="step4">\t\t倒影照片经常被描述为抽象派，我觉得挺合适，不过在拍摄倒影照片时，照片的风格完全取决于你，摄影师。
+\n\t\t你可能希望利用倒影让一张平庸的照片焕发光彩，你可能想拍摄真实的风光，或者你可能想利用角度和光线来创作一张艺术作品。每一张照片中都蕴藏着快乐，你可以自由地捕捉到它们。</string>
+
 </resources>

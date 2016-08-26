@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2EB8C2" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="过去"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1992年2月10日"
+        android:textSize="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="腾讯QQ诞生"
+        android:textColor="#4A4F5E"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fusion_guoqu_img" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:text="        在17年的今天,1999年2月10日，腾讯QQ诞生。腾讯公司成立于1998年11月11日。1997年，马化腾接触到了ICQ;1998年11月11日，马化腾和同学张志东在广东省深圳市注册成立“深圳市腾讯计算机系统有限公司”。"
+        android:textColor="#717171"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:text="      2014年2月10日，是QQ17周岁的生日。作为国内最成功的即时聊天软件，它已经伴随我们走过了15年的光阴，曾经最早使用 它的青涩少年现在已经成为中年大叔。它承载了无数网友的青春岁月和喜怒哀乐。经过这么多年产品变迁，QQ已经积累了8亿的用户群。在十五周年之际，腾讯QQ带来了全新的品牌定位——“乐在沟通”。"
+        android:textColor="#717171"
+        android:textSize="13sp" />
+
+</LinearLayout>

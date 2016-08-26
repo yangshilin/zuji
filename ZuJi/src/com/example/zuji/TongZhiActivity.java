@@ -46,7 +46,7 @@ public class TongZhiActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.return_tongzhi:
-				Intent intent =new Intent(TongZhiActivity.this,XiaoXiActivity.class);
+				Intent intent =new Intent(TongZhiActivity.this,Fragment_XiaoXi.class);
 				startActivity(intent);
 				break;
 			default:
