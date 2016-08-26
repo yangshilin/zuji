@@ -70,7 +70,8 @@ public class MeiShiActivity extends Activity {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.meishi_back:
-
+				startActivity(new Intent(MeiShiActivity.this,
+						BottonNavigationActivity.class));
 				break;
 
 			default:
