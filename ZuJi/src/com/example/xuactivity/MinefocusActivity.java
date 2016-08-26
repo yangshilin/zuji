@@ -13,7 +13,7 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class Minefocus extends Activity {
+public class MinefocusActivity extends Activity {
 	ListView minefocus_listview;
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();

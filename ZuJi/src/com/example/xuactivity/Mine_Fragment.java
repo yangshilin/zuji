@@ -49,7 +49,7 @@ public class Mine_Fragment extends Fragment {
 		btnzujitime=(Button) v.findViewById(R.id.btnzujitime);
 		btnzujitime.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-			Intent  intent=new Intent(getActivity(),Timefusiondeletes.class);
+			Intent  intent=new Intent(getActivity(),TimefusiondeletesActivity.class);
 			startActivity(intent);
 				
 			}
