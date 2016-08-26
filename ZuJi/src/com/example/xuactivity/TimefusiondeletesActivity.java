@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import com.example.zuji.R;
 
-public class Timefusiondeletes extends Activity  {
+public class TimefusiondeletesActivity extends Activity  {
 	ListView time_listviews;
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list;
@@ -47,13 +47,13 @@ public class Timefusiondeletes extends Activity  {
 					.findViewById(R.id.timepaizhao);
 			TextView timedelete = (TextView) arg1.findViewById(R.id.timedelete);
 			final int a = arg2;
-			Toast.makeText(Timefusiondeletes.this, "" + arg2,
+			Toast.makeText(TimefusiondeletesActivity.this, "" + arg2,
 					Toast.LENGTH_SHORT).show();
 			timeshare.setOnClickListener(new View.OnClickListener() {
 
 				@Override
 				public void onClick(View v) {//分享
-					Toast.makeText(Timefusiondeletes.this, "分享成功",
+					Toast.makeText(TimefusiondeletesActivity.this, "分享成功",
 							Toast.LENGTH_SHORT).show();
 				}
 			});
@@ -72,13 +72,13 @@ public class Timefusiondeletes extends Activity  {
 				public void onClick(View v) {
 					list.remove(a);
 					simpleAdapter.notifyDataSetChanged();
-					Toast.makeText(Timefusiondeletes.this, "删除成功" + a,
+					Toast.makeText(TimefusiondeletesActivity.this, "删除成功" + a,
 							Toast.LENGTH_SHORT).show();
 				}
 			});
 		}
 	};
-
+//初始化
 	public void intView() {
 		time_listviews = (ListView) findViewById(R.id.time_listviews);
 		String[] from = { "times", "mothday", "timelife" };
@@ -89,6 +89,7 @@ public class Timefusiondeletes extends Activity  {
 		time_listviews.setAdapter(simpleAdapter);
 
 	}
+	//调用相机功能照相
 	public void getPhoto(View v){
 		Intent intent = new Intent();intent.setAction("android.media.action.IMAGE_CAPTURE");
 		intent.addCategory("android.intent.category.DEFAULT");
@@ -97,7 +98,7 @@ public class Timefusiondeletes extends Activity  {
 		 intent.putExtra(MediaStore.EXTRA_OUTPUT, uri); 
 		this.startActivity(intent);
 	}
-
+	//simpleAdapter的数据
 	private List<Map<String, Object>> data() {
 		list = new ArrayList<Map<String, Object>>();
 		Map<String, Object> map = new HashMap<String, Object>();

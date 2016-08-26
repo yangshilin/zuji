@@ -24,6 +24,8 @@ OnClickListener clickListener=new OnClickListener() {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.dynamic_back:
+			startActivity(new Intent(DynamicActivity.this,
+					BottonNavigationActivity.class));
 			break;
 
 		default:
