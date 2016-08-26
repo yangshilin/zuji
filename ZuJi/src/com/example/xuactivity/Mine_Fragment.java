@@ -3,13 +3,14 @@ package com.example.xuactivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -23,6 +24,7 @@ import com.example.xuAdapterclass.Release;
 import com.example.zuji.R;
 
 public class Mine_Fragment extends Fragment {
+	Button btnzujitime;
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
@@ -44,6 +46,14 @@ public class Mine_Fragment extends Fragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_mine, null);
+		btnzujitime=(Button) v.findViewById(R.id.btnzujitime);
+		btnzujitime.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+			Intent  intent=new Intent(getActivity(),Timefusiondeletes.class);
+			startActivity(intent);
+				
+			}
+		});
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
 		fabu_gridview = (GridView) v.findViewById(R.id.fabu_gridview);
 		getDataFabu();
