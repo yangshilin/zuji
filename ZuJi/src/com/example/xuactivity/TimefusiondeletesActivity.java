@@ -13,17 +13,23 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
-public class TimefusiondeletesActivity extends Activity  {
+public class TimefusiondeletesActivity extends Activity implements OnClickListener{
+	ImageButton btfhmine;
+	Button bt_inpast;
 	ListView time_listviews;
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list;
@@ -35,6 +41,29 @@ public class TimefusiondeletesActivity extends Activity  {
 		setContentView(R.layout.time_fusiondeletes);
 		intView();
 		time_listviews.setOnItemClickListener(itemClickListener);
+	}
+
+	// 初始化
+	public void intView() {
+		btfhmine=(ImageButton) findViewById(R.id.btfhmine);
+		btfhmine.setOnClickListener(this);
+		bt_inpast = (Button) findViewById(R.id.bt_inpast);
+		bt_inpast.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				startActivity(new Intent(TimefusiondeletesActivity.this,
+						Timeinthepast_activity.class));
+			}
+		});
+		time_listviews = (ListView) findViewById(R.id.time_listviews);
+		String[] from = { "times", "mothday", "timelife" };
+		int[] to = { R.id.times, R.id.mothday, R.id.timelife };
+
+		simpleAdapter = new SimpleAdapter(this, data(),
+				R.layout.time_fusiondeletes_listview, from, to);
+		time_listviews.setAdapter(simpleAdapter);
+
 	}
 
 	OnItemClickListener itemClickListener = new OnItemClickListener() {
@@ -52,7 +81,7 @@ public class TimefusiondeletesActivity extends Activity  {
 			timeshare.setOnClickListener(new View.OnClickListener() {
 
 				@Override
-				public void onClick(View v) {//分享
+				public void onClick(View v) {// 分享
 					Toast.makeText(TimefusiondeletesActivity.this, "分享成功",
 							Toast.LENGTH_SHORT).show();
 				}
@@ -62,8 +91,8 @@ public class TimefusiondeletesActivity extends Activity  {
 				@Override
 				public void onClick(View v) {
 					getPhoto(v);
-					//Toast.makeText(Timefusiondeletes.this, "拍照",
-							//Toast.LENGTH_SHORT).show();
+					// Toast.makeText(Timefusiondeletes.this, "拍照",
+					// Toast.LENGTH_SHORT).show();
 				}
 			});
 			timedelete.setOnClickListener(new View.OnClickListener() {
@@ -78,27 +107,20 @@ public class TimefusiondeletesActivity extends Activity  {
 			});
 		}
 	};
-//初始化
-	public void intView() {
-		time_listviews = (ListView) findViewById(R.id.time_listviews);
-		String[] from = { "times", "mothday", "timelife" };
-		int[] to = { R.id.times, R.id.mothday, R.id.timelife };
 
-		simpleAdapter = new SimpleAdapter(this, data(),
-				R.layout.time_fusiondeletes_listview, from, to);
-		time_listviews.setAdapter(simpleAdapter);
-
-	}
-	//调用相机功能照相
-	public void getPhoto(View v){
-		Intent intent = new Intent();intent.setAction("android.media.action.IMAGE_CAPTURE");
+	// 调用相机功能照相
+	public void getPhoto(View v) {
+		Intent intent = new Intent();
+		intent.setAction("android.media.action.IMAGE_CAPTURE");
 		intent.addCategory("android.intent.category.DEFAULT");
-		 File file = new File(Environment.getExternalStorageDirectory()+"/000.jpg"); 
-		 Uri uri = Uri.fromFile(file);
-		 intent.putExtra(MediaStore.EXTRA_OUTPUT, uri); 
+		File file = new File(Environment.getExternalStorageDirectory()
+				+ "/000.jpg");
+		Uri uri = Uri.fromFile(file);
+		intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
 		this.startActivity(intent);
 	}
-	//simpleAdapter的数据
+
+	// simpleAdapter的数据
 	private List<Map<String, Object>> data() {
 		list = new ArrayList<Map<String, Object>>();
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -120,4 +142,18 @@ public class TimefusiondeletesActivity extends Activity  {
 		return list;
 	}
 
+	@Override
+	public void onClick(View v) {
+	switch (v.getId()) {
+	case R.id.btfhmine:
+		startActivity(new Intent(TimefusiondeletesActivity.this,BottonNavigationActivity.class));
+		break;
+
+	default:
+		break;
+	}
+		
+	}
+
+	
 }

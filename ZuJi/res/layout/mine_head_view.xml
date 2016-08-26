@@ -16,6 +16,7 @@
             android:layout_height="wrap_content" >
 
             <ImageButton
+                android:id="@+id/headivbt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -25,6 +26,7 @@
                 android:src="@drawable/back_white" />
 
             <ImageButton
+                android:id="@+id/headset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -38,6 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp" >
+                 <ImageView
+                android:id="@+id/headtuceng_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/tuceng_icon" />
 
             <TextView
                 android:id="@+id/fensi"
@@ -45,17 +54,20 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/tuceng_icon"
+                android:layout_toLeftOf="@+id/headtuceng_icon"
                 android:text="粉丝"
+                android:textSize="10sp"
                 android:textColor="#ffffff" />
 
             <TextView
+                android:id="@+id/hradfensinumb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="25dp"
-                android:layout_toLeftOf="@+id/tuceng_icon"
+                android:layout_toLeftOf="@+id/headtuceng_icon"
                 android:text="3"
+                android:textSize="10sp"
                 android:textColor="#ffffff" />
 
             <TextView
@@ -63,46 +75,45 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/tuceng_icon"
+                android:layout_toRightOf="@+id/headtuceng_icon"
                 android:text="关注"
+               android:textSize="10sp" 
                 android:textColor="#ffffff" />
 
             <TextView
+                android:id="@+id/headguanzhumunb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="25dp"
-                android:layout_toRightOf="@+id/tuceng_icon"
+                android:layout_toRightOf="@+id/headtuceng_icon"
                 android:text="12"
+                android:textSize="10sp"
                 android:textColor="#ffffff" />
 
-            <ImageView
-                android:id="@+id/tuceng_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/tuceng_icon" />
+       
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" >
+            android:layout_marginTop="5dp" >
 
             <TextView
-                android:id="@+id/tvzuji"
+                android:id="@+id/headtvzuji"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
-                android:text="足迹" />
+                android:text="足迹" 
+                android:textSize="14sp"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
                 android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/tvzuji"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/headtvzuji"
                 android:src="@drawable/nv" />
         </RelativeLayout>
 
@@ -111,25 +122,29 @@
             android:layout_height="wrap_content" >
 
             <TextView
+                android:id="@+id/idnumb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="ID: 123456" />
+                android:text="ID: 123456" 
+                android:textSize="12sp"/>
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
         <RadioGroup
+            android:id="@+id/centre_radiogroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
             <RadioButton
+                android:id="@+id/headzhuye"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -139,9 +154,11 @@
                 android:drawablePadding="5dp"
                 android:gravity="center"
                 android:text="主页"
+                android:textSize="15sp"
                 android:textColor="@android:color/black" />
 
             <RadioButton
+                android:id="@+id/headfabu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
@@ -149,16 +166,19 @@
                 android:drawableBottom="@drawable/selector_rediobutton"
                 android:drawablePadding="5dp"
                 android:gravity="center"
+                android:textSize="15sp"
                 android:text="发布"
                 android:textColor="@android:color/black" />
 
             <RadioButton
+                android:id="@+id/headshoucang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
                 android:drawableBottom="@drawable/selector_rediobutton"
                 android:drawablePadding="5dp"
+                android:textSize="15sp"
                 android:gravity="center"
                 android:text="收藏"
                 android:textColor="@android:color/black" />
