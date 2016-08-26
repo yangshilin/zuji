@@ -2,49 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.9"
     android:background="@color/gray_white"
     android:gravity="bottom"
-    android:alpha="0.9"
     android:orientation="vertical" >
+
     <TextView
-        
-        style="@style/textSize2"
         android:id="@+id/paizhao_touxiang"
+        style="@style/textSize2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:gravity="center"
         android:padding="10dp"
-        android:background="@color/white"
-        android:text="@string/paizhao"/>
-     <TextView
-        style="@style/textSize2"
+        android:text="@string/paizhao"
+        android:textColor="@color/black" />
+
+    <TextView
         android:id="@+id/cong_touxiang"
+        style="@style/textSize2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:background="@color/white"
         android:gravity="center"
         android:padding="10dp"
-        android:background="@color/white"
-        android:text="@string/cong"/>
+        android:text="@string/cong"
+        android:textColor="@color/black" />
+
     <TextView
-        style="@style/textSize2"
         android:id="@+id/baocun_touxiang"
+        style="@style/textSize2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:background="@color/white"
         android:gravity="center"
         android:padding="10dp"
-        android:background="@color/white"
-        android:text="@string/baocun"/>
+        android:text="@string/baocun"
+        android:textColor="@color/black" />
+
     <TextView
-        style="@style/textSize2"
         android:id="@+id/quexiao_touxiang"
+        style="@style/textSize2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@color/white"
         android:gravity="center"
         android:padding="10dp"
-        android:background="@color/white"
-        android:text="@string/quxiao"/> 
-    
+        android:text="@string/quxiao"
+        android:textColor="@color/black" />
+
 </LinearLayout>
