@@ -22,6 +22,8 @@
         </activity>
         <activity android:name="com.example.zuji.PingLunActivity" >
         </activity>
+        <activity android:name="com.example.zuji.ZuJiActivity" >
+        </activity>
         <activity android:name="com.example.zuji.TiDaoActivity" >
         </activity>
         <activity android:name="com.example.zuji.TongZhiActivity" >
@@ -32,8 +34,8 @@
         </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
-        </activity>
+         <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
+        </activity> 
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>
         <activity android:name="com.example.zuji.MeiShiActivity" >

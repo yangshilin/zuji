@@ -20,7 +20,7 @@
         android:layout_marginTop="5dp" >
 
         <ImageView
-            android:id="@+id/user_image2"
+            android:id="@+id/user_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
@@ -30,25 +30,27 @@
 
         <TextView
             android:id="@+id/zuji_content"
+            style="@style/textSize2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
-            android:layout_toLeftOf="@+id/user_image2"
+            android:layout_toLeftOf="@+id/user_image"
             android:background="@drawable/liaotian_beijingkuang"
-            android:padding="5dp"
-            android:maxWidth="200dp"
             android:clickable="true"
             android:focusable="true"
             android:gravity="left|center"
             android:lineSpacingExtra="2dp"
-            android:textColor="@color/white"
-            style="@style/textSize2"
-            android:text="kjhuesdnfjhcfoaedfnioas" />
-        <!--android:background="@drawable/chatfrom_bg"
+            android:maxWidth="200dp"
+            android:padding="5dp"
+            android:text="kjhuesdnfjhcfoaedfnioas"
+            android:textColor="@color/white" />
+        <!--
+            android:background="@drawable/chatfrom_bg"
              android:focusable 是否聚焦
              android：clickable 是否点击
-             android:lineSpacingExtra  额外的线间距--> 
+             android:lineSpacingExtra  额外的线间距
+        -->
     </RelativeLayout>
 
 </LinearLayout>
