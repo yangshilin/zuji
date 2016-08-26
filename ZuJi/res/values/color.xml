@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-     <color name="deegreen">#28A7B0</color>
+
+    <color name="deegreen">#28A7B0</color>
     <!-- 【深】绿色 -->
 
     <color name="deepgray">#848484</color>
@@ -8,9 +9,6 @@
 
     <color name="darkblack">#474747</color>
     <!-- 【暗】黑色 -->
-
-    <color name="white">#FFFFFF</color>
-    <!-- 白色 -->
 
     <color name="ivory">#FFFFF0</color>
     <!-- 象牙色 -->
@@ -288,9 +286,6 @@
     <color name="skyblue">#87CEEB</color>
     <!-- 天蓝色 -->
 
-    <color name="gray">#808080</color>
-    <!-- 灰色 -->
-
     <color name="olive">#808000</color>
     <!-- 橄榄色 -->
 
@@ -432,14 +427,11 @@
     <color name="navy">#000080</color>
     <!-- 海军色 -->
 
-    <color name="black">#000000</color>
-    <!-- 黑色 -->
+    <color name="beijing_qiandao">#DCE3E3</color>
+    <color name="qianhuise">#c6c6c6</color>
+    <!-- 浅灰色 -->
 
-	<color name="beijing_qiandao">#DCE3E3</color>
-	
-	<color name="qianhuise">#c6c6c6</color>
-	<!-- 浅灰色 -->
-	
-	<color name="danhuise">#efefef</color>
-	<!-- 淡灰色 -->
+    <color name="danhuise">#efefef</color>
+    <!-- 淡灰色 -->
+
 </resources>

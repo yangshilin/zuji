@@ -31,6 +31,9 @@
  		<activity android:name="com.example.zuji.GeRenTouXiangActivity"></activity>
  		<activity android:name="com.example.zuji.GuanYuZuJiActivity"></activity>
  		<activity android:name="com.example.zuji.MeiShiActivity"></activity>
+ 		<activity android:name="com.example.zuiji.homepage.SceneryCommentContentActivity"></activity>
+    	<activity android:name="com.example.zuiji.homepage.ZujiRecommendActivity"></activity>
+    	<activity android:name="com.example.zuiji.homepage.HotPhotoalbumActivity"></activity>
     </application>
 
 </manifest>

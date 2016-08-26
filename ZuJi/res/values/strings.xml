@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="xiaoxi">消息</string>
+    <string name="zuijin">最近联系人</string>
+    <string name="pinglun">评论</string>
+    <string name="dianzan">点赞</string>
+    <string name="zande">赞的</string>
+    <string name="tongzhi">通知</string>
+    <string name="tidao">提到你的</string>
+    <string name="zuji">足迹</string>
+    <string name="shouye">首页</string>
+    <string name="shequ">社区</string>
+    <string name="wode">我的</string>
+    <string name="zan">赞了</string>
+    <string name="huifu">回复</string>
+    <string name="fasong">发送</string>
+    <string name="tidaole">提到了</string>
+    <string name="geren">个人头像</string>
+    <string name="paizhao">拍照</string>
+    <string name="cong">从个人相册选择</string>
+    <string name="baocun">保存图片</string>
+    <string name="quxiao">取消</string>
+    <string name="guanzhu">关注了</string>
+    <string name="shezhimima">设置足迹密码</string>
+    <string name="shoujihao">手机号/足迹号</string>
+    <string name="zujihao">足迹号</string>
+    <string name="qing">请设置足迹密码</string>
+    <string name="shezhi">设置</string>
+    <string name="gerenziliao">个人资料</string>
+    <string name="zhanghao">账号管理</string>
+    <string name="qingkong">清空缓存</string>
+    <string name="gongkai">公开地理位置</string>
+    <string name="gongkaiwode">公开我的收藏</string>
+    <string name="guanyuwomen">关于我们</string>
+    <string name="jiance">检测更新</string>
+    <string name="yijian">意见反馈</string>
+    <string name="mima">密码</string>
+    <string name="caidan">菜单</string>
+    <string name="sd">s</string>
+    <string name="queren">确认密码</string>
+    <string name="zaici">请再次确认</string>
+    <string name="ni">你</string>
+    <string name="guanyu">关于足迹</string>
+    <string name="banben">v.1.1.1.001</string>
+    <string name="gongneng">功能介绍</string>
+    <string name="bangzhu">帮助</string>
+    <string name="fankiu">反馈</string>
+    <string name="dui">对我而言可爱的她</string>
+    <string name="shijian">10分钟前</string>
+    <string name="zushiye">祖师爷:</string>
+    <string name="dongtai">一路向北，只为在最美丽的季节与你相遇。</string>
+    <string name="nide">你的动态</string>
+    <string name="pingjia">心悦君兮知不知</string>
+    <string name="duihua">没有你，良辰美景更与何人说。</string>
+    <string name="xieyi">足迹软件许可及服务协议</string>
+    <string name="bianhao">copyright@ 2009-20105 Tencent All Ringhts Reserved</string>
     <string name="app_name">足迹</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -8,20 +62,29 @@
     <string name="community">社区</string>
     <string name="message">消息</string>
     <string name="my">我的</string>
-    <string name="chuangkou_content">每个窗口都是一个\n独特的视觉系统</string><!-- \n 换行 --><!-- \t空格一个字符 -->
-	<string name="publicpraise_title">口碑风景</string>
-	<string name="hot_yingji_title">热门影集</string>
-	<string name="comment_name">左手倒影</string>
-	<string name="junmo">君莫笑</string>
-	<string name="yonghu_id">ID:123456789</string>
-	<string name="hot_content_title">四季灿烂每时每刻</string>
-	<string name="shouye_content_title">片单 |每个窗口都是一个独特的视觉系统</string>
-	<string name="shouye_zuoze_name">作者：kitty</string>
-	<string name="shouye_zhuanzai_shengming">本文为足迹编辑部独家稿件，未经允许请勿转载</string>
-	<string name="shouye_zuji_content_miaoshu">视觉传达设计系在其发展历史上形成了在国内外具有广泛影响的师资队伍和学术带头人，其师资队伍的整体实力可以成为东北地区高校艺术设计教学的领军团队，老、中、青教学梯队建设比较合理，骨干教师均具有丰富的教学经验，其教学、科研成果在国内同类院校的相关领域中占有重要的学术地位。在社会需求旺盛，招生量连年提高的形势下，对离、退休及校外教师资源的合理利用是保证教学质量、推动学科建设的重要环节。对校外教师资源使用将建立国内外两套机制，一方面建立聘请国际知名 的外国学者前来讲学、交流及互访的机制，另一方面与国内相关院校及学者建立客座教师的互助机制，确保各学科的知识融汇和更新频率与国内外相关领域同步。</string>
-	<string name="zuji_tuijian">足迹推荐</string>
-	<string name="zuji_content_title">黄河之水天上来，奔流到海不复回</string>
-	<string name="zuji_content_scenery_miaoshu">\t\t壶口瀑布，国家级风景名胜区，国家AAAA级旅游景区，国家地质公园。 东濒山洗省临汾市吉县壶口镇，西临陕西省延安市宜川县壶口乡，为两省共有旅游景区。北距山西太原387千米;南距陕西西安449千米。\n\t\t壶口瀑布是中国第二大瀑布，世界上最大的黄色瀑布。在水量很大的夏季，壶口瀑布气势恢宏；而到了冬季，整个水面全部冰冻，结出罕见的巨大冰瀑。\n\t\t2014年12月6日前后，由于受持续降温天气影响，黄河壶口瀑布出现流凌、冰挂景观。</string>
-	<string name="zuji_tuijian_content_title">五岳归来不看山，黄山归来不看岳</string>
-	<string name="zuji_tuijian_content_scenery_miaoshu">\t\t黄山，世界文化与自然双重遗产、世界地质公园、国家AAAAA级旅游风景区、国家级风景名胜区、全国文明风景旅游区示范点。\n\t\t黄山位于安徽省南部黄山市境内（景区由市直辖），是安徽省旅游的标志，系中国十大风景名胜中唯一的山岳风光。\n\t\t黄山原名黟山，因峰岩青黑，遥望苍黛而名。后因传说轩辕黄帝曾在此炼丹，故改名为"黄山"。明朝旅行家徐霞客登临黄山时候，曾对黄山的秀丽赞叹：“博海内外之名山，无如徽之黄山，天下无山，关止矣！”被后人引申为“五岳归来不看山，黄山归来不看岳”。</string>
+    <string name="chuangkou_content">每个窗口都是一个\n独特的视觉系统</string>
+    
+ <!-- \n 换行 -->
+    <!-- \t空格一个字符 -->
+    <string name="publicpraise_title">口碑风景</string>
+    <string name="hot_yingji_title">热门影集</string>
+    <string name="comment_name">左手倒影</string>
+    <string name="junmo">君莫笑</string>
+    <string name="yonghu_id">ID:123456789</string>
+    <string name="hot_content_title">四季灿烂每时每刻</string>
+    <string name="shouye_content_title">片单 |每个窗口都是一个独特的视觉系统</string>
+    <string name="shouye_zuoze_name">作者：kitty</string>
+    <string name="shouye_zhuanzai_shengming">本文为足迹编辑部独家稿件，未经允许请勿转载</string>
+    <string name="shouye_zuji_content_miaoshu">视觉传达设计系在其发展历史上形成了在国内外具有广泛影响的师资队伍和学术带头人，其师资队伍的整体实力可以成为东北地区高校艺术设计教学的领军团队，老、中、青教学梯队建设比较合理，骨干教师均具有丰富的教学经验，其教学、科研成果在国内同类院校的相关领域中占有重要的学术地位。在社会需求旺盛，招生量连年提高的形势下，对离、退休及校外教师资源的合理利用是保证教学质量、推动学科建设的重要环节。对校外教师资源使用将建立国内外两套机制，一方面建立聘请国际知名 的外国学者前来讲学、交流及互访的机制，另一方面与国内相关院校及学者建立客座教师的互助机制，确保各学科的知识融汇和更新频率与国内外相关领域同步。</string>
+    <string name="zuji_tuijian">足迹推荐</string>
+    <string name="zuji_content_title">黄河之水天上来，奔流到海不复回</string>
+    <string name="zuji_content_scenery_miaoshu">\t\t壶口瀑布，国家级风景名胜区，国家AAAA级旅游景区，国家地质公园。 东濒山洗省临汾市吉县壶口镇，西临陕西省延安市宜川县壶口乡，为两省共有旅游景区。北距山西太原387千米;南距陕西西安449千米。\n\t\t壶口瀑布是中国第二大瀑布，世界上最大的黄色瀑布。在水量很大的夏季，壶口瀑布气势恢宏；而到了冬季，整个水面全部冰冻，结出罕见的巨大冰瀑。\n\t\t2014年12月6日前后，由于受持续降温天气影响，黄河壶口瀑布出现流凌、冰挂景观。</string>
+    <string name="zuji_tuijian_content_title">五岳归来不看山，黄山归来不看岳</string>
+    <string name="zuji_tuijian_content_scenery_miaoshu">\t\t黄山，世界文化与自然双重遗产、世界地质公园、国家AAAAA级旅游风景区、国家级风景名胜区、全国文明风景旅游区示范点。\n\t\t黄山位于安徽省南部黄山市境内（景区由市直辖），是安徽省旅游的标志，系中国十大风景名胜中唯一的山岳风光。\n\t\t黄山原名黟山，因峰岩青黑，遥望苍黛而名。后因传说轩辕黄帝曾在此炼丹，故改名为"黄山"。明朝旅行家徐霞客登临黄山时候，曾对黄山的秀丽赞叹：“博海内外之名山，无如徽之黄山，天下无山，关止矣！”被后人引申为“五岳归来不看山，黄山归来不看岳”。</string>
+	<string name="step1">fdgh</string>
+	<string name="step2">fdgh</string>
+	<string name="step3">fdgh</string>
+	<string name="step4">fdgh</string>
+	
+	
 </resources>
