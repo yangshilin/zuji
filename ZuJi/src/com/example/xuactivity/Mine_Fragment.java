@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
@@ -22,9 +23,11 @@ import com.example.xuAdapterclass.MyCollectAdapter;
 import com.example.xuAdapterclass.MyFabuAdapter;
 import com.example.xuAdapterclass.Release;
 import com.example.zuji.R;
+import com.example.zuji.SheZhiActivity;
 
 public class Mine_Fragment extends Fragment {
 
+	ImageButton shezhi;
 	Button btnzujitime;
 
 	ListView shoucang_listview;
@@ -79,7 +82,22 @@ public class Mine_Fragment extends Fragment {
 		layout_shoucang.setVisibility(layout_shoucang.GONE);
 		layout_zhuye.setVisibility(layout_zhuye.VISIBLE);
 		layout_fabu.setVisibility(layout_fabu.GONE);
+		shezhi = (ImageButton) v.findViewById(R.id.set);
+		shezhi.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (v.getId() == R.id.set) {
+					Intent intent = new Intent(getActivity(),
+							SheZhiActivity.class);
+					startActivity(intent);
+				}
+
+			}
+		});
 		return v;
+
 	}
 
 	OnCheckedChangeListener checkedChangeListener = new OnCheckedChangeListener() {

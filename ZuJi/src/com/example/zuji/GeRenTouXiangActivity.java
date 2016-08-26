@@ -1,5 +1,6 @@
 package com.example.zuji;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +9,10 @@ import java.util.Map;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,11 +29,8 @@ public class GeRenTouXiangActivity extends Activity {
 	private final int xuanze = 1;
 	private final int baocun = 2;
 	private final int quxiao = 3;
-
 	ImageButton touxiangReturn;
 	LinearLayout xuanzedialog;
-
-	AlertDialog menuDialog;
 	GridView gridview;
 
 	@Override
@@ -57,6 +58,7 @@ public class GeRenTouXiangActivity extends Activity {
 				break;
 			case R.id.caidan_touxiang:
 				showMenu();
+				
 				break;
 
 			default:
@@ -88,9 +90,7 @@ public class GeRenTouXiangActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (position) {
 			case paizhao:
-				Intent intent = new Intent(GeRenTouXiangActivity.this,
-						SheZhiActivity.class);
-				startActivity(intent);
+				
 				break;
 			case xuanze:
 				Intent intent2 = new Intent(GeRenTouXiangActivity.this,
@@ -113,5 +113,12 @@ public class GeRenTouXiangActivity extends Activity {
 		}
 
 	};
-
+	/*public void getPhoto(View v){//拍照
+		Intent intent = new Intent();intent.setAction("android.media.action.IMAGE_CAPTURE");
+		intent.addCategory("android.intent.category.DEFAULT");
+		 File file = new File(Environment.getExternalStorageDirectory()+"/000.jpg"); 
+		 Uri uri = Uri.fromFile(file);
+		 intent.putExtra(MediaStore.EXTRA_OUTPUT, uri); 
+		this.startActivity(intent);
+}*/
 }
