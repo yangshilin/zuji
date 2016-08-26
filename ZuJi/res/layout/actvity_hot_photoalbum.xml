@@ -11,7 +11,7 @@
         android:background="@color/deegreen" >
 
         <ImageButton
-            android:id="@+id/scenery_comment_fanhuiBtn"
+            android:id="@+id/hot_yingji_fanhuiBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -19,7 +19,7 @@
             android:src="@drawable/back_white" />
 
         <TextView
-            android:id="@+id/scenery_comment_title"
+            android:id="@+id/hot_yingji_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

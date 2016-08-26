@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
 public class SceneryCommentContentActivity extends Activity {
@@ -35,7 +36,7 @@ public class SceneryCommentContentActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.scenery_comment_content_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
 				Intent intent = new Intent(SceneryCommentContentActivity.this,
-						null);
+						BottonNavigationActivity.class);
 				startActivity(intent);// start开始 执行Intent意图【跳转】
 				break;
 

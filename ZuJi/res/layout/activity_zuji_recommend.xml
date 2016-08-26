@@ -197,6 +197,7 @@
             android:layout_weight="8"
             android:background="@drawable/edit_text_background"
             android:hint="快来评论一番吧~"
+            android:textColor="@color/black"
             android:textColorHint="@color/deepgray"
             android:textSize="12sp" />
 

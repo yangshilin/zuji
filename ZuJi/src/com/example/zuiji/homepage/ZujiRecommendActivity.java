@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
 public class ZujiRecommendActivity extends Activity{
@@ -40,7 +41,7 @@ public class ZujiRecommendActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.zuji_recommend_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
-				Intent intent = new Intent(ZujiRecommendActivity.this,null);
+				Intent intent = new Intent(ZujiRecommendActivity.this,BottonNavigationActivity.class);
 				startActivity(intent);// start开始 执行Intent意图【跳转】
 				
 				break;

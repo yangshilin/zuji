@@ -20,6 +20,7 @@ public class HomepageFragment extends Fragment{
 	TextView qiandao;
 	TextView fengjing;
 	TextView gengduofengjing;
+	ImageView gengduoBtn;
 	TextView tuijian;
 	TextView yingji;
 	
@@ -33,11 +34,13 @@ public class HomepageFragment extends Fragment{
 		edt = (EditText)view.findViewById(R.id.homepage_edit_text);
 		fengjing =(TextView)view.findViewById(R.id.homepage_fengjing);
 		gengduofengjing = (TextView)view.findViewById(R.id.homepage_gengduo_fengjing);
+		gengduoBtn = (ImageView)view.findViewById(R.id.homepage_genduo_koubei_Btn);
 		tuijian = (TextView)view.findViewById(R.id.homepage_tuijian);
 		yingji =(TextView)view.findViewById(R.id.homepage_hot);
 		
 		fengjing.setOnClickListener(onClickListener);
 		gengduofengjing.setOnClickListener(onClickListener);
+		gengduoBtn.setOnClickListener(onClickListener);
 		tuijian.setOnClickListener(onClickListener);
 		yingji.setOnClickListener(onClickListener);
 		return view;
@@ -53,12 +56,16 @@ public class HomepageFragment extends Fragment{
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.homepage_fengjing:// id执行 //当前上下文//跳转指定的界面
-				Intent fengjing = new Intent(getActivity(),null);
+				Intent fengjing = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing);//start开始 执行Intent意图【跳转】
 				break;
 			case R.id.homepage_gengduo_fengjing:
 				Intent gengduofengjing = new Intent(getActivity(),SceneryCommentContentActivity.class);
 				startActivity(gengduofengjing);
+				break;
+			case R.id.homepage_genduo_koubei_Btn:
+				Intent gengduoBtn = new Intent(getActivity(),SceneryCommentContentActivity.class);
+				startActivity(gengduoBtn);
 				break;
 			case R.id.homepage_tuijian:
 				Intent tuijian = new Intent(getActivity(),ZujiRecommendActivity.class);
