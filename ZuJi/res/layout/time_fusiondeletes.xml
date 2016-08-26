@@ -50,6 +50,7 @@
             android:src="@drawable/pull_down" />
 
         <Button
+            android:id="@+id/bt_inpast"
             android:layout_width="40dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"

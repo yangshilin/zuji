@@ -13,7 +13,7 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class Minefans extends Activity {
+public class MinefansActivity extends Activity {
 	ListView minefans_listview;
 	SimpleAdapter saAdapter;
 	List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();

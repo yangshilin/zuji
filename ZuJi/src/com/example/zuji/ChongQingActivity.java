@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -38,8 +39,8 @@ public class ChongQingActivity extends Activity {
 		cq_list_left.setAdapter(meiShiAdapte_left);
 		cq_list_right = (NotScrollListView) findViewById(R.id.cq_listview_right);
 		MeiShiAdapter meiShiAdapte_right = new MeiShiAdapter(
-				getApplicationContext(), cq_data_right, R.layout.listview_right,
-				from, to);
+				getApplicationContext(), cq_data_right,
+				R.layout.listview_right, from, to);
 		cq_list_right.setAdapter(meiShiAdapte_right);
 		cq_back = (ImageView) findViewById(R.id.cq_back);
 		cq_back.setOnClickListener(clickListener);
@@ -51,7 +52,8 @@ public class ChongQingActivity extends Activity {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.cq_back:
-
+				startActivity(new Intent(ChongQingActivity.this,
+						BottonNavigationActivity.class));
 				break;
 
 			default:
@@ -59,6 +61,7 @@ public class ChongQingActivity extends Activity {
 			}
 		}
 	};
+
 	public void getDataForLeft() {
 		cq_data_left = new ArrayList<Map<String, Object>>();
 		Map<String, Object> data_item = new HashMap<String, Object>();
