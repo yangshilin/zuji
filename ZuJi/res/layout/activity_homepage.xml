@@ -2,30 +2,385 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/deegreen"
-        android:gravity="center"
-        android:text="@string/homepage"
-        android:textColor="@color/ivory"
-        android:textSize="20sp"/>
+    android:orientation="vertical" 
+>
 
- 
-      
-    <ListView
-        android:id="@+id/homepageh_listview"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/deegreen"
+                android:gravity="center"
+                android:text="@string/homepage"
+                android:textColor="@color/ivory"
+                android:textSize="20sp" />
+
+     <ScrollView
+        android:id="@+id/homepageh_scrollview"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:background="@null"
-        android:cacheColorHint="@null"
-        android:divider="@null"
-        android:dividerHeight="10dp"
-        android:scrollbars="none" >
-     </ListView>
- 
-    
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/danhuise"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="240dp" 
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/homepage_header_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:alpha="0.3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/new_york_stock_exchange" />
+
+                <EditText
+                    android:id="@+id/homepage_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/edit_text_background"
+                    android:gravity="center"
+                    android:hint="搜索"
+                    android:textColorHint="@color/darkgray"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/homepage_window_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/homepage_edit_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+            		android:layout_marginLeft="80dp"
+            		android:layout_marginRight="80dp"
+            		android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/new_york_stock_exchange" />
+
+                <!-- android:scaleType="centerCrop"  图片居中放大 -->
+
+                <TextView
+                    android:id="@+id/homepage_window_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/homepage_window_image"
+                    android:layout_alignLeft="@id/homepage_window_image"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/chuangkou_content"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/homepage_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/homepage_header_image"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:alpha="0.2"
+                    android:src="@drawable/sign_in_background" />
+
+                <!--
+         <ImageView
+         android:id="@+id/homepage_sign_in"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/sign_in_miaobiao"
+         android:alpha="0.9"
+         android:layout_alignBottom="@id/homepage_header_image"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="20dp" />
+                -->
+
+                <TextView
+                    android:id="@+id/homepage_text_qiandao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/homepage_sign_in"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="26dp"
+                    android:text="签到"
+                    android:textColor="@color/darkgray" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" 
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2" >
+
+                    <View
+                        android:id="@+id/view_1"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/deegreen" />
+
+                    <TextView
+                        android:id="@+id/homepage_fengjing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/view_1"
+                        android:text="@string/publicpraise_title"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/homepage_koubei_viewone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/homepage_koubei_image2" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/homepage_koubei_viewtwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/homepage_koubei_image3" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/homepage_koubei_viewthree"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/homepage_koubei_image1" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2" >
+
+                    <TextView
+                        android:id="@+id/homepage_gengduo_fengjing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="更多口碑风景"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/homepage_genduo_koubei_Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:src="@drawable/rub_course_more_icon" />
+                </RelativeLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/qianhuise"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2" >
+
+                    <View
+                        android:id="@+id/view_2"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/darkkhaki" />
+
+                    <TextView
+                        android:id="@+id/homepage_tuijian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/view_2"
+                        android:text="@string/zuji_tuijian"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/homepage_tuijian_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/homepage_footprint_recommend" />
+                
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/qianhuise"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2" >
+
+                    <View
+                        android:id="@+id/view_3"
+                        android:layout_width="3dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/darkcyan" />
+
+                    <TextView
+                        android:id="@+id/homepage_hot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/view_3"
+                        android:text="@string/hot_yingji_title"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="8"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                         android:id="@+id/homepage_hot_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/homepage_hot_photo_album_image1" />
+					<View android:layout_width="fill_parent"
+					    android:layout_height="2dp"/>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <ImageView
+                                 android:id="@+id/homepage_hot_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/homepage_hot_photo_album_image2" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <ImageView
+                                 android:id="@+id/homepage_hot_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/homepage_hot_photo_album_image3" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="fill_parent" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <ImageView
+                                 android:id="@+id/homepage_hot_frou"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/homepage_hot_photo_album_image4" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/qianhuise"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.zuji;
 
 import com.example.xuactivity.Mine_Fragment;
+import com.example.zuiji.homepage.HomepageFragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class BottonNavigationActivity extends FragmentActivity {
 	SheQu_Fragment shequ_fragment = new SheQu_Fragment();
 	Fragment_XiaoXi fragment_XiaoXi = new Fragment_XiaoXi();
 	Mine_Fragment mine_Fragment = new Mine_Fragment();
+	HomepageFragment homepageFragment = new HomepageFragment();
 	FragmentManager fm = getSupportFragmentManager();
 	ImageButton camera;// 相机
 
@@ -38,6 +40,7 @@ public class BottonNavigationActivity extends FragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);// 去掉标题拦
 		setContentView(R.layout.activity_botton_navigation);
 		// setFragment(R.id.btn_homepage);
+
 		replace_layout = (LinearLayout) findViewById(R.id.replace_layout);
 		radioGroup = (RadioGroup) findViewById(R.id.navigation_radiogroup);
 		radioGroup.setOnCheckedChangeListener(CheckedChangeListener);// 选中改变的监听
@@ -47,7 +50,8 @@ public class BottonNavigationActivity extends FragmentActivity {
 		btn_my = (RadioButton) findViewById(R.id.btn_my);
 		camera = (ImageButton) findViewById(R.id.camera_btn);
 		camera.setOnClickListener(xiangji);
-
+		setFragment(R.id.btn_homepage);
+		setchecked(R.id.btn_homepage);
 	}
 
 	OnCheckedChangeListener CheckedChangeListener = new OnCheckedChangeListener() {
@@ -64,128 +68,111 @@ public class BottonNavigationActivity extends FragmentActivity {
 			}
 		}
 
-		private void setchecked(int Id) {
-			switch (Id) {
-			case R.id.btn_homepage:
-				btn_homepage
-						.setCompoundDrawablesWithIntrinsicBounds(
-								null,
-								getResources().getDrawable(
-										R.drawable.homepage_ischeck), null,
-								null);// 选中图片更换为 靓图
-				btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.shequ), null,
-						null);
-				btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.message), null,
-						null);
-				btn_my.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.my), null, null);
-				btn_homepage.setTextColor(getResources().getColor(
-						R.color.deegreen));// 选中为深蓝色
-				btn_community.setTextColor(getResources().getColor(
-						R.color.black));// 未选中为黑色
-				btn_message
-						.setTextColor(getResources().getColor(R.color.black));
-				btn_my.setTextColor(getResources().getColor(R.color.black));
-				break;
-			case R.id.btn_community:
-				btn_homepage.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.homepage), null,
-						null);
-				btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.shequ_ischeck),
-						null, null);
-				btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.message), null,
-						null);
-				btn_my.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.my), null, null);
-
-				btn_homepage.setTextColor(getResources()
-						.getColor(R.color.black));
-				btn_community.setTextColor(getResources().getColor(
-						R.color.deegreen));
-				btn_message
-						.setTextColor(getResources().getColor(R.color.black));
-				btn_my.setTextColor(getResources().getColor(R.color.black));
-				break;
-			case R.id.btn_message:
-				btn_homepage.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.homepage), null,
-						null);
-				btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.shequ), null,
-						null);
-				btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.message_ischeck),
-						null, null);
-				btn_my.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.my), null, null);
-
-				btn_homepage.setTextColor(getResources()
-						.getColor(R.color.black));
-				btn_community.setTextColor(getResources().getColor(
-						R.color.black));
-				btn_message.setTextColor(getResources().getColor(
-						R.color.deegreen));
-				btn_my.setTextColor(getResources().getColor(R.color.black));
-				break;
-			case R.id.btn_my:
-				btn_homepage.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.homepage), null,
-						null);
-				btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.shequ), null,
-						null);
-				btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.message), null,
-						null);
-				btn_my.setCompoundDrawablesWithIntrinsicBounds(null,
-						getResources().getDrawable(R.drawable.my_ischeck),
-						null, null);
-
-				btn_homepage.setTextColor(getResources()
-						.getColor(R.color.black));
-				btn_community.setTextColor(getResources().getColor(
-						R.color.black));
-				btn_message
-						.setTextColor(getResources().getColor(R.color.black));
-				btn_my.setTextColor(getResources().getColor(R.color.deegreen));
-				break;
-
-			default:
-				break;
-			}
-
-		}
-
-		private void setFragment(int R_id) {
-			// 碎片Manager管理人员——获得Support支持碎片管理
-			FragmentTransaction ft = fm.beginTransaction();// 碎片管理begin开始处理Transaction事物
-			switch (R_id) {
-			case R.id.btn_homepage:
-				ft.replace(R.id.replace_layout, null);// replace替换——【Fragment替换viewoager内容】
-				ft.commit();// commit委托
-				break;
-			case R.id.btn_community:
-				ft.replace(R.id.replace_layout, shequ_fragment);
-				ft.commit();
-				break;
-			case R.id.btn_message:
-				ft.replace(R.id.replace_layout, fragment_XiaoXi);
-				ft.commit();
-				break;
-			case R.id.btn_my:
-				ft.replace(R.id.replace_layout, mine_Fragment);
-				ft.commit();
-				break;
-			default:
-				break;
-			}
-		}
-
 	};
+
+	private void setchecked(int Id) {
+		switch (Id) {
+		case R.id.btn_homepage:
+			btn_homepage.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.homepage_ischeck),
+					null, null);// 选中图片更换为 靓图
+			btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.shequ), null, null);
+			btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.message), null, null);
+			btn_my.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
+					.getDrawable(R.drawable.my), null, null);
+			btn_homepage
+					.setTextColor(getResources().getColor(R.color.deegreen));// 选中为深蓝色
+			btn_community.setTextColor(getResources().getColor(R.color.black));// 未选中为黑色
+			btn_message.setTextColor(getResources().getColor(R.color.black));
+			btn_my.setTextColor(getResources().getColor(R.color.black));
+			break;
+		case R.id.btn_community:
+			btn_homepage
+					.setCompoundDrawablesWithIntrinsicBounds(null,
+							getResources().getDrawable(R.drawable.homepage),
+							null, null);
+			btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.shequ_ischeck), null,
+					null);
+			btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.message), null, null);
+			btn_my.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
+					.getDrawable(R.drawable.my), null, null);
+
+			btn_homepage.setTextColor(getResources().getColor(R.color.black));
+			btn_community.setTextColor(getResources()
+					.getColor(R.color.deegreen));
+			btn_message.setTextColor(getResources().getColor(R.color.black));
+			btn_my.setTextColor(getResources().getColor(R.color.black));
+			break;
+		case R.id.btn_message:
+			btn_homepage
+					.setCompoundDrawablesWithIntrinsicBounds(null,
+							getResources().getDrawable(R.drawable.homepage),
+							null, null);
+			btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.shequ), null, null);
+			btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.message_ischeck),
+					null, null);
+			btn_my.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
+					.getDrawable(R.drawable.my), null, null);
+
+			btn_homepage.setTextColor(getResources().getColor(R.color.black));
+			btn_community.setTextColor(getResources().getColor(R.color.black));
+			btn_message.setTextColor(getResources().getColor(R.color.deegreen));
+			btn_my.setTextColor(getResources().getColor(R.color.black));
+			break;
+		case R.id.btn_my:
+			btn_homepage
+					.setCompoundDrawablesWithIntrinsicBounds(null,
+							getResources().getDrawable(R.drawable.homepage),
+							null, null);
+			btn_community.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.shequ), null, null);
+			btn_message.setCompoundDrawablesWithIntrinsicBounds(null,
+					getResources().getDrawable(R.drawable.message), null, null);
+			btn_my.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
+					.getDrawable(R.drawable.my_ischeck), null, null);
+
+			btn_homepage.setTextColor(getResources().getColor(R.color.black));
+			btn_community.setTextColor(getResources().getColor(R.color.black));
+			btn_message.setTextColor(getResources().getColor(R.color.black));
+			btn_my.setTextColor(getResources().getColor(R.color.deegreen));
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+	private void setFragment(int R_id) {
+		// 碎片Manager管理人员——获得Support支持碎片管理
+		FragmentTransaction ft = fm.beginTransaction();// 碎片管理begin开始处理Transaction事物
+		switch (R_id) {
+		case R.id.btn_homepage:
+			ft.replace(R.id.replace_layout, homepageFragment);// replace替换——【Fragment替换viewoager内容】
+			ft.commit();// commit委托
+			break;
+		case R.id.btn_community:
+			ft.replace(R.id.replace_layout, shequ_fragment);
+			ft.commit();
+			break;
+		case R.id.btn_message:
+			ft.replace(R.id.replace_layout, fragment_XiaoXi);
+			ft.commit();
+			break;
+		case R.id.btn_my:
+			ft.replace(R.id.replace_layout, mine_Fragment);
+			ft.commit();
+			break;
+		default:
+			break;
+		}
+	}
 
 	OnClickListener xiangji = new OnClickListener() {
 
