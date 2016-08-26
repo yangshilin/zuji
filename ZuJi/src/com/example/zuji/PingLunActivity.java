@@ -50,7 +50,7 @@ public class PingLunActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.return_pinglun:
-				Intent intent=new Intent(PingLunActivity.this,Fragment_XiaoXi.class);
+				Intent intent=new Intent(PingLunActivity.this,BottonNavigationActivity.class);
 				startActivity(intent);
 				break;
 			default:

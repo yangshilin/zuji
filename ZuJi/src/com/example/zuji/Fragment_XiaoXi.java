@@ -45,11 +45,10 @@ public class Fragment_XiaoXi extends Fragment {
 		dianzantext = (LinearLayout) header.findViewById(R.id.dianzan_xiaoxi);
 		tongzhitext = (LinearLayout) header.findViewById(R.id.tongzhi_xiaoxi);
 		tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		//tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		btn1 = (ImageButton) header.findViewById(R.id.btn1);
+		/*btn1 = (ImageButton) header.findViewById(R.id.btn1);
 		btn2 = (ImageButton) header.findViewById(R.id.btn2);
 		btn3 = (ImageButton) header.findViewById(R.id.btn3);
-		btn4 = (ImageButton) header.findViewById(R.id.btn4);
+		btn4 = (ImageButton) header.findViewById(R.id.btn4);*/
 		listview.addHeaderView(header);// 添加头视图
 		getData();
 		adapter = new XiaoXiAdapter(getActivity(), xiaoxiList,
@@ -61,7 +60,7 @@ public class Fragment_XiaoXi extends Fragment {
 		tidaotext.setOnClickListener(onClickListener);
 		xiaoxiReturn.setOnClickListener(onClickListener);
 		listview.setOnItemClickListener(new OnItemClickListener(){
-
+			//listview的监听事件
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {

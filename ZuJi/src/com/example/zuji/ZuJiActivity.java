@@ -1,8 +1,10 @@
 package com.example.zuji;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ import android.widget.Toast;
 import com.example.zuji.adapter.ZuJiAdapter;
 import com.example.zuji.javaclass.ZuJi;
 
+@SuppressLint("SimpleDateFormat")
 public class ZuJiActivity extends Activity {
 	private TextView fasongText = null;
 	private EditText zujiEditText = null;
@@ -25,6 +28,7 @@ public class ZuJiActivity extends Activity {
 	private List<ZuJi> zujiList = null;
 	private ZuJiAdapter zujiAdapter = null;
 	ImageButton zujiReturn;
+	TextView timetext;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,7 @@ public class ZuJiActivity extends Activity {
 		zujiEditText = (EditText) this.findViewById(R.id.zuji_edittext);
 		fasongText = (TextView) this.findViewById(R.id.zuji_fasong);
 		zujiReturn = (ImageButton) this.findViewById(R.id.zuji_return);
-
+		timetext=(TextView)findViewById(R.id.zuji_time);
 		zujiListView = (ListView) this.findViewById(R.id.duihua_listview);
 
 		zujiList = new ArrayList<ZuJi>();
@@ -71,14 +75,15 @@ public class ZuJiActivity extends Activity {
 				if (!zujiEditText.getText().toString().equals("")) {
 					// 发送消息
 					send();
+					
 				} else {
-					Toast.makeText(ZuJiActivity.this, "Content is empty",
+					Toast.makeText(ZuJiActivity.this, "不能发送空白消息",
 							Toast.LENGTH_SHORT).show();
 				}
 
 				break;
 			case R.id.zuji_return:
-					Intent intent=new Intent(ZuJiActivity.this,Fragment_XiaoXi.class);
+					Intent intent=new Intent(ZuJiActivity.this,BottonNavigationActivity.class);
 					startActivity(intent);
 				break;
 			default:
@@ -90,7 +95,8 @@ public class ZuJiActivity extends Activity {
 
 	private void send() {
 		ZuJi zuji = new ZuJi();
-		zuji.setZujitime("2012-09-20 15:16:34");
+		zuji.setZujitime("");
+		
 		zuji.setContent(zujiEditText.getText().toString());
 		zuji.setComeMsg(false);
 		zujiList.add(zuji);
@@ -98,5 +104,11 @@ public class ZuJiActivity extends Activity {
 		zujiListView.setSelection(zujiList.size() - 1);
 		zujiEditText.setText("");
 	}
-
+	/*public String getTime(){
+		SimpleDateFormat   sDateFormat   =   new   SimpleDateFormat("yyyy-MM-dd   hh:mm:ss");     
+		String   date   =   sDateFormat.format(new   java.util.Date());
+		return date;
+	}*/
+	
+	
 }

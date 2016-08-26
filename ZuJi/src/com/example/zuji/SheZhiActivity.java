@@ -1,5 +1,7 @@
 package com.example.zuji;
 
+import com.example.xuactivity.Mine_Fragment;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,13 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class SheZhiActivity extends Activity{
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.shezhi);
-	}
-	/*ImageButton shizhiReturn;
+	
+	ImageButton shizhiReturn;
 	ImageView weizhibtn,shoucangbtn;
 	LinearLayout ziliao,guangli,huancun,guanyu,gengxing,yijian;
 	@Override
@@ -28,7 +25,7 @@ public class SheZhiActivity extends Activity{
 		setContentView(R.layout.shezhi);
 		
 		shizhiReturn=(ImageButton)findViewById(R.id.zhezhi_return);
-		weizhibtn=(ImageView)findViewById(R.id.weishi_shezhi);
+		weizhibtn=(ImageView)findViewById(R.id.weizhi_shezhi);
 		shoucangbtn=(ImageView)findViewById(R.id.shouchang_shezhi);
 		ziliao=(LinearLayout)findViewById(R.id.ziliao_linear);
 		guangli=(LinearLayout)findViewById(R.id.guanli_linear);
@@ -54,26 +51,39 @@ public class SheZhiActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.zhezhi_return:
+				Intent intent1=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				startActivity(intent1);
 				break;
-			case R.id.weishi_shezhi:
+			case R.id.weizhi_shezhi:
+				
 				break;
 			case R.id.shouchang_shezhi:
 				break;
 			case R.id.ziliao_linear:
+				Intent intent2=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				startActivity(intent2);
 				break;
 			case R.id.guanli_linear:
+				Intent intent3=new Intent(SheZhiActivity.this,SheZhiZuJiMiMaActivity.class);
+				startActivity(intent3);
 				break;
 			case R.id.fancun_linear:
+				Intent intent4=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				startActivity(intent4);
 				break;
 			case R.id.guanyu_linear:
-				Intent intent=new Intent(SheZhiActivity.this,GuanYuZuJiActivity.class);
-				startActivity(intent);
+				Intent intent5=new Intent(SheZhiActivity.this,GuanYuZuJiActivity.class);
+				startActivity(intent5);
 				break;
 			case R.id.gengxin_linear:
+				Intent intent6=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				startActivity(intent6);
 				break;
 			case R.id.fankiu_linear:
+				Intent intent7=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				startActivity(intent7);
 				break;
 			}
 		}
-	};*/
+	};
 }

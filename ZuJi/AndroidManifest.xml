@@ -11,7 +11,9 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher" >
-        <activity android:name="com.example.zuji.BottonNavigationActivity" >
+        <activity
+            android:name="com.example.zuji.BottonNavigationActivity"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,19 +25,23 @@
         <activity android:name="com.example.zuji.PingLunActivity" >
         </activity>
         <activity android:name="com.example.zuji.ZuJiActivity" >
-        </activity>
+        </activity> 
         <activity android:name="com.example.zuji.TiDaoActivity" >
         </activity>
         <activity android:name="com.example.zuji.TongZhiActivity" >
         </activity>
         <activity android:name="com.example.zuji.ChongQingActivity" >
         </activity>
+         <activity android:name="com.example.zuji.SheZhiActivity" >
+        </activity>
+         <activity android:name="com.example.zuji.SheZhiZuJiMiMaActivity" >
+        </activity>
         <activity android:name="com.example.zuji.DynamicActivity" >
         </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-         <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
-        </activity> 
+        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
+        </activity>
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>
         <activity android:name="com.example.zuji.MeiShiActivity" >
