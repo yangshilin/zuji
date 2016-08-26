@@ -11,7 +11,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher" >
-        <activity android:name="com.example.zuji.XiaoXiActivity" >
+        <activity android:name="com.example.zuji.BottonNavigationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +37,28 @@
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>
         <activity android:name="com.example.zuji.MeiShiActivity" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Minefans" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Minefocus" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Timefusiondeletes" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Timeinthepast_activity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.HomepageZuji" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.HotPhotoalbumActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.SceneryCommentActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.SceneryCommentContentActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendTwoActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.seekActivity" >
         </activity>
     </application>
 
