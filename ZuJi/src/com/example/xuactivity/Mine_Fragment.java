@@ -24,7 +24,9 @@ import com.example.xuAdapterclass.Release;
 import com.example.zuji.R;
 
 public class Mine_Fragment extends Fragment {
+
 	Button btnzujitime;
+
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
@@ -46,16 +48,20 @@ public class Mine_Fragment extends Fragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_mine, null);
-		btnzujitime=(Button) v.findViewById(R.id.btnzujitime);
+
+		btnzujitime = (Button) v.findViewById(R.id.btnzujitime);
 		btnzujitime.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-			Intent  intent=new Intent(getActivity(),TimefusiondeletesActivity.class);
-			startActivity(intent);
-				
+				Intent intent = new Intent(getActivity(),
+						TimefusiondeletesActivity.class);
+				startActivity(intent);
+
 			}
 		});
+
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
 		fabu_gridview = (GridView) v.findViewById(R.id.fabu_gridview);
+
 		getDataFabu();
 		getData();
 		adapter = new MyCollectAdapter(getActivity(),
@@ -65,7 +71,6 @@ public class Mine_Fragment extends Fragment {
 		adapterfabu = new MyFabuAdapter(getActivity(),
 				R.layout.mine_listview_release, idd, listfabu);
 		fabu_gridview.setAdapter(adapterfabu);
-
 		centre_radiogroup = (RadioGroup) v.findViewById(R.id.centre_radiogroup);
 		centre_radiogroup.setOnCheckedChangeListener(checkedChangeListener);
 		layout_zhuye = (LinearLayout) v.findViewById(R.id.layout_zhuye);
