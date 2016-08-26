@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_white"
+    android:gravity="bottom"
+    android:alpha="0.9"
+    android:orientation="vertical" >
+    <TextView
+        
+        style="@style/textSize2"
+        android:id="@+id/paizhao_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:text="@string/paizhao"/>
+     <TextView
+        style="@style/textSize2"
+        android:id="@+id/cong_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:text="@string/cong"/>
+    <TextView
+        style="@style/textSize2"
+        android:id="@+id/baocun_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:text="@string/baocun"/>
+    <TextView
+        style="@style/textSize2"
+        android:id="@+id/quexiao_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:text="@string/quxiao"/> 
+    
+</LinearLayout>

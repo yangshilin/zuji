@@ -5,23 +5,32 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+ >
         <activity
-            android:name="com.example.zuji.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.example.zuji.XiaoXiActivity"
+         >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.xuactivity.Timefusiondeletes"/>
+        <activity android:name="com.example.zuji.DianZanActivity"></activity>
+        <activity android:name="com.example.zuji.PingLunActivity"></activity>
+        <activity android:name="com.example.zuji.TiDaoActivity"></activity>
+        <activity android:name="com.example.zuji.TongZhiActivity"></activity>
+ 		<activity android:name="com.example.zuji.ChongQingActivity"></activity>
+ 		<activity android:name="com.example.zuji.DynamicActivity"></activity>
+ 		<activity android:name="com.example.zuji.DynamicSiBuSheYingActivity"></activity>
+ 		<activity android:name="com.example.zuji.GeRenTouXiangActivity"></activity>
+ 		<activity android:name="com.example.zuji.GuanYuZuJiActivity"></activity>
+ 		<activity android:name="com.example.zuji.MeiShiActivity"></activity>
     </application>
 
 </manifest>

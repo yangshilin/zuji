@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 未选中为false 所选的图片为灰色 -->
+	<item android:drawable="@drawable/message" 
+	    android:state_checked="false"/>
+	
+	<!-- 选中为true 所选的图片为点亮的图片颜色 -->
+	<item android:drawable="@drawable/message_ischeck"
+	    android:state_checked="true"/>
+</selector>
+<!-- selector 选择器标签 判断图片的切换 -->
