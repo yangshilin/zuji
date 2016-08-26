@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+       
+   <item android:state_pressed="true" android:color="@color/white"></item><!-- 当前选中【pressed按压】 -->  
+   <item android:color="@color/deegreen" android:state_checked="true" /><!--选中为@color里设置的深绿色  -->
+   <item android:color="@color/black" android:state_checked="false" /><!--选中为@color里设置的黑色  -->
+<!-- android:state_checked= 声明选中   进行切换颜色-->
+    
+
+</selector>

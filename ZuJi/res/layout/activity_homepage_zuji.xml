@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        
+        android:background="@color/deegreen" >
+
+        <ImageButton
+            android:id="@+id/homepage_zuju_fanhuiBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="20dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/scenery_comment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/homepage"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/homepage_zuju_fenxiangBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+           	android:background="@null"
+            android:padding="20dp"
+            android:src="@drawable/share_white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2" >
+
+        <ImageButton
+            android:id="@+id/shouye_zuju_touxiang"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:src="@drawable/focus_icon1" />
+
+        <TextView
+            android:id="@+id/shouye_zuju_bumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/shouye_zuju_touxiang"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/shouye_zuju_touxiang"
+            android:text="足迹编辑部"
+            android:textColor="@color/deegreen"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/shouye_zuju_fabushijia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shouye_zuju_touxiang"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/shouye_zuju_touxiang"
+            android:text="2016.03.09 11:30 发布，12968成员"
+            android:textColor="@color/deepgray"
+            android:textSize="10dp" />
+
+        <ImageButton
+            android:id="@+id/shouye_zuju_hongxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/homepage_ischeck" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" >
+
+        <ImageView
+            android:id="@+id/homepage_zuju_image"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:alpha="0.3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/new_york_stock_exchange" />
+
+        <ImageView
+            android:id="@+id/homepage_zuju_tupian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/new_york_stock_exchange" />
+
+        <!-- android:scaleType="centerCrop"  图片居中放大 -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2" >
+
+        <TextView
+            android:id="@+id/homepage_zuju_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shouye_content_title"
+            android:textColor="@color/darkblack"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@color/danhuise" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" >
+
+        <TextView
+            android:id="@+id/homepage_zuju_content_zuoze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/shouye_zuoze_name" />
+
+        <TextView
+            android:id="@+id/homepage_zuju_content_shengming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homepage_zuju_content_zuoze"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/shouye_zhuanzai_shengming"
+            android:textColor="@color/deepgray"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/homepage_zuju_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homepage_zuju_content_shengming"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/shouye_zuji_content_miaoshu"
+            android:textColor="@color/deepgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/homepage_zuji_edittext_pinglun"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/homepage_zuju_pinglun"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/qianhuise" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/qianhuise" />
+
+            <EditText
+                android:id="@+id/homepage_zuju_edittext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@null" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/qianhuise" />
+
+            <ImageButton
+                android:id="@+id/homepage_zuju_biaoqing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/pinglun_biaoqiang_image" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

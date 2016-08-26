@@ -10,11 +10,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
-        <activity
-            android:name="com.example.zuji.GeRenTouXiangActivity"
-            android:label="@string/app_name" >
+        android:icon="@drawable/ic_launcher" >
+        <activity android:name="com.example.zuji.BottonNavigationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,15 +26,39 @@
         </activity>
         <activity android:name="com.example.zuji.TongZhiActivity" >
         </activity>
-        <activity android:name="com.example.zuji.ZuJiActivity" >
+        <activity android:name="com.example.zuji.ChongQingActivity" >
         </activity>
-        <activity android:name="com.example.zuji.SheZhiActivity" >
+        <activity android:name="com.example.zuji.DynamicActivity" >
         </activity>
-        <activity android:name="com.example.zuji.ShezhiMimaActivity" >
+        <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-        <activity android:name="com.example.zuji.GuanYuActivity" >
+        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
         </activity>
-        <activity android:name="com.example.zuji.Activity" >
+        <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.MeiShiActivity" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Minefans" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Minefocus" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Timefusiondeletes" >
+        </activity>
+        <activity android:name="com.example.xuactivity.Timeinthepast_activity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.HomepageZuji" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.HotPhotoalbumActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.SceneryCommentActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.SceneryCommentContentActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendTwoActivity" >
+        </activity>
+        <activity android:name="com.example.zuiji.homepage.seekActivity" >
         </activity>
     </application>
 
