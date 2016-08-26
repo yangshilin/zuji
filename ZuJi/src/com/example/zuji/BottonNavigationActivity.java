@@ -21,7 +21,8 @@ public class BottonNavigationActivity extends FragmentActivity {
 	RadioButton btn_community;//社交
 	RadioButton btn_message;//消息
 	RadioButton btn_my;//我
-	
+	SheQu_Fragment shequ_fragment=new SheQu_Fragment();
+
 	ImageButton camera;//相机
 	
 	@Override
@@ -31,6 +32,7 @@ public class BottonNavigationActivity extends FragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题拦
 		setContentView(R.layout.activity_botton_navigation);
 		//setFragment(R.id.btn_homepage);
+		
 		radioGroup = (RadioGroup) findViewById(R.id.navigation_radiogroup);
 		radioGroup.setOnCheckedChangeListener(CheckedChangeListener);//选中改变的监听
 		btn_homepage = (RadioButton)findViewById(R.id.btn_homepage);
