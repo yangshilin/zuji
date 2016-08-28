@@ -50,6 +50,7 @@
                     android:gravity="center"
                     android:hint="搜索"
                     android:textColorHint="@color/darkgray"
+                    android:textColor="@color/black"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -140,6 +141,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_toRightOf="@id/view_1"
                         android:text="@string/publicpraise_title"
+                        android:textColor="@color/black"
                         android:textSize="15sp" />
                 </RelativeLayout>
 
@@ -210,6 +212,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="更多口碑风景"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
 
                     <ImageButton
@@ -256,6 +259,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_toRightOf="@id/view_2"
                         android:text="@string/zuji_tuijian"
+                        android:textColor="@color/black"
                         android:textSize="15sp" />
                 </RelativeLayout>
 
@@ -302,6 +306,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_toRightOf="@id/view_3"
                         android:text="@string/hot_yingji_title"
+                        android:textColor="@color/black"
                         android:textSize="15sp" />
                 </RelativeLayout>
 

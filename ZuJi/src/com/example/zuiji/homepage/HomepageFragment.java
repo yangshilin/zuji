@@ -60,15 +60,15 @@ public class HomepageFragment extends Fragment{
 				startActivity(fengjing);//start开始 执行Intent意图【跳转】
 				break;
 			case R.id.homepage_gengduo_fengjing:
-				Intent gengduofengjing = new Intent(getActivity(),SceneryCommentContentActivity.class);
+				Intent gengduofengjing = new Intent(getActivity(),SceneryMoreActivity.class);
 				startActivity(gengduofengjing);
 				break;
 			case R.id.homepage_genduo_koubei_Btn:
-				Intent gengduoBtn = new Intent(getActivity(),SceneryCommentContentActivity.class);
+				Intent gengduoBtn = new Intent(getActivity(),SceneryMoreActivity.class);
 				startActivity(gengduoBtn);
 				break;
 			case R.id.homepage_tuijian:
-				Intent tuijian = new Intent(getActivity(),ZujiRecommendActivity.class);
+				Intent tuijian = new Intent(getActivity(),ZujiRecommendHuangheActivity.class);
 				startActivity(tuijian);
 				break;
 			case R.id.homepage_hot:
