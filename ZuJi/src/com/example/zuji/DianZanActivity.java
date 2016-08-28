@@ -43,7 +43,7 @@ public class DianZanActivity extends Activity{
 				// TODO Auto-generated method stub
 				switch (v.getId()){
 				case R.id.return_dianzan:
-					Intent intent=new Intent(DianZanActivity.this,Fragment_XiaoXi.class);
+					Intent intent=new Intent(DianZanActivity.this,BottonNavigationActivity.class);
 					startActivity(intent);
 					break;
 				default:

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/hui"
+    android:background="@color/gray"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -26,11 +26,20 @@
             android:layout_centerInParent="true"
             android:text="@string/xiaoxi" />
     </RelativeLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray">
+        
     <ListView
         android:id="@+id/listview_xiaoxi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
     </ListView>
+    
+</LinearLayout>
+    
 
 </LinearLayout>
