@@ -51,7 +51,7 @@ public class SheZhiActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.zhezhi_return:
-				Intent intent1=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				Intent intent1=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
 				startActivity(intent1);
 				break;
 			case R.id.weizhi_shezhi:
@@ -60,7 +60,7 @@ public class SheZhiActivity extends Activity{
 			case R.id.shouchang_shezhi:
 				break;
 			case R.id.ziliao_linear:
-				Intent intent2=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				Intent intent2=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
 				startActivity(intent2);
 				break;
 			case R.id.guanli_linear:
@@ -68,7 +68,7 @@ public class SheZhiActivity extends Activity{
 				startActivity(intent3);
 				break;
 			case R.id.fancun_linear:
-				Intent intent4=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				Intent intent4=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
 				startActivity(intent4);
 				break;
 			case R.id.guanyu_linear:
@@ -76,11 +76,11 @@ public class SheZhiActivity extends Activity{
 				startActivity(intent5);
 				break;
 			case R.id.gengxin_linear:
-				Intent intent6=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				Intent intent6=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
 				startActivity(intent6);
 				break;
 			case R.id.fankiu_linear:
-				Intent intent7=new Intent(SheZhiActivity.this,Mine_Fragment.class);
+				Intent intent7=new Intent(SheZhiActivity.this,YiJianFanKiuActivity.class);
 				startActivity(intent7);
 				break;
 			}

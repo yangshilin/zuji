@@ -18,7 +18,7 @@
     </style>
 
     <style name="textSize3">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">13sp</item>
     </style>
 
     <style name="textSize">

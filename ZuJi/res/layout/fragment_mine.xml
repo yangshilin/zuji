@@ -185,10 +185,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:orientation="vertical" >
+        android:orientation="vertical" > 
 
         <ScrollView
             android:layout_width="match_parent"
+            android:background="#ffffff"
             android:layout_height="match_parent" >
 
             <LinearLayout
@@ -361,10 +362,13 @@
                     android:gravity="center"
                     android:text="查看足迹里的时光"
                     android:textSize="15sp" />
+                <View
+                    android:layout_height="150dp"
+                    android:layout_width="match_parent"
+                    android:background="#FFFFFF"/>
             </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
+         </ScrollView> 
+	</LinearLayout>
     <LinearLayout
         android:id="@+id/layout_fabu"
         android:layout_width="match_parent"

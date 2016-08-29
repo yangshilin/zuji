@@ -2,19 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingBottom="5dp" >
 
     <TextView
         android:id="@+id/zuji_time"
-        style="@style/textSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@color/gray_white"
         android:padding="2dp"
-        android:textColor="@color/white"/>
-
+        android:textSize="12sp" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -25,9 +24,9 @@
             android:id="@+id/user_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/collect_icon2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/collect_icon1"
             android:focusable="false" />
 
         <TextView
@@ -35,9 +34,9 @@
             style="@style/textSize2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/user_image"
+            android:layout_toLeftOf="@+id/user_image"
             android:background="@drawable/liaotian_beijingkuang"
             android:clickable="true"
             android:focusable="true"
@@ -45,10 +44,10 @@
             android:lineSpacingExtra="2dp"
             android:maxWidth="200dp"
             android:padding="5dp"
-            android:text="dgjsiarek"
+            android:text="kjhuesdnfjhcfoaedfnioas"
             android:textColor="@color/white" />
         <!--
-             android:background="@drawable/chatfrom_bg"
+            android:background="@drawable/chatfrom_bg"
              android:focusable 是否聚焦
              android：clickable 是否点击
              android:lineSpacingExtra  额外的线间距

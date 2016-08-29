@@ -5,11 +5,15 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.zuji.R;
 import com.example.zuji.javaclass.TiDaoNiDe;
 
 public class TiDaoNiDaAdapter extends BaseAdapter{
@@ -71,7 +75,7 @@ public class TiDaoNiDaAdapter extends BaseAdapter{
 			TextView userName=(TextView)convertView.findViewById(id[7]);
 			TextView userWords=(TextView)convertView.findViewById(id[8]);
 			TextView time=(TextView)convertView.findViewById(id[9]);
-			
+			LinearLayout dongtai=(LinearLayout)convertView.findViewById(R.id.tidao_linear);
 			TiDaoNiDe tidaonide=tidaonideList.get(position);
 			OthersImage.setImageResource(tidaonide.getOthersImage());
 			OthersName.setText(tidaonide.getOthersName());
@@ -83,7 +87,27 @@ public class TiDaoNiDaAdapter extends BaseAdapter{
 			userName.setText(tidaonide.getUserName());
 			userWords.setText(tidaonide.getUserWords());
 			time.setText(tidaonide.getTime());
+			OthersImage.setOnClickListener(onClickListener);
+			dongtai.setOnClickListener(onClickListener);
 		return convertView;
 	}
-
+OnClickListener onClickListener=new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()){
+			
+			case R.id.tidao_otherImage:
+				Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+				break;
+			case R.id.tidao_linear:
+				Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+				break;
+				default:
+					break;
+			}
+			
+		}
+	};
 }

@@ -9,13 +9,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.example.xuactivity.Mine_Fragment;
 import com.example.zuji.adapter.TongZhiAdapter;
 import com.example.zuji.javaclass.TongZhi;
 
-public class TongZhiActivity extends Activity{
+public class TongZhiActivity extends Activity {
 	TongZhiAdapter adapter;
 	ListView listview;
 	List<TongZhi> tongzhilist;
@@ -31,7 +34,16 @@ public class TongZhiActivity extends Activity{
 		
 		tongzhiReturn=(ImageButton)findViewById(R.id.return_tongzhi);
 		listview=(ListView)findViewById(R.id.listview_tongzhi);
-		
+		listview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(TongZhiActivity.this,ZuJiActivity.class);
+				startActivity(intent);
+			}
+		});
 		getData();
 		adapter=new TongZhiAdapter(TongZhiActivity.this,tongzhilist,
 				R.layout.tongzhi_listview_item,id);
@@ -66,4 +78,5 @@ public class TongZhiActivity extends Activity{
 		tongzhi.setAddImage(R.drawable.add);
 		tongzhilist.add(tongzhi);
 	}
+	
 }
