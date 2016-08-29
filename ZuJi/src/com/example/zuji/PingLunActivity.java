@@ -19,7 +19,7 @@ import com.example.zuji.javaclass.PingLun;
 
 public class PingLunActivity extends Activity{
 	ListView listview;
-	int[] id={R.id.touxiang_pinglun,R.id.otheraName_pinglun,R.id.zipinglun_pinglun,R.id.nide_pinglun,
+	int[] id={R.id.otherImage_pinglun,R.id.otheraName_pinglun,R.id.zipinglun_pinglun,R.id.nide_pinglun,
 			R.id.huifu_pinglun,R.id.pingjia_pinglun,R.id.userImage_pinglun,R.id.userName_pinglun,
 			R.id.dongtai_pinglun,R.id.time_pinglun};
 	PingLunAdapter adapter;
@@ -69,7 +69,7 @@ public class PingLunActivity extends Activity{
 		pinglun.setNide(getResources().getString(R.string.nide));
 		pinglun.setHuifu(getResources().getString(R.string.huifu));
 		pinglun.setOthersWords(getResources().getString(R.string.pingjia));
-		pinglun.setOthersImage(R.drawable.praise_background);
+		pinglun.setUserImage(R.drawable.praise_background);
 		pinglun.setUserName(getResources().getString(R.string.zushiye));
 		pinglun.setUserWords(getResources().getString(R.string.dongtai));
 		pinglun.setTime(getResources().getString(R.string.shijian));

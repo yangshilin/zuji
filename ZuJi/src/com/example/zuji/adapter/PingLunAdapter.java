@@ -5,15 +5,20 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.zuji.R;
 import com.example.zuji.javaclass.PingLun;
 
 
 public class PingLunAdapter extends BaseAdapter{
+	
 	Context context;
 	List<PingLun> pinglunList;
 	LayoutInflater inflater;
@@ -72,6 +77,7 @@ public class PingLunAdapter extends BaseAdapter{
 		TextView userName=(TextView)convertView.findViewById(id[7]);
 		TextView userWords=(TextView)convertView.findViewById(id[8]);
 		TextView time=(TextView)convertView.findViewById(id[9]);
+		LinearLayout dongtai=(LinearLayout)convertView.findViewById(R.id.pinglun_linear);
 		
 		PingLun pinglun=pinglunList.get(position);
 		OthersImage.setImageResource(pinglun.getOthersImage());
@@ -84,8 +90,30 @@ public class PingLunAdapter extends BaseAdapter{
 		userName.setText(pinglun.getUserName());
 		userWords.setText(pinglun.getUserWords());
 		time.setText(pinglun.getTime());
-	
+		huifu.setOnClickListener(onClickListener);
+		OthersImage.setOnClickListener(onClickListener);
+		dongtai.setOnClickListener(onClickListener);
 		return convertView;
 	}
-
+	OnClickListener onClickListener=new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()){
+			case R.id.huifu_pinglun:
+				Toast.makeText(context, "你要回复他", Toast.LENGTH_LONG).show();
+				break;
+			case R.id.otherImage_pinglun:
+				Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+				break;
+			case R.id.pinglun_linear:
+				Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+				break;
+				default:
+					break;
+			}
+			
+		}
+	};
 }

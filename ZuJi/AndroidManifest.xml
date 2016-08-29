@@ -37,6 +37,8 @@
         </activity>
         <activity android:name="com.example.zuji.DynamicActivity" >
         </activity>
+        <activity android:name="com.example.zuji.YiJianFanKiuActivity" >
+        </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
         <activity android:name="com.example.zuji.GeRenTouXiangActivity" >

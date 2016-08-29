@@ -96,7 +96,6 @@ public class ZuJiActivity extends Activity {
 	private void send() {
 		ZuJi zuji = new ZuJi();
 		zuji.setZujitime("");
-		
 		zuji.setContent(zujiEditText.getText().toString());
 		zuji.setComeMsg(false);
 		zujiList.add(zuji);
