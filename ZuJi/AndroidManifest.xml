@@ -24,11 +24,17 @@
         </activity>
         <activity android:name="com.example.zuji.PingLunActivity" >
         </activity>
+        <activity android:name="com.example.zuji.ZuJiActivity" >
+        </activity> 
         <activity android:name="com.example.zuji.TiDaoActivity" >
         </activity>
         <activity android:name="com.example.zuji.TongZhiActivity" >
         </activity>
         <activity android:name="com.example.zuji.ChongQingActivity" >
+        </activity>
+         <activity android:name="com.example.zuji.SheZhiActivity" >
+        </activity>
+         <activity android:name="com.example.zuji.SheZhiZuJiMiMaActivity" >
         </activity>
         <activity android:name="com.example.zuji.DynamicActivity" >
         </activity>
@@ -54,11 +60,11 @@
         </activity>
         <activity android:name="com.example.zuiji.homepage.SceneryCommentActivity" >
         </activity>
-        <activity android:name="com.example.zuiji.homepage.SceneryCommentContentActivity" >
+        <activity android:name="com.example.zuiji.homepage.SceneryMoreActivity" >
         </activity>
-        <activity android:name="com.example.zuiji.homepage.ZujiRecommendActivity" >
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendHuangheActivity" >
         </activity>
-        <activity android:name="com.example.zuiji.homepage.ZujiRecommendTwoActivity" >
+        <activity android:name="com.example.zuiji.homepage.ZujiRecommendHuangshanActivity" >
         </activity>
         <activity android:name="com.example.zuiji.homepage.seekActivity" >
         </activity>

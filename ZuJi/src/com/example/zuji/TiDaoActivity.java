@@ -47,7 +47,7 @@ public class TiDaoActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.return_tidao:
-				Intent intent=new Intent(TiDaoActivity.this,Fragment_XiaoXi.class);
+				Intent intent=new Intent(TiDaoActivity.this,BottonNavigationActivity.class);
 				startActivity(intent);
 				break;
 			default:

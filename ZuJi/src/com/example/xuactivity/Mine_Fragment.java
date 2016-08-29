@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
@@ -22,13 +23,16 @@ import com.example.xuAdapterclass.MyCollectAdapter;
 import com.example.xuAdapterclass.MyFabuAdapter;
 import com.example.xuAdapterclass.Release;
 import com.example.zuji.R;
+import com.example.zuji.SheZhiActivity;
 
 public class Mine_Fragment extends Fragment {
+
+	ImageButton shezhi;
 	Button btnzujitime;
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
-	List<Collect> list = new ArrayList<Collect>();;
+	List<Collect> list = new ArrayList<Collect>();
 	RadioGroup centre_radiogroup;
 	LinearLayout layout_zhuye;
 	LinearLayout layout_fabu;
@@ -46,12 +50,14 @@ public class Mine_Fragment extends Fragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_mine, null);
-		btnzujitime=(Button) v.findViewById(R.id.btnzujitime);
+
+		btnzujitime = (Button) v.findViewById(R.id.btnzujitime);
 		btnzujitime.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-			Intent  intent=new Intent(getActivity(),TimefusiondeletesActivity.class);
-			startActivity(intent);
-				
+				Intent intent = new Intent(getActivity(),
+						TimefusiondeletesActivity.class);
+				startActivity(intent);
+
 			}
 		});
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
@@ -74,7 +80,22 @@ public class Mine_Fragment extends Fragment {
 		layout_shoucang.setVisibility(layout_shoucang.GONE);
 		layout_zhuye.setVisibility(layout_zhuye.VISIBLE);
 		layout_fabu.setVisibility(layout_fabu.GONE);
+		shezhi = (ImageButton) v.findViewById(R.id.set);
+		shezhi.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (v.getId() == R.id.set) {
+					Intent intent = new Intent(getActivity(),
+							SheZhiActivity.class);
+					startActivity(intent);
+				}
+
+			}
+		});
 		return v;
+
 	}
 
 	OnCheckedChangeListener checkedChangeListener = new OnCheckedChangeListener() {

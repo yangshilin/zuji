@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -43,11 +45,10 @@ public class Fragment_XiaoXi extends Fragment {
 		dianzantext = (LinearLayout) header.findViewById(R.id.dianzan_xiaoxi);
 		tongzhitext = (LinearLayout) header.findViewById(R.id.tongzhi_xiaoxi);
 		tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		btn1 = (ImageButton) header.findViewById(R.id.btn1);
+		/*btn1 = (ImageButton) header.findViewById(R.id.btn1);
 		btn2 = (ImageButton) header.findViewById(R.id.btn2);
 		btn3 = (ImageButton) header.findViewById(R.id.btn3);
-		btn4 = (ImageButton) header.findViewById(R.id.btn4);
+		btn4 = (ImageButton) header.findViewById(R.id.btn4);*/
 		listview.addHeaderView(header);// 添加头视图
 		getData();
 		adapter = new XiaoXiAdapter(getActivity(), xiaoxiList,
@@ -58,6 +59,16 @@ public class Fragment_XiaoXi extends Fragment {
 		tongzhitext.setOnClickListener(onClickListener);
 		tidaotext.setOnClickListener(onClickListener);
 		xiaoxiReturn.setOnClickListener(onClickListener);
+		listview.setOnItemClickListener(new OnItemClickListener(){
+			//listview的监听事件
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(getActivity(),ZuJiActivity.class);
+				startActivity(intent);
+			}
+			});
 		return v;
 	}
 
@@ -68,6 +79,7 @@ public class Fragment_XiaoXi extends Fragment {
 		xiaoxi.setXiaoxiName(getResources().getString(R.string.zuji));
 		xiaoxi.setXiaoxiText(getResources().getString(R.string.duihua));
 		xiaoxiList.add(xiaoxi);
+
 	}
 
 	OnClickListener onClickListener = new OnClickListener() {
