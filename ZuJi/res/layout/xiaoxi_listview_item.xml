@@ -27,7 +27,7 @@
             android:orientation="vertical" >
 
             <TextView
-                style="@style/textSize2"
+                style="@style/textSize"
                 android:id="@+id/name_xiaoxi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/duihua"
-                style="@style/textSize" />
+                style="@style/textSize3" />
         </LinearLayout>
     </LinearLayout>
 

@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="@color/danhuise">
+    android:background="@color/danhuise"
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,7 +11,7 @@
         android:background="@color/deegreen" >
 
         <ImageButton
-            android:id="@+id/scenery_comment_fanhuiBtn"
+            android:id="@+id/zuji_recommend_fanhuiBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -19,11 +19,11 @@
             android:src="@drawable/back_white" />
 
         <TextView
-            android:id="@+id/scenery_comment_title"
+            android:id="@+id/zuji_recommend_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/publicpraise_title"
+            android:text="@string/zuji_tuijian"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </RelativeLayout>
@@ -34,11 +34,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="13"
-        android:orientation="vertical"
-        android:background="@color/white" >
+        android:background="@color/white"
+        android:orientation="vertical" >
 
         <ListView
-            android:id="@+id/scenery_comment_listview"
+            android:id="@+id/ziju_huanghe_listview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="@color/danhuise"
@@ -54,19 +54,19 @@
         android:orientation="horizontal" >
 
         <EditText
-            android:id="@+id/scenery_comment_edittext"
+            android:id="@+id/zuji_recommend_edittext"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_weight="8"
             android:background="@drawable/edit_text_background"
             android:hint="快来评论一番吧~"
-            android:textColorHint="@color/deepgray"
             android:textColor="@color/black"
+            android:textColorHint="@color/deepgray"
             android:textSize="12sp" />
 
         <ImageButton
-            android:id="@+id/scenery_comment_xiaoxilan_zan"
+            android:id="@+id/zuji_recommend_xiaoxilan_zan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -75,7 +75,7 @@
             android:src="@drawable/da_xin" />
 
         <ImageButton
-            android:id="@+id/scenery_comment_xiaoxilan_zhuanfa"
+            android:id="@+id/zuji_recommend_xiaoxilan_zhuanfa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"

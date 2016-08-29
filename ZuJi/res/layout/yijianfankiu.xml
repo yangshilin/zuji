@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blue_green" >
+
+        <ImageButton
+            android:id="@+id/return_fankui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           	android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            style="@style/dingbudaohangliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/yijianfankiu" />
+        <TextView
+            android:id="@+id/guanbi_fankui"
+            style="@style/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+           	android:textColor="@color/white"
+            android:text="@string/guanbi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edittext_fankui"
+            style="@style/textSize3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:hint="@string/qingshuru" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/addimage_fankui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@drawable/icon_addpic_unfocused2" />
+
+            <TextView
+                style="@style/textSize3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/tianjia" />
+        </LinearLayout>
+    </LinearLayout>
+	<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            
+            <TextView
+                style="@style/textSize3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="@string/lianxidianhua" />
+            <EditText
+             android:id="@+id/phone_fankui"
+            style="@style/textSize3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:hint="@string/xuantian" />
+            
+        </LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp"
+	    android:gravity="center"
+	    android:orientation="horizontal" >
+
+	    <TextView
+	        android:id="@+id/tijiao_fankui"
+	        style="@style/textSize3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/white"
+	        android:background="@drawable/check_out_print"
+	        android:gravity="center"
+	        android:text="@string/tijiao" />
+	</LinearLayout>
+
+</LinearLayout>

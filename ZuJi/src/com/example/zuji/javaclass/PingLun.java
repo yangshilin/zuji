@@ -11,6 +11,7 @@ public class PingLun {
 	String userName;
 	String userWords;
 	String time;
+	
 	public int getOthersImage() {
 		return OthersImage;
 	}

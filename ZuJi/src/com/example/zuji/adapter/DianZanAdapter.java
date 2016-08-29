@@ -6,10 +6,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.zuji.R;
 import com.example.zuji.javaclass.DianZan;
 
 
@@ -71,7 +75,7 @@ public class DianZanAdapter extends BaseAdapter{
 		TextView userName=(TextView)convertView.findViewById(id[5]);
 		TextView userWords=(TextView)convertView.findViewById(id[6]);
 		TextView time=(TextView)convertView.findViewById(id[7]);
-		
+		LinearLayout dongtai=(LinearLayout)convertView.findViewById(R.id.dianzan_linear);
 		DianZan dianzan=dianzanList.get(position);
 		OthersImage.setImageResource(dianzan.getOthersImage());
 		OthersName.setText(dianzan.getOthersName());
@@ -81,7 +85,28 @@ public class DianZanAdapter extends BaseAdapter{
 		userName.setText(dianzan.getUserName());
 		userWords.setText(dianzan.getUserWords());
 		time.setText(dianzan.getTime());
-		return convertView;
+		OthersImage.setOnClickListener(onClickListener);
+		dongtai.setOnClickListener(onClickListener);
+	return convertView;
+}
+OnClickListener onClickListener=new OnClickListener() {
+	
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()){
+		
+		case R.id.dianzan_otherImage:
+			Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.dianzan_linear:
+			Toast.makeText(context, "要跳转页面", Toast.LENGTH_LONG).show();
+			break;
+			default:
+				break;
+		}
+		
 	}
+};
 
 }
