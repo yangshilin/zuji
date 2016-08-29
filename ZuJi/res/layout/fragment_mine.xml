@@ -52,6 +52,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/tiaofensi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
@@ -62,6 +63,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/guanzhu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -72,6 +74,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/tiaoguanzhu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -105,6 +108,7 @@
                 android:textSize="14sp" />
 
             <ImageView
+                android:id="@+id/nv"
                 android:layout_width="11dp"
                 android:layout_height="11dp"
                 android:layout_centerVertical="true"
@@ -213,6 +217,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:hint="呢称："
+                         android:textColor="#A0A0A0"
                         android:textSize="10sp" />
 
                     <TextView
@@ -236,6 +241,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
+                         android:textColor="#A0A0A0"
                         android:hint="性别："
                         android:textSize="10sp" />
 
@@ -260,6 +266,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
+                         android:textColor="#A0A0A0"
                         android:hint="城市："
                         android:textSize="10sp" />
 
@@ -284,6 +291,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
+                         android:textColor="#A0A0A0"
                         android:hint="年龄："
                         android:textSize="10sp" />
 
@@ -308,6 +316,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
+                         android:textColor="#A0A0A0"
                         android:hint="爱好："
                         android:textSize="10sp" />
 
@@ -331,6 +340,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                         android:textColor="#A0A0A0"
                         android:hint="个性签名："
                         android:textSize="10sp" />
 
@@ -364,7 +374,6 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/layout_fabu"
         android:layout_width="match_parent"

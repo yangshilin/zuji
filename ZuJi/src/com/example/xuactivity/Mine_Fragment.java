@@ -13,23 +13,29 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.TextView;
 
 import com.example.xuAdapterclass.Collect;
 import com.example.xuAdapterclass.MyCollectAdapter;
 import com.example.xuAdapterclass.MyFabuAdapter;
 import com.example.xuAdapterclass.Release;
+import com.example.zuji.GeRenTouXiangActivity;
 import com.example.zuji.R;
 import com.example.zuji.SheZhiActivity;
 
-public class Mine_Fragment extends Fragment {
-
+public class Mine_Fragment extends Fragment implements OnClickListener {
+	ImageView tuceng_icon;
+	TextView tiaofensi;
+	TextView tiaoguanzhu;
+	TextView fensi;
+	TextView guanzhu;
 	ImageButton shezhi;
 	Button btnzujitime;
-
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
@@ -49,10 +55,9 @@ public class Mine_Fragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_mine, null);
-
 		btnzujitime = (Button) v.findViewById(R.id.btnzujitime);
+		// 进入时光轴
 		btnzujitime.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent intent = new Intent(getActivity(),
@@ -70,10 +75,11 @@ public class Mine_Fragment extends Fragment {
 		adapter = new MyCollectAdapter(getActivity(),
 				R.layout.mine_listview_collect, id, list);
 		shoucang_listview.setAdapter(adapter);
-
+		// 收藏转换
 		adapterfabu = new MyFabuAdapter(getActivity(),
 				R.layout.mine_listview_release, idd, listfabu);
 		fabu_gridview.setAdapter(adapterfabu);
+		// 发布转换
 		centre_radiogroup = (RadioGroup) v.findViewById(R.id.centre_radiogroup);
 		centre_radiogroup.setOnCheckedChangeListener(checkedChangeListener);
 		layout_zhuye = (LinearLayout) v.findViewById(R.id.layout_zhuye);
@@ -87,7 +93,6 @@ public class Mine_Fragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				if (v.getId() == R.id.set) {
 					Intent intent = new Intent(getActivity(),
 							SheZhiActivity.class);
@@ -96,8 +101,44 @@ public class Mine_Fragment extends Fragment {
 
 			}
 		});
+		tuceng_icon = (ImageView) v.findViewById(R.id.tuceng_icon);
+		fensi = (TextView) v.findViewById(R.id.fensi);
+		guanzhu = (TextView) v.findViewById(R.id.guanzhu);
+		tiaofensi = (TextView) v.findViewById(R.id.tiaofensi);
+		tiaoguanzhu = (TextView) v.findViewById(R.id.tiaoguanzhu);
+		fensi.setOnClickListener(this);
+		guanzhu.setOnClickListener(this);
+		tiaofensi.setOnClickListener(this);
+		tiaoguanzhu.setOnClickListener(this);
+		tuceng_icon.setOnClickListener(this);
 		return v;
+	}
 
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.fensi:
+			Intent intent = new Intent(getActivity(), MinefansActivity.class);
+			startActivity(intent);
+			break;
+
+		case R.id.guanzhu:
+			Intent intent2 = new Intent(getActivity(), MinefocusActivity.class);
+			startActivity(intent2);
+			break;
+		case R.id.tiaofensi:
+			Intent intent3 = new Intent(getActivity(), MinefocusActivity.class);
+			startActivity(intent3);
+			break;
+		case R.id.tiaoguanzhu:
+			Intent intent4 = new Intent(getActivity(), MinefocusActivity.class);
+			startActivity(intent4);
+			break;
+		case R.id.tuceng_icon:
+			Intent intent5 = new Intent(getActivity(), GeRenTouXiangActivity.class);
+			startActivity(intent5);
+			break;
+		}
 	}
 
 	OnCheckedChangeListener checkedChangeListener = new OnCheckedChangeListener() {
@@ -127,7 +168,7 @@ public class Mine_Fragment extends Fragment {
 		}
 	};
 
-	public void getData() {
+	public void getData() {// 收藏的数据
 		for (int i = 0; i < 20; i++) {
 			Collect collect = new Collect();
 			collect.setTuxiang(R.drawable.collect_iconone);
@@ -145,7 +186,7 @@ public class Mine_Fragment extends Fragment {
 
 	}
 
-	public void getDataFabu() {
+	public void getDataFabu() {// 发布的数据
 		for (int i = 0; i < 20; i++) {
 			Release release = new Release();
 			release.setImageId(R.drawable.publish_imgone);

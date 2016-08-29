@@ -39,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+             android:textColor="#A0A0A0"
             android:text="2016年02月10日" />
 
         <ImageView
