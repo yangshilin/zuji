@@ -23,7 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
-            android:text="2016" />
+            android:text="2016" 
+            android:textColor="#A0A0A0"
+            android:textSize="12sp"/>
 
         <View
             android:id="@+id/timeline"
@@ -43,7 +45,7 @@
             android:layout_marginLeft="50dp"
             android:text="02.10"
             android:textColor="#7A7A7A"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
         <LinearLayout
             android:layout_width="1dp"
@@ -60,19 +62,26 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/centeryuan"
-            android:background="@drawable/fusion_two" >
+            >
+            <ImageView 
+                android:id="@+id/ivxiugai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fusion_two"
+                />
            
 
             <TextView
                 android:id="@+id/timelife"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="115dp"
                 android:text="生命，是一个过程，可悲的是它不能重来，可喜的是它也不需要重来。"
+                android:textSize="15sp"
                 android:textColor="#7A7A7A" />
 
             <LinearLayout

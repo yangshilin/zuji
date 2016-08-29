@@ -8,9 +8,10 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ import com.example.zuji.R;
 
 public class TimefusiondeletesActivity extends Activity implements OnClickListener{
 	ImageButton btfhmine;
+	ImageView ivxiugai;
 	Button bt_inpast;
 	ListView time_listviews;
 	SimpleAdapter simpleAdapter;
@@ -57,13 +60,25 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 			}
 		});
 		time_listviews = (ListView) findViewById(R.id.time_listviews);
-		String[] from = { "times", "mothday", "timelife" };
-		int[] to = { R.id.times, R.id.mothday, R.id.timelife };
+		String[] from = { "times", "mothday", "ivxiugai","timelife"};
+		int[] to = { R.id.times, R.id.mothday, R.id.ivxiugai,R.id.timelife };
 
 		simpleAdapter = new SimpleAdapter(this, data(),
 				R.layout.time_fusiondeletes_listview, from, to);
 		time_listviews.setAdapter(simpleAdapter);
 
+	}
+	@Override
+	public void onClick(View v) {
+	switch (v.getId()) {
+	case R.id.btfhmine:
+		startActivity(new Intent(TimefusiondeletesActivity.this,BottonNavigationActivity.class));
+		break;
+
+	default:
+		break;
+	}
+		
 	}
 
 	OnItemClickListener itemClickListener = new OnItemClickListener() {
@@ -91,8 +106,7 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 				@Override
 				public void onClick(View v) {
 					getPhoto(v);
-					// Toast.makeText(Timefusiondeletes.this, "拍照",
-					// Toast.LENGTH_SHORT).show();
+					
 				}
 			});
 			timedelete.setOnClickListener(new View.OnClickListener() {
@@ -110,15 +124,35 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	// 调用相机功能照相
 	public void getPhoto(View v) {
-		Intent intent = new Intent();
-		intent.setAction("android.media.action.IMAGE_CAPTURE");
-		intent.addCategory("android.intent.category.DEFAULT");
-		File file = new File(Environment.getExternalStorageDirectory()
-				+ "/000.jpg");
-		Uri uri = Uri.fromFile(file);
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-		this.startActivity(intent);
+		String FilePath="/sdcard/pic/";
+		File file=new File(FilePath);
+		file.mkdirs();//创建文件
+		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);// 定义调用相机并取回图片的Intent意图  
+		intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(FilePath, "img.jpg")));
+		// 将图片保存到指定的存储路径									// 将图片保存到指定的存储路径
+		this.startActivityForResult(intent, 1);
+	
 	}
+	@Override  
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
+	    super.onActivityResult(requestCode, resultCode, data);  
+	  
+	    if (resultCode == Activity.RESULT_OK) {  
+	    	String FilePath="/sdcard/pic/";
+	        String imgName = null;
+			Bitmap bitmap = BitmapFactory.decodeFile(FilePath + imgName);  
+	  
+			ivxiugai = (ImageView) findViewById(R.id.ivxiugai);  
+	      
+			ivxiugai.setImageBitmap(bitmap);  
+	              
+	    } else {  
+	        finish();  
+	    }  
+	}  
+	
+	
+
 
 	// simpleAdapter的数据
 	private List<Map<String, Object>> data() {
@@ -126,34 +160,25 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("times", "2016");
 		map.put("mothday", "02.10");
+		map.put("ivxiugai", R.drawable.fusion_two);
 		map.put("timelife", "生命，是一个过程，可悲的是它不能重来，可喜的是它也不需要重来。");
 		list.add(map);
 
 		map = new HashMap<String, Object>();
 		map.put("times", "2016");
 		map.put("mothday", "02.10");
+		map.put("ivxiugai", R.drawable.fusion_two);
 		map.put("timelife", "生命，是一个过程，可悲的是它不能重来，可喜的是它也不需要重来。");
 		list.add(map);
 		map = new HashMap<String, Object>();
 		map.put("times", "2016");
 		map.put("mothday", "02.10");
+		map.put("ivxiugai", R.drawable.fusion_two);
 		map.put("timelife", "生命，是一个过程，可悲的是它不能重来，可喜的是它也不需要重来。");
 		list.add(map);
 		return list;
 	}
 
-	@Override
-	public void onClick(View v) {
-	switch (v.getId()) {
-	case R.id.btfhmine:
-		startActivity(new Intent(TimefusiondeletesActivity.this,BottonNavigationActivity.class));
-		break;
-
-	default:
-		break;
-	}
-		
-	}
-
+	
 	
 }
