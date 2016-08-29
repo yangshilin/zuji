@@ -29,11 +29,10 @@ public class Mine_Fragment extends Fragment {
 
 	ImageButton shezhi;
 	Button btnzujitime;
-
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
-	List<Collect> list = new ArrayList<Collect>();;
+	List<Collect> list = new ArrayList<Collect>();
 	RadioGroup centre_radiogroup;
 	LinearLayout layout_zhuye;
 	LinearLayout layout_fabu;
@@ -61,10 +60,8 @@ public class Mine_Fragment extends Fragment {
 
 			}
 		});
-
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
 		fabu_gridview = (GridView) v.findViewById(R.id.fabu_gridview);
-
 		getDataFabu();
 		getData();
 		adapter = new MyCollectAdapter(getActivity(),
@@ -74,6 +71,7 @@ public class Mine_Fragment extends Fragment {
 		adapterfabu = new MyFabuAdapter(getActivity(),
 				R.layout.mine_listview_release, idd, listfabu);
 		fabu_gridview.setAdapter(adapterfabu);
+
 		centre_radiogroup = (RadioGroup) v.findViewById(R.id.centre_radiogroup);
 		centre_radiogroup.setOnCheckedChangeListener(checkedChangeListener);
 		layout_zhuye = (LinearLayout) v.findViewById(R.id.layout_zhuye);
