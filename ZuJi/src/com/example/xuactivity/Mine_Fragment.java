@@ -26,12 +26,13 @@ import com.example.zuji.R;
 import com.example.zuji.SheZhiActivity;
 
 public class Mine_Fragment extends Fragment {
+
 	ImageButton shezhi;
 	Button btnzujitime;
 	ListView shoucang_listview;
 	GridView fabu_gridview;
 	List<Release> listfabu = new ArrayList<Release>();
-	List<Collect> list = new ArrayList<Collect>();;
+	List<Collect> list = new ArrayList<Collect>();
 	RadioGroup centre_radiogroup;
 	LinearLayout layout_zhuye;
 	LinearLayout layout_fabu;
@@ -49,6 +50,7 @@ public class Mine_Fragment extends Fragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_mine, null);
+
 		btnzujitime = (Button) v.findViewById(R.id.btnzujitime);
 		btnzujitime.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
