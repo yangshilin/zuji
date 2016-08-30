@@ -1,6 +1,8 @@
 package com.example.xuactivity;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +14,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +22,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -30,13 +34,14 @@ import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
 public class TimefusiondeletesActivity extends Activity implements OnClickListener{
+	CheckBox pull_dwon;
 	ImageButton btfhmine;
 	ImageView ivxiugai;
 	Button bt_inpast;
 	ListView time_listviews;
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list;
-
+    Uri uri;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -48,6 +53,9 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	// 初始化
 	public void intView() {
+		pull_dwon=(CheckBox) findViewById(R.id.pull_down);
+		pull_dwon.setOnClickListener(this);
+		ivxiugai = (ImageView) findViewById(R.id.ivxiugai);  
 		btfhmine=(ImageButton) findViewById(R.id.btfhmine);
 		btfhmine.setOnClickListener(this);
 		bt_inpast = (Button) findViewById(R.id.bt_inpast);
@@ -75,7 +83,12 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 		startActivity(new Intent(TimefusiondeletesActivity.this,BottonNavigationActivity.class));
 		break;
 
-	default:
+	case R.id.pull_down:
+		if (pull_dwon.isChecked()) {
+			
+		}else{
+			
+		}
 		break;
 	}
 		
@@ -124,11 +137,11 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	// 调用相机功能照相
 	public void getPhoto(View v) {
-		String FilePath="/sdcard/pic/";
-		File file=new File(FilePath);
-		file.mkdirs();//创建文件
+	  String path=Environment.getExternalStorageDirectory()+File.separator+"image.png";
+	   File file=new File(path);
+	    uri=Uri.fromFile(file);
 		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);// 定义调用相机并取回图片的Intent意图  
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(FilePath, "img.jpg")));
+		intent.putExtra(MediaStore.EXTRA_OUTPUT,uri);
 		// 将图片保存到指定的存储路径									// 将图片保存到指定的存储路径
 		this.startActivityForResult(intent, 1);
 	
@@ -137,15 +150,19 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
 	    super.onActivityResult(requestCode, resultCode, data);  
 	  
-	    if (resultCode == Activity.RESULT_OK) {  
-	    	String FilePath="/sdcard/pic/";
-	        String imgName = null;
-			Bitmap bitmap = BitmapFactory.decodeFile(FilePath + imgName);  
-	  
-			ivxiugai = (ImageView) findViewById(R.id.ivxiugai);  
-	      
-			ivxiugai.setImageBitmap(bitmap);  
-	              
+	    if (resultCode == Activity.RESULT_OK) { 
+	    	String path=Environment.getExternalStorageDirectory()+File.separator+"image.png";
+	    	File file=new File(path);
+	    	FileInputStream inputStream;
+			try {
+				inputStream = new FileInputStream(file);
+				Bitmap bitmap=BitmapFactory.decodeStream(inputStream);
+				ivxiugai.setImageBitmap(bitmap);  
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        
 	    } else {  
 	        finish();  
 	    }  
