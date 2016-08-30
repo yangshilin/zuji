@@ -138,6 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:background="@null"
+                    android:onClick="true"
                     android:src="@drawable/select" />
             </LinearLayout>
 
