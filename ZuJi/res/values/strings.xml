@@ -26,6 +26,7 @@
     <string name="pinglun">评论</string>
     <string name="dianzan">点赞</string>
     <string name="zande">赞的</string>
+    <string name="baocun1">保存</string>
     <string name="tongzhi">通知</string>
     <string name="tidao">提到你的</string>
     <string name="zuji">足迹</string>
@@ -68,6 +69,19 @@
     <string name="gongneng">功能介绍</string>
     <string name="bangzhu">帮助</string>
     <string name="fankiu">反馈</string>
+    <string name="touxiang">头像</string>
+    <string name="nicheng">昵称</string>
+    <string name="xingbie">性别</string>
+     <string name="buchaoguo">不超过40个字</string>
+     <string name="buchaoguo2">不超过25个字</string>
+    <string name="chengshi">城市</string>
+    <string name="nianling">年龄</string>
+    <string name="aihao">爱好</string>
+     <string name="aihaoleixing">旅游.看电影.看书</string>
+      <string name="chongqing">重庆</string>
+       <string name="qianming">旅途不在乎终点，而是在意途中的人和事还有那些美好的记忆和景色</string>
+     <string name="nv">女</string>
+    <string name="gexingqianming">个性签名</string>
     <string name="dui">对我而言可爱的她</string>
     <string name="shijian">10分钟前</string>
     <string name="zushiye">祖师爷:</string>

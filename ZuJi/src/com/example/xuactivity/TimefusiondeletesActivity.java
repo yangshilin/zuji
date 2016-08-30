@@ -1,6 +1,8 @@
 package com.example.xuactivity;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +10,8 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -27,12 +32,15 @@ import android.widget.Toast;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
-public class TimefusiondeletesActivity extends Activity implements OnClickListener{
+public class TimefusiondeletesActivity extends Activity implements
+		OnClickListener {
 	ImageButton btfhmine;
+	ImageView ivxiugai;
 	Button bt_inpast;
 	ListView time_listviews;
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list;
+	Uri uri;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +53,8 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	// 初始化
 	public void intView() {
-		btfhmine=(ImageButton) findViewById(R.id.btfhmine);
+
+		btfhmine = (ImageButton) findViewById(R.id.btfhmine);
 		btfhmine.setOnClickListener(this);
 		bt_inpast = (Button) findViewById(R.id.bt_inpast);
 		bt_inpast.setOnClickListener(new OnClickListener() {
@@ -74,6 +83,7 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 			TextView timeshare = (TextView) arg1.findViewById(R.id.timeshare);
 			TextView timepaizhao = (TextView) arg1
 					.findViewById(R.id.timepaizhao);
+			ivxiugai = (ImageView) arg1.findViewById(R.id.ivxiugai);
 			TextView timedelete = (TextView) arg1.findViewById(R.id.timedelete);
 			final int a = arg2;
 			Toast.makeText(TimefusiondeletesActivity.this, "" + arg2,
@@ -110,14 +120,41 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	// 调用相机功能照相
 	public void getPhoto(View v) {
-		Intent intent = new Intent();
-		intent.setAction("android.media.action.IMAGE_CAPTURE");
-		intent.addCategory("android.intent.category.DEFAULT");
-		File file = new File(Environment.getExternalStorageDirectory()
-				+ "/000.jpg");
-		Uri uri = Uri.fromFile(file);
+		String path = Environment.getExternalStorageDirectory()
+				+ File.separator + "image.png";
+		File file = new File(path);
+		uri = Uri.fromFile(file);
+		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);// 定义调用相机并取回图片的Intent意图
 		intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-		this.startActivity(intent);
+		intent.putExtra("return-data", true);
+		// 将图片保存到指定的存储路径 // 将图片保存到指定的存储路径
+		this.startActivityForResult(intent, 1);
+
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (resultCode == Activity.RESULT_OK) {
+			Bitmap bitmap;
+			try {
+				bitmap = BitmapFactory.decodeStream(getContentResolver()
+						.openInputStream(uri));
+				simpleAdapter.notifyDataSetChanged();
+				ivxiugai.setImageBitmap(bitmap);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			// Bitmap bitmap=(Bitmap)data.getExtras().get("data");
+			
+
+		}
+
+		else {
+			finish();
+		}
 	}
 
 	// simpleAdapter的数据
@@ -144,16 +181,16 @@ public class TimefusiondeletesActivity extends Activity implements OnClickListen
 
 	@Override
 	public void onClick(View v) {
-	switch (v.getId()) {
-	case R.id.btfhmine:
-		startActivity(new Intent(TimefusiondeletesActivity.this,BottonNavigationActivity.class));
-		break;
+		switch (v.getId()) {
+		case R.id.btfhmine:
+			startActivity(new Intent(TimefusiondeletesActivity.this,
+					BottonNavigationActivity.class));
+			break;
 
-	default:
-		break;
-	}
-		
+		default:
+			break;
+		}
+
 	}
 
-	
 }

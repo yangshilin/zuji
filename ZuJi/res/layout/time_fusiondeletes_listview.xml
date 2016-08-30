@@ -53,17 +53,23 @@
             android:orientation="vertical" >
         </LinearLayout>
 
-        <RelativeLayout
+          <RelativeLayout
             
             android:id="@+id/timeright"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/centeryuan"
-            android:background="@drawable/fusion_two" >
-           
+            >
+            <ImageView 
+                android:id="@+id/ivxiugai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fusion_two"
+                />
+
 
             <TextView
                 android:id="@+id/timelife"
