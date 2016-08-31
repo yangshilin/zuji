@@ -45,7 +45,7 @@ public class SceneryMoreActivity extends Activity {
 	private void getDate() {
 		// TODO Auto-generated method stub
 		lists = new ArrayList<SceneryMore>();//数组列表集合参数
-		for (int i = 0; i < 20; i++) {
+	
 		SceneryMore sm = new SceneryMore();//实例化参数对象
 		sm.setTupian(R.drawable.teita);
 		sm.setTouxiang(R.drawable.touxiang);
@@ -59,12 +59,105 @@ public class SceneryMoreActivity extends Activity {
 		sm.setZanshu("278");
 		lists.add(sm);// 列表添加参数
 		
+		 sm = new SceneryMore();//实例化参数对象
+			sm.setTupian(R.drawable.koubei_work_image);
+			sm.setTouxiang(R.drawable.logo_1);
+			sm.setTitle("flalf");
+			sm.setShizhong(R.drawable.shijian);
+			sm.setRiqi("3-10");
+			sm.setShijian("10:15");
+			sm.setPingyu(R.drawable.xiao_pinglun);
+			sm.setPingyushu("52");
+			sm.setXin(R.drawable.xin);
+			sm.setZanshu("432");
+			lists.add(sm);// 列表添加参数
+			
+			 sm = new SceneryMore();//实例化参数对象
+				sm.setTupian(R.drawable.tag2);
+				sm.setTouxiang(R.drawable.logo_2);
+				sm.setTitle("kt-mi");
+				sm.setShizhong(R.drawable.shijian);
+				sm.setRiqi("3-10");
+				sm.setShijian("10:15");
+				sm.setPingyu(R.drawable.xiao_pinglun);
+				sm.setPingyushu("522");
+				sm.setXin(R.drawable.xin);
+				sm.setZanshu("412");
+				lists.add(sm);// 列表添加参数
+				
+				 sm = new SceneryMore();//实例化参数对象
+					sm.setTupian(R.drawable.tag3);
+					sm.setTouxiang(R.drawable.logo_7);
+					sm.setTitle("小虾米");
+					sm.setShizhong(R.drawable.shijian);
+					sm.setRiqi("3-10");
+					sm.setShijian("10:15");
+					sm.setPingyu(R.drawable.xiao_pinglun);
+					sm.setPingyushu("520");
+					sm.setXin(R.drawable.xin);
+					sm.setZanshu("42");
+					lists.add(sm);// 列表添加参数
+					
+					
+					 sm = new SceneryMore();//实例化参数对象
+						sm.setTupian(R.drawable.xiaobian2);
+						sm.setTouxiang(R.drawable.logo_8);
+						sm.setTitle("秋风");
+						sm.setShizhong(R.drawable.shijian);
+						sm.setRiqi("2-8");
+						sm.setShijian("15:15");
+						sm.setPingyu(R.drawable.xiao_pinglun);
+						sm.setPingyushu("1204");
+						sm.setXin(R.drawable.xin);
+						sm.setZanshu("742");
+						lists.add(sm);// 列表添加参数
+						
+						
+						 sm = new SceneryMore();//实例化参数对象
+							sm.setTupian(R.drawable.xiaobian3);
+							sm.setTouxiang(R.drawable.logo_5);
+							sm.setTitle("雨滴");
+							sm.setShizhong(R.drawable.shijian);
+							sm.setRiqi("2-7");
+							sm.setShijian("13:15");
+							sm.setPingyu(R.drawable.xiao_pinglun);
+							sm.setPingyushu("43");
+							sm.setXin(R.drawable.xin);
+							sm.setZanshu("763");
+							lists.add(sm);// 列表添加参数
+							
+							
+							 sm = new SceneryMore();//实例化参数对象
+								sm.setTupian(R.drawable.homepage_koubei_image2);
+								sm.setTouxiang(R.drawable.logo_1);
+								sm.setTitle("东方红");
+								sm.setShizhong(R.drawable.shijian);
+								sm.setRiqi("1-10");
+								sm.setShijian("16:15");
+								sm.setPingyu(R.drawable.xiao_pinglun);
+								sm.setPingyushu("45");
+								sm.setXin(R.drawable.xin);
+								sm.setZanshu("7432");
+								lists.add(sm);// 列表添加参数
+								
+								
+								 sm = new SceneryMore();//实例化参数对象
+									sm.setTupian(R.drawable.homepage_hot_photo_album_image3);
+									sm.setTouxiang(R.drawable.logo_1);
+									sm.setTitle("阿甘铪");
+									sm.setShizhong(R.drawable.shijian);
+									sm.setRiqi("1-10");
+									sm.setShijian("12:13");
+									sm.setPingyu(R.drawable.xiao_pinglun);
+									sm.setPingyushu("42");
+									sm.setXin(R.drawable.xin);
+									sm.setZanshu("745");
+									lists.add(sm);// 列表添加参数
+			
 		SceneryMoreAdapter smAdapter = new SceneryMoreAdapter(SceneryMoreActivity.this,
 				R.layout.activity_scenery_more_gridview, lists);
 		gridview.setAdapter(smAdapter);//listView设置Adapter
 	}
-
-}
 
 	OnClickListener onclicklistener = new OnClickListener() {
 		/**
