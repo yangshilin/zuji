@@ -60,7 +60,7 @@ public class SheZhiActivity extends Activity{
 			case R.id.shouchang_shezhi:
 				break;
 			case R.id.ziliao_linear:
-				Intent intent2=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
+				Intent intent2=new Intent(SheZhiActivity.this,GeRenZiLiaoActivity.class);
 				startActivity(intent2);
 				break;
 			case R.id.guanli_linear:

@@ -22,7 +22,7 @@
 
         <TextView
             style="@style/dingbudaohangliang"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="1"
@@ -71,7 +71,8 @@
                 style="@style/textSize3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/tianjia" />
+                android:textColor="@color/gray_white"
+                android:text="@string/tianjia" />
         </LinearLayout>
     </LinearLayout>
 	<LinearLayout
@@ -95,6 +96,7 @@
             style="@style/textSize3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:inputType="phone"
             android:layout_marginLeft="10dp"
             android:background="@null"
             android:textColor="@color/black"

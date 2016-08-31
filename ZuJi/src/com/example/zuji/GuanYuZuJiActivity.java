@@ -1,13 +1,13 @@
 package com.example.zuji;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class GuanYuZuJiActivity extends Activity{
 	ImageButton guanyuReturn;
@@ -35,12 +35,16 @@ public class GuanYuZuJiActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.zuji_return:
+				Intent intent=new Intent(GuanYuZuJiActivity.this,SheZhiActivity.class);
+				startActivity(intent);
 				break;
 			case R.id.gongneng_guanyu:
 				break;
 			case R.id.bangzhu_guanyu:
 				break;
 			case R.id.fankui_guanyu:
+				Intent intent4=new Intent(GuanYuZuJiActivity.this,YiJianFanKiuActivity.class);
+				startActivity(intent4);
 				break;
 				default:
 					break;
