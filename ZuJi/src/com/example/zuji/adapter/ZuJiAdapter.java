@@ -5,10 +5,12 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.zuji.R;
 import com.example.zuji.javaclass.ZuJi;
@@ -65,10 +67,10 @@ public class ZuJiAdapter extends BaseAdapter {
 			chatHolder = new ChatHolder();
 			if (zujiList.get(position).isComeMsg()) {
 				convertView = inflater.inflate(
-						R.layout.zuji_listview_item_right, null);
+						R.layout.zuji_listview_item_left, null);
 			} else {
 				convertView = inflater.inflate(
-						R.layout.zuiji_listview_item_left, null);
+						R.layout.zuji_listview_item_right, null);
 			}
 			chatHolder.timeTextView = (TextView) convertView
 					.findViewById(R.id.zuji_time);
@@ -85,7 +87,16 @@ public class ZuJiAdapter extends BaseAdapter {
 		chatHolder.contentTextView.setText(zujiList.get(position).getContent());
 		chatHolder.userImageView.setImageResource(zujiList.get(position)
 				.getUserImage());
-
+		chatHolder.userImageView.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if(v.getId()==R.id.user_image){
+					Toast.makeText(context, "你要跳转",Toast.LENGTH_LONG).show();
+				}
+			}
+		});
 		return convertView;
 	}
 

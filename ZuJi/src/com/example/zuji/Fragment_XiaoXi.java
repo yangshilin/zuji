@@ -27,8 +27,6 @@ public class Fragment_XiaoXi extends Fragment {
 	int[] id = { R.id.xiaoxi_touxiang, R.id.name_xiaoxi, R.id.text_xiaoxi };
 	XiaoXiAdapter adapter;
 	List<XiaoXi> xiaoxiList;
-
-	ImageButton xiaoxiReturn, btn1, btn2, btn3, btn4;
 	LinearLayout pinglunText, dianzantext, tongzhitext, tidaotext;
 	TextView zuijin;
 
@@ -36,7 +34,7 @@ public class Fragment_XiaoXi extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.xiaoxi, null);
-		xiaoxiReturn = (ImageButton) v.findViewById(R.id.return_xiaoxi);
+		
 		listview = (ListView) v.findViewById(R.id.listview_xiaoxi);
 
 		header = View.inflate(getActivity(), R.layout.xiaoxi_listview_head,
@@ -45,10 +43,7 @@ public class Fragment_XiaoXi extends Fragment {
 		dianzantext = (LinearLayout) header.findViewById(R.id.dianzan_xiaoxi);
 		tongzhitext = (LinearLayout) header.findViewById(R.id.tongzhi_xiaoxi);
 		tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		/*btn1 = (ImageButton) header.findViewById(R.id.btn1);
-		btn2 = (ImageButton) header.findViewById(R.id.btn2);
-		btn3 = (ImageButton) header.findViewById(R.id.btn3);
-		btn4 = (ImageButton) header.findViewById(R.id.btn4);*/
+		
 		listview.addHeaderView(header);// 添加头视图
 		getData();
 		adapter = new XiaoXiAdapter(getActivity(), xiaoxiList,
@@ -58,7 +53,7 @@ public class Fragment_XiaoXi extends Fragment {
 		dianzantext.setOnClickListener(onClickListener);
 		tongzhitext.setOnClickListener(onClickListener);
 		tidaotext.setOnClickListener(onClickListener);
-		xiaoxiReturn.setOnClickListener(onClickListener);
+		
 		listview.setOnItemClickListener(new OnItemClickListener(){
 			//listview的监听事件
 			@Override
@@ -88,11 +83,7 @@ public class Fragment_XiaoXi extends Fragment {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.return_xiaoxi:
-				Intent intent1 = new Intent(getActivity(),
-						PingLunActivity.class);
-				startActivity(intent1);
-				break;
+			
 			case R.id.pinglun_xiaoxi:
 				Intent intent2 = new Intent(getActivity(),
 						PingLunActivity.class);
@@ -112,11 +103,7 @@ public class Fragment_XiaoXi extends Fragment {
 				Intent intent5 = new Intent(getActivity(), TiDaoActivity.class);
 				startActivity(intent5);
 				break;
-			/*
-			 * case R.id.zuji_xiaozi: Intent intent6 = new
-			 * Intent(XiaoXiActivity.this, ZuJiActivity.class);
-			 * startActivity(intent6); break;
-			 */
+			
 			default:
 				break;
 

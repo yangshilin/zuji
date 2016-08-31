@@ -52,6 +52,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/fensishu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
@@ -62,6 +63,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/guanzhu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -72,6 +74,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/guanzhushu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -185,10 +188,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:orientation="vertical" >
+        android:orientation="vertical" > 
 
         <ScrollView
             android:layout_width="match_parent"
+            android:background="#ffffff"
             android:layout_height="match_parent" >
 
             <LinearLayout
@@ -361,10 +365,13 @@
                     android:gravity="center"
                     android:text="查看足迹里的时光"
                     android:textSize="15sp" />
+                <View
+                    android:layout_height="150dp"
+                    android:layout_width="match_parent"
+                    android:background="#FFFFFF"/>
             </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
+         </ScrollView> 
+	</LinearLayout>
     <LinearLayout
         android:id="@+id/layout_fabu"
         android:layout_width="match_parent"
