@@ -33,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:textColor="#A0A0A0"
         android:text="1992年2月10日"
         android:textSize="10dp" />
 

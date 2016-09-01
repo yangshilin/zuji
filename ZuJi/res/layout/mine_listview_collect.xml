@@ -23,6 +23,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/collect_iconone"
+             android:textColor="#A0A0A0"
             android:text="恬恬喜欢的甜" />
     </RelativeLayout>
 
@@ -97,6 +98,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/iv_zan"
+             android:textColor="#A0A0A0"
             android:text="124" />
 
         <ImageView
@@ -115,6 +117,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/iv_comment"
+             android:textColor="#A0A0A0"
             android:text="15" />
     </RelativeLayout>
 

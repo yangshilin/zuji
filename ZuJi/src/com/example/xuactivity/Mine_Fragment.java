@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.TextView;
 
 import com.example.xuAdapterclass.Collect;
 import com.example.xuAdapterclass.MyCollectAdapter;
@@ -25,8 +26,8 @@ import com.example.xuAdapterclass.Release;
 import com.example.zuji.R;
 import com.example.zuji.SheZhiActivity;
 
-public class Mine_Fragment extends Fragment {
-
+public class Mine_Fragment extends Fragment implements OnClickListener {
+	TextView fensi, fensishu, guanzhu, guanzhushu;
 	ImageButton shezhi;
 	Button btnzujitime;
 	ListView shoucang_listview;
@@ -82,7 +83,6 @@ public class Mine_Fragment extends Fragment {
 		layout_fabu.setVisibility(layout_fabu.GONE);
 		shezhi = (ImageButton) v.findViewById(R.id.set);
 		shezhi.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -94,7 +94,34 @@ public class Mine_Fragment extends Fragment {
 
 			}
 		});
+
+		fensi = (TextView) v.findViewById(R.id.fensi);
+		fensishu = (TextView) v.findViewById(R.id.fensishu);
+		guanzhu = (TextView) v.findViewById(R.id.guanzhu);
+		guanzhushu = (TextView) v.findViewById(R.id.guanzhushu);
+		fensi.setOnClickListener(this);
+		fensishu.setOnClickListener(this);
+		guanzhu.setOnClickListener(this);
+		guanzhushu.setOnClickListener(this);
 		return v;
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.fensi:
+				startActivity(new Intent(getActivity(),MinefansActivity.class));
+			break;
+		case R.id.fensishu:
+			startActivity(new Intent(getActivity(),MinefansActivity.class));
+			break;
+		case R.id.guanzhu:
+			startActivity(new Intent(getActivity(),MinefocusActivity.class));
+			break;
+		case R.id.guanzhushu:
+			startActivity(new Intent(getActivity(),MinefocusActivity.class));
+			break;
+		}
 
 	}
 
@@ -126,7 +153,7 @@ public class Mine_Fragment extends Fragment {
 	};
 
 	public void getData() {
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <4; i++) {
 			Collect collect = new Collect();
 			collect.setTuxiang(R.drawable.collect_iconone);
 			collect.setName("恬恬喜欢的甜");
@@ -144,7 +171,7 @@ public class Mine_Fragment extends Fragment {
 	}
 
 	public void getDataFabu() {
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <6; i++) {
 			Release release = new Release();
 			release.setImageId(R.drawable.publish_imgone);
 			release.setXinsheng("一路向北，只为在最美丽的季节与你相遇。");

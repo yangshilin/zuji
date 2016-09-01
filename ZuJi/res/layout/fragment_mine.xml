@@ -52,6 +52,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/fensishu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
@@ -62,6 +63,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/guanzhu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -72,6 +74,7 @@
                 android:textSize="10sp" />
 
             <TextView
+                android:id="@+id/guanzhushu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
