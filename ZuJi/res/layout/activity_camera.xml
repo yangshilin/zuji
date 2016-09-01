@@ -13,8 +13,9 @@
             android:id="@+id/dengbu_gongnengqu"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:background="@color/deegreen"
-            android:orientation="horizontal" >
+            android:background="#2EB8C2"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
 
             <ImageButton
                 android:id="@+id/camera_quxiao_btn"
@@ -23,7 +24,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/icon_quxiao_unfocused" />
+                android:src="@drawable/camera_huibui" />
 
             <View
                 android:layout_width="0dp"
@@ -33,10 +34,10 @@
             <ImageButton
                 android:id="@+id/camera_xiangce_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/icon_quxiao_unfocused" />
+                android:src="@drawable/camera_xiangce" />
 
             <View
                 android:layout_width="0dp"
@@ -46,10 +47,10 @@
             <ImageButton
                 android:id="@+id/camera_flashlight_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/icon_quxiao_unfocused" />
+                android:src="@drawable/cawera_shanguangdeng" />
 
             <View
                 android:layout_width="0dp"
@@ -59,11 +60,11 @@
             <ImageButton
                 android:id="@+id/camera_transform_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/icon_quxiao_unfocused" />
+                android:src="@drawable/camera_jingtouzhuanghuan" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +72,8 @@
             android:layout_width="fill_parent"
             android:layout_height="45dp"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:gravity="center_vertical">
 
             <View
                 android:layout_width="0dp"
@@ -81,10 +83,10 @@
             <ImageButton
                 android:id="@+id/camera_chongpai_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/rub_course_back_icon" />
+                android:src="@drawable/camera_quxiao" />
 
             <View
                 android:layout_width="0dp"
@@ -94,10 +96,10 @@
             <ImageButton
                 android:id="@+id/camera_xiushi_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/shequ_ischeck" />
+                android:src="@drawable/camera_bianji_youji" />
 
             <View
                 android:layout_width="0dp"

@@ -103,12 +103,15 @@ public class HomepageFragment extends Fragment{
 			case R.id.homepage_fengjing:// id执行 //当前上下文//跳转指定的界面
 				Intent fengjing = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing);//start开始 执行Intent意图【跳转】
+				break;
 			case R.id.homepage_koubei_viewone:
 				Intent fengjing1 = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing1);
+				break;
 			case R.id.homepage_koubei_viewtwo:
 				Intent fengjing2 = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing2);
+				break;
 			case R.id.homepage_koubei_viewthree:
 				Intent fengjing3 = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing3);
@@ -134,15 +137,19 @@ public class HomepageFragment extends Fragment{
 			case R.id.homepage_hot:
 				Intent yingji = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji);
+				break;
 			case R.id.homepage_hot_one:
 				Intent yingji2 = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji2);
+				break;
 			case R.id.homepage_hot_two:
 				Intent yingji3 = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji3);
+				break;
 			case R.id.homepage_hot_three:
 				Intent yingji4 = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji4);
+				break;
 			case R.id.homepage_hot_frou:
 				Intent yingji5 = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji5);
