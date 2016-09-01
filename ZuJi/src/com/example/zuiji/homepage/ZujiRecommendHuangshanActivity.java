@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.xuAdapterclass.ZujiHuangheAdapter;
 import com.example.xuAdapterclass.ZujiHuangshanAdapter;
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 import com.example.zuji.javaclass.ZujiHuangheSetget;
 import com.example.zuji.javaclass.ZujiHuangshan;
@@ -104,7 +105,7 @@ public class ZujiRecommendHuangshanActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.zuji_tuijian_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
-				Intent intent = new Intent(ZujiRecommendHuangshanActivity.this,null);
+				Intent intent = new Intent(ZujiRecommendHuangshanActivity.this,BottonNavigationActivity.class);
 				startActivity(intent);// start开始 执行Intent意图【跳转】
 				break;
 

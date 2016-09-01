@@ -27,7 +27,8 @@
                 android:hint="搜索"
                 android:paddingLeft="40dp"
                 android:textColorHint="@color/qianhuise"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textColor="@color/black"/>"
 
             <ImageButton
                 android:id="@+id/seek_edittext_btn"
