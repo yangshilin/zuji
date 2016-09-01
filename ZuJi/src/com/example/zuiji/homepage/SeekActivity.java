@@ -1,14 +1,18 @@
 package com.example.zuiji.homepage;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
-public class seekActivity extends Activity{
+public class SeekActivity extends Activity{
 	EditText editText;
 	ImageButton sousu;
 	TextView quxiao;
@@ -31,6 +35,25 @@ public class seekActivity extends Activity{
 	diming_tishi_3 = (TextView)findViewById(R.id.see_tuijian_didian_three);
 	diming_tishi_4 = (TextView)findViewById(R.id.see_tuijian_didian_frou);
 	diming_tishi_5 = (TextView)findViewById(R.id.see_tuijian_didian_five);
+	
+	quxiao.setOnClickListener(l);
 	}
+	OnClickListener l = new OnClickListener(){
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.seek_quxiao_btn:
+				Intent quxiao = new Intent(SeekActivity.this,BottonNavigationActivity.class);
+				startActivity(quxiao);
+				break;
+
+			default:
+				break;
+			}
+		}
+		};
+	
 
 }

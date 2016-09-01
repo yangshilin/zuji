@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -36,7 +37,7 @@ public class MeiShiActivity extends Activity {
 		getDataForLeft();
 		getDataForRight();
 		list_left = (NotScrollListView) findViewById(R.id.meishi_listview_left);
-		list_left.setOnItemClickListener(itemClickListener);
+
 		MeiShiAdapter meiShiAdapte_left = new MeiShiAdapter(
 				getApplicationContext(), data_left, R.layout.listview_left,
 				from, to);
@@ -48,8 +49,26 @@ public class MeiShiActivity extends Activity {
 		list_right.setAdapter(meiShiAdapte_right);
 		meishi_back = (ImageView) findViewById(R.id.meishi_back);
 		meishi_back.setOnClickListener(clickListener);
-		list_left.setItemsCanFocus(true);
+		list_left.setOnTouchListener(new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_MOVE:
+					v.getParent().requestDisallowInterceptTouchEvent(true);
+					break;
+				case MotionEvent.ACTION_DOWN:
+					v.getParent().requestDisallowInterceptTouchEvent(false);
+				case MotionEvent.ACTION_UP:
+					v.getParent().requestDisallowInterceptTouchEvent(false);
+				case MotionEvent.ACTION_CANCEL:
+					v.getParent().requestDisallowInterceptTouchEvent(false);
+					break;
+				}
+				return false;
+			}
 
+		});
+		list_left.setOnItemClickListener(itemClickListener);
 	}
 
 	OnItemClickListener itemClickListener = new OnItemClickListener() {

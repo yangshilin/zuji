@@ -47,6 +47,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/da_xin"
+            android:textColor="#A0A0A0"
             android:text="20" />
 
         <TextView
@@ -56,6 +57,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
+             android:textColor="#A0A0A0"
             android:text="99" />
 
         <ImageView

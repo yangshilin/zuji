@@ -8,16 +8,16 @@
     <TextView
         style="@style/dingbudaohangliang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:background="@color/blue_green"
         android:gravity="center"
         android:text="@string/xiaoxi" />
 
-        <ListView
-            android:id="@+id/listview_xiaoxi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" >
-        </ListView>
-    
+    <ListView
+        android:id="@+id/listview_xiaoxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+    </ListView>
+
 </LinearLayout>

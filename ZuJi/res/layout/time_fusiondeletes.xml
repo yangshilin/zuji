@@ -39,16 +39,21 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+             android:textColor="#A0A0A0"
             android:text="2016年02月10日" />
 
-        <ImageView
+        <CheckBox
             android:id="@+id/pull_down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cltime"
+            android:button="@null"
+            android:checked="false"
+            android:text=""
             android:layout_centerHorizontal="true"
             android:paddingTop="5dp"
-            android:src="@drawable/pull_down" />
+            android:drawableLeft="@drawable/selector_pullheader" />
+        
 
         <Button
             android:id="@+id/bt_inpast"
@@ -61,6 +66,7 @@
             android:text="过去"
             android:textSize="12sp" />
     </RelativeLayout>
+     
 
     <RelativeLayout
         android:layout_width="match_parent"

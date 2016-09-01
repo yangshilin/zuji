@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
 public class HomepageZuji extends Activity {
@@ -31,7 +32,7 @@ public class HomepageZuji extends Activity {
 		dianzan_btn = (ImageButton) findViewById(R.id.shouye_zuju_hongxin);
 		pinglun_btn = (TextView) findViewById(R.id.homepage_zuju_pinglun);
 		pingyu = (EditText) findViewById(R.id.homepage_zuju_edittext);
-		biaoqing = (ImageButton) findViewById(R.id.homepage_zuju_biaoqing);
+		biaoqing = (ImageButton) findViewById(R.id.homepage_hot_frou);
 		/**
 		 * 页面跳转
 		 */
@@ -48,7 +49,7 @@ public class HomepageZuji extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.homepage_zuju_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
-				Intent fanhui = new Intent(HomepageZuji.this, null);
+				Intent fanhui = new Intent(HomepageZuji.this, BottonNavigationActivity.class);
 				startActivity(fanhui);// start开始 执行Intent意图【跳转】
 				break;
 			case R.id.homepage_zuju_fenxiangBtn:
