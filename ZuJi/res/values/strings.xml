@@ -69,11 +69,46 @@
     <string name="dui">对我而言可爱的她</string>
     <string name="shijian">10分钟前</string>
     <string name="zushiye">祖师爷:</string>
+    <string name="zushiye1">祖师爷:</string>
+    <string name="maohao">:</string>
+     <string name="yishi">已是最新版本</string>
+     <string name="yijianfankiu">意见反馈</string>
+     <string name="guanbi">关闭</string>
+     <string name="qingshuru">请输入遇到的问题或建议...</string>
+     <string name="tianjia">添加图片说明</string>
+     <string name="lianxidianhua">联系电话</string>
+     <string name="xuantian">选填，便于我们联系你</string>
+     <string name="tijiao">提交</string>
     <string name="dongtai">一路向北，只为在最美丽的季节与你相遇。</string>
     <string name="nide">你的动态</string>
     <string name="pingjia">心悦君兮知不知</string>
     <string name="duihua">没有你，良辰美景更与何人说。</string>
     <string name="xieyi">足迹软件许可及服务协议</string>
+    <string name="baocun1">保存</string>
+    <string name="touxiang">头像</string>
+    <string name="nicheng">昵称</string>
+    <string name="xingbie">性别</string>
+    <string name="chengshi">城市</string>
+    <string name="nianling">年龄</string>
+    <string name="aihao">爱好</string>
+    <string name="gexingqianming">个性签名</string>
+    <string name="nv">女</string>
+    <string name="chongqing">重庆</string>
+    <string name="aihaoleixing">看电影.旅游.看书</string>
+    <string name="qianming">旅途不在乎终点，而在意途中的人和事以及那些美好的回忆和景色</string>
+    <string name="buchaoguo2">不超过25个字</string>
+    <string name="buchaoguo">不超过40个字</string>
+    <string name="jianjie">\t\t软件简介
+\n\t\t足迹是一款专注于为用户提供在个人或群体旅游时即时发布心得体会，经验，以及推荐的平台APP。
+\n\t\t目标群体包括摄影爱好者，旅游爱好者，旅游文化探索者，以及一切对旅游与摄影喜爱的大众人群。
+\n\t\t足迹这款移动端记事APP，包含了文字和图片两种方式共存，其应用目的主要是为一些旅游的个人或群体提供一个交流平台，用户可以在平台上发表所见所感，宣传一些当地风景或国外风景文化，作为其他用户在计划旅游是的参考方向。
+\n\t\t
+\n\t\t主要功能   
+\t\t照片文字即时发布，即拍即发，不等待，让分享更便捷；
+\n\t\t口碑风景，推荐足迹，让旅游更满意，更精彩；
+\n\t\t社区版块，热门动态，更多旅游故事，精彩图片让你目不暇接；
+\n\t\t消息通知，更多旅游达人在线交流分享旅游心得；
+\n\t\t更多拍照技巧，让你在成为专业摄影师的道路上一步步成长。</string>
     <string name="bianhao">copyright@ 2009-20105 Tencent All Ringhts Reserved</string>
     <string name="step1">\t\t倒影有很多种形式，从风光摄影到微距摄影都有，不过这里有一些通用的基础技术，可以帮助你做得更好。
 \n\t\t出于对景深的考虑，试试选用小光圈比如f/11或更小的。这样有助于强化倒影效果。
