@@ -70,6 +70,7 @@
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_marginLeft="20dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/icon_addpic_unfocused" />
         </LinearLayout>
 
@@ -161,27 +162,29 @@
             android:id="@+id/weixin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="18dp"
             android:layout_toRightOf="@id/tongbu"
-            android:layout_marginLeft="20dp"
             android:background="@null"
             android:src="@drawable/wexin" />
+
         <ImageButton
             android:id="@+id/qq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="18dp"
             android:layout_toRightOf="@id/weixin"
-            android:layout_marginLeft="20dp"
             android:background="@null"
             android:src="@drawable/qq" />
+
         <ImageButton
             android:id="@+id/weibo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="18dp"
             android:layout_toRightOf="@id/qq"
-            android:layout_marginLeft="20dp"
             android:background="@null"
             android:src="@drawable/weibo" />
     </RelativeLayout>
