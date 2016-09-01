@@ -1,9 +1,7 @@
 package com.example.zuji;
 
-import com.example.xuactivity.Mine_Fragment;
-import com.example.zuiji.homepage.HomepageFragment;
-
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+
+import com.example.xuactivity.Mine_Fragment;
+import com.example.zuiji.homepage.CameraActivity;
+import com.example.zuiji.homepage.HomepageFragment;
 
 @SuppressLint("NewApi")
 public class BottonNavigationActivity extends FragmentActivity {
@@ -48,7 +50,7 @@ public class BottonNavigationActivity extends FragmentActivity {
 		btn_community = (RadioButton) findViewById(R.id.btn_community);
 		btn_message = (RadioButton) findViewById(R.id.btn_message);
 		btn_my = (RadioButton) findViewById(R.id.btn_my);
-		camera = (ImageButton) findViewById(R.id.camera_btn);
+		camera = (ImageButton) findViewById(R.id.navigation_camera_btn);
 		camera.setOnClickListener(xiangji);
 		setFragment(R.id.btn_homepage);
 		setchecked(R.id.btn_homepage);
@@ -180,8 +182,9 @@ public class BottonNavigationActivity extends FragmentActivity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.camera_btn:
-
+			case R.id.navigation_camera_btn:
+				Intent intent = new Intent(BottonNavigationActivity.this,CameraActivity.class);
+				startActivity(intent);	
 				break;
 
 			default:
