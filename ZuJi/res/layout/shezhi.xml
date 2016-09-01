@@ -47,7 +47,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -73,7 +73,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -99,7 +99,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -124,22 +124,22 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
-                    android:layout_width="match_parent"
+                    style="@style/textSize"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="8"
                     android:padding="10dp"
                     android:text="@string/gongkai"
                     android:textColor="@color/black" />
-
-                <ImageView
-                    android:id="@+id/weizhi_shezhi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:background="@null"
-                    android:onClick="true"
-                    android:src="@drawable/select" />
+			<CheckBox 
+				    android:id="@+id/weizhi_shezhi"
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:button="@null"
+				    android:text=""
+				    android:drawableLeft="@drawable/select"/>
+                
             </LinearLayout>
 
             <LinearLayout
@@ -151,21 +151,23 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
-                    android:layout_width="match_parent"
+                    style="@style/textSize"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="8"
                     android:padding="10dp"
                     android:text="@string/gongkaiwode"
                     android:textColor="@color/black" />
-
-                <ImageView
-                    android:id="@+id/shouchang_shezhi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:background="@null"
-                    android:src="@drawable/select" />
+				<CheckBox 
+				    android:id="@+id/shouchang_shezhi"
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="1"
+				    android:button="@null"
+				    android:text=""
+				    android:drawableLeft="@drawable/select"/>
+                
+              
             </LinearLayout>
 
             <LinearLayout
@@ -178,7 +180,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -204,7 +206,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -212,12 +214,13 @@
                     android:text="@string/jiance"
                     android:textColor="@color/black" />
 
-                <ImageView
+                <TextView
+                    style="@style/textSize3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
                     android:padding="10dp"
-                    android:src="@drawable/homepage_koubei_into" />
+                    android:hint="@string/yishi"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -230,7 +233,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/textSize2"
+                    style="@style/textSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -209,7 +209,8 @@
             android:onClick="true"
             android:padding="10dp"
             android:text="@string/aihaoleixing"
-            android:textColor="@color/gray_white" />
+            android:textColor="@color/gray_white"
+             android:textColorHint="@color/gray_white"/>
     </LinearLayout>
 
     <LinearLayout
@@ -239,6 +240,7 @@
             android:onClick="true"
             android:padding="10dp"
             android:text="@string/qianming"
+            android:textColorHint="@color/gray_white"
             android:textColor="@color/gray_white" />
     </LinearLayout>
 
