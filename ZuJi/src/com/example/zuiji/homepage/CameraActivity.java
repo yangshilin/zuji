@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
+
 public class CameraActivity extends Activity{
 	ImageButton fanhui;
 	ImageButton xiangce;
