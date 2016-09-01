@@ -32,6 +32,8 @@
         </activity>
         <activity android:name="com.example.zuji.TongZhiActivity" >
         </activity>
+        <activity android:name="com.example.zuji.GongNrngJieShaoActivity" >
+        </activity>
         <activity android:name="com.example.zuji.ChongQingActivity" >
         </activity>
          <activity android:name="com.example.zuji.SheZhiActivity" >

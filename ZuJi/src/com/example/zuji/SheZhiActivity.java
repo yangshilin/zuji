@@ -1,13 +1,12 @@
 package com.example.zuji;
 
-import com.example.xuactivity.Mine_Fragment;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,7 +14,8 @@ import android.widget.LinearLayout;
 public class SheZhiActivity extends Activity{
 	
 	ImageButton shizhiReturn;
-	ImageView weizhibtn,shoucangbtn;
+	
+	CheckBox weizhibtn,shoucangbtn;
 	LinearLayout ziliao,guangli,huancun,guanyu,gengxing,yijian;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,8 @@ public class SheZhiActivity extends Activity{
 		setContentView(R.layout.shezhi);
 		
 		shizhiReturn=(ImageButton)findViewById(R.id.zhezhi_return);
-		weizhibtn=(ImageView)findViewById(R.id.weizhi_shezhi);
-		shoucangbtn=(ImageView)findViewById(R.id.shouchang_shezhi);
+		weizhibtn=(CheckBox)findViewById(R.id.weizhi_shezhi);
+		shoucangbtn=(CheckBox)findViewById(R.id.shouchang_shezhi);
 		ziliao=(LinearLayout)findViewById(R.id.ziliao_linear);
 		guangli=(LinearLayout)findViewById(R.id.guanli_linear);
 		huancun=(LinearLayout)findViewById(R.id.fancun_linear);
@@ -58,6 +58,7 @@ public class SheZhiActivity extends Activity{
 				
 				break;
 			case R.id.shouchang_shezhi:
+				
 				break;
 			case R.id.ziliao_linear:
 				Intent intent2=new Intent(SheZhiActivity.this,GeRenZiLiaoActivity.class);

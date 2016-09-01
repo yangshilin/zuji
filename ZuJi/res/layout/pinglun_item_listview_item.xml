@@ -12,12 +12,38 @@
     android:orientation="horizontal">
     <TextView
         android:id="@+id/huifu_name"
+        style="@style/textSize3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/blue"
-        android:text="@string/zushiye"
+        android:text="@string/zushiye1"
         />
+     <TextView
+        android:id="@+id/huifu"
+        style="@style/textSize3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/huifu"
+        />
+     <TextView
+        android:id="@+id/item_otherName"
+        style="@style/textSize3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:text="@string/zuji"
+        />
+     <TextView
+        android:id="@+id/maohao"
+        style="@style/textSize3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:text="@string/maohao"
+        />
+    
     <EditText
         android:id="@+id/huifu_item"
         android:layout_height="wrap_content"
