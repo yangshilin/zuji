@@ -70,6 +70,8 @@
     <string name="bangzhu">帮助</string>
     <string name="fankiu">反馈</string>
     <string name="touxiang">头像</string>
+    <string name="yishi">已是最新版本</string>
+    <string name="maohao">:</string>
     <string name="nicheng">昵称</string>
     <string name="xingbie">性别</string>
      <string name="buchaoguo">不超过40个字</string>
@@ -88,6 +90,7 @@
    <string name="zushiye1">祖师爷</string>
     <string name="dongtai">一路向北，只为在最美丽的季节与你相遇。</string>
     <string name="nide">你的动态</string>
+     <string name="jieshao">介绍</string>
     <string name="pingjia">心悦君兮君不知</string>
     <string name="duihua">没有你，良辰美景更与何人说。</string>
     <string name="qingshuru">请输入遇到的问题或建议...</string>
