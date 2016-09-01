@@ -153,7 +153,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 	};
 
 	public void getData() {
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <4; i++) {
 			Collect collect = new Collect();
 			collect.setTuxiang(R.drawable.collect_iconone);
 			collect.setName("恬恬喜欢的甜");
@@ -171,7 +171,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 	}
 
 	public void getDataFabu() {
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <6; i++) {
 			Release release = new Release();
 			release.setImageId(R.drawable.publish_imgone);
 			release.setXinsheng("一路向北，只为在最美丽的季节与你相遇。");
