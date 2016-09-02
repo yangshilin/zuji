@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
+
 public class CameraActivity extends Activity{
 	ImageButton fanhui;
 	ImageButton xiangce;
@@ -33,7 +34,7 @@ public class CameraActivity extends Activity{
 	ImageButton jingtou;
 	ImageButton chongpai;
 	ImageButton paizhao;
-	ImageButton xiushi;
+	ImageButton bianji;
 	ImageView view;
 	Uri uri;//文件
 	@Override
@@ -48,10 +49,11 @@ public class CameraActivity extends Activity{
 	 jingtou = (ImageButton)findViewById(R.id.camera_transform_btn);
 	 chongpai = (ImageButton)findViewById(R.id.camera_chongpai_btn);
 	 paizhao = (ImageButton)findViewById(R.id.camera_photograph_btn);
-	 xiushi = (ImageButton)findViewById(R.id.camera_xiushi_btn);
+	 bianji = (ImageButton)findViewById(R.id.camera_xiushi_btn);
 	 
 	fanhui.setOnClickListener(onClickListener);
 	paizhao.setOnClickListener(onClickListener);
+	bianji.setOnClickListener(onClickListener);
 	}
 	OnClickListener onClickListener = new OnClickListener(){
 
@@ -67,7 +69,8 @@ public class CameraActivity extends Activity{
 				Intent paizhao = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);//调用相机功能
 				paizhao.putExtra(MediaStore.EXTRA_OUTPUT,uri);//输出
 				startActivityForResult(paizhao,1);
-			case R.id.camera_xiangce_btn:
+				break;
+		/*	case R.id.camera_xiangce_btn:
 				Intent xiangce = new Intent(Intent.ACTION_GET_CONTENT);
 				xiangce.addCategory(Intent.CATEGORY_OPENABLE);
 				xiangce.setType("image/*");
@@ -76,6 +79,11 @@ public class CameraActivity extends Activity{
 				xiangce.putExtra("outputY", 230);
 				xiangce.putExtra("return-data", true);
 				startActivityForResult(xiangce, 1);
+				break;*/
+			case R.id.camera_xiushi_btn:
+				Intent bianjia = new Intent(CameraActivity.this,CameraDongtaiActivity.class);
+				startActivity(bianjia);
+				break;
 			default:
 				break;
 			}

@@ -39,6 +39,8 @@ public class GuanYuZuJiActivity extends Activity{
 				startActivity(intent);
 				break;
 			case R.id.gongneng_guanyu:
+				Intent intent2=new Intent(GuanYuZuJiActivity.this,GongNrngJieShaoActivity.class);
+				startActivity(intent2);
 				break;
 			case R.id.bangzhu_guanyu:
 				break;
