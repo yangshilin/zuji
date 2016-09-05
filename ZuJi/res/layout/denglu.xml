@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/copy"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/denglu_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            style="@style/dingbudaohangliang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/denglu" />
+
+        <TextView
+            android:id="@+id/denglu_zhuce"
+            style="@style/textSize3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/zhuce"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        
+        android:src="@drawable/login_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/denglu_zhanghao"
+            style="@style/textSize3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:singleLine="true"
+            android:drawableBottom="@drawable/login_line"
+            android:drawableLeft="@drawable/login_user"
+            android:drawablePadding="10dp"
+            android:hint="@string/shoujihao2"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+     
+    <EditText
+        android:id="@+id/denglu_mima"
+        style="@style/textSize3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:singleLine="true"
+        android:layout_marginTop="15dp"
+        android:drawableBottom="@drawable/login_line"
+        android:drawableLeft="@drawable/mima_suo"
+        android:drawablePadding="10dp"
+        android:hint="@string/mima2"
+        android:inputType="textPassword"
+        android:textColor="@color/white" 
+        android:textColorHint="@color/white" />
+     
+		<TextView
+		    android:id="@+id/denglu_denglu"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="40dp"
+		    android:layout_gravity="center"
+		    android:gravity="center"
+		    style="@style/dingbudaohangliang"
+		    android:background="@drawable/denglu_background"
+		    android:text="@string/denglu"/>
+		<TextView
+		    android:id="@+id/denglu_wangjimima"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textColor="@color/white"
+		    android:textSize="15sp"
+		    android:layout_marginTop="18dp"
+		    android:text="@string/wangjimima"/>
+		 </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

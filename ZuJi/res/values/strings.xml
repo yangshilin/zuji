@@ -43,7 +43,7 @@
     <string name="quxiao">取消</string>
     <string name="guanzhu">关注了</string>
     <string name="shezhimima">设置足迹密码</string>
-    <string name="shoujihao">手机号/足迹号</string>
+    <string name="shoujihao">足迹号/手机号</string>
     <string name="zujihao">足迹号</string>
     <string name="qing">请设置足迹密码</string>
     <string name="shezhi">设置</string>
@@ -98,6 +98,11 @@
     <string name="qianming">旅途不在乎终点，而在意途中的人和事以及那些美好的回忆和景色</string>
     <string name="buchaoguo2">不超过25个字</string>
     <string name="buchaoguo">不超过40个字</string>
+    <string name="denglu">登录</string>
+    <string name="zhuce">注册</string>
+    <string name="wangjimima">忘记密码？</string>
+    <string name="shoujihao2">足迹号/手机号:</string>
+    <string name="mima2">密码:</string>
     <string name="jianjie">\t\t软件简介
 \n\t\t足迹是一款专注于为用户提供在个人或群体旅游时即时发布心得体会，经验，以及推荐的平台APP。
 \n\t\t目标群体包括摄影爱好者，旅游爱好者，旅游文化探索者，以及一切对旅游与摄影喜爱的大众人群。
