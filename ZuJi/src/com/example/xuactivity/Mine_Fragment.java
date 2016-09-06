@@ -166,36 +166,34 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 	};
 
 	public void getData() {
-		for (int i = 0; i < 20; i++) {
-			Collect collect = new Collect();
-			collect.setTuxiang(R.drawable.collect_iconone);
-			collect.setName("恬恬喜欢的甜");
-			collect.setShiwuname("芒果千层糕");
-			collect.setView(R.id.colorview);
-			collect.setDaytime("2015.6.8");
-			collect.setLiulan("120次浏览");
-			collect.setZan(R.drawable.da_xin);
-			collect.setZannumb("12");
-			collect.setCommection(R.drawable.comment_tu);
-			collect.setCommnumb("15");
-			list.add(collect);
-		}
-
-	}
-
-	public void getDataFabu() {
-		String httpHost = "http://192.168.1.175/index.php/home/api/getfabudata";
+		String httpHost = "http://192.168.1.175/index.php/home/api/getshoucangdata";
 		String param = null;
+		int type = 1;
 		try {
 			param = "user_id=" + URLEncoder.encode("123456", "utf-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		httpUrlConn(httpHost, param);
+		httpUrlConn1(httpHost, param, type);
+
 	}
 
-	public void httpUrlConn(String httpHost, String param) {
+	public void getDataFabu() {
+		String httpHost = "http://192.168.1.175/index.php/home/api/getfabudata";
+		String param = null;
+		int type = 2;
+		try {
+			param = "user_id=" + URLEncoder.encode("123456", "utf-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		httpUrlConn(httpHost, param, type);
+	}
+
+	public  void httpUrlConn(String httpHost, String param,
+			final int type) {
 		final String newHttpHost = httpHost;
 		final String newParam = param;
 		new Thread(new Runnable() {
@@ -228,10 +226,57 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 					e.printStackTrace();
 				}
 				Log.i("httppost===>Data", builder.toString());
-				getJsonData(builder.toString());
+				if (type == 2) {
+					getJsonData(builder.toString());
+				} else if (type == 1) {
+					getJsonDataForShouCang(builder.toString());
+				}
 			}
 		}).start();
 
+	}
+	public synchronized void httpUrlConn1(String httpHost, String param,
+			final int type) {
+		final String newHttpHost = httpHost;
+		final String newParam = param;
+		new Thread(new Runnable() {
+			StringBuilder builder = new StringBuilder();
+			
+			@Override
+			public void run() {
+				try {
+					String urlName = newHttpHost + "?" + newParam;
+					URL url = new URL(urlName);
+					HttpURLConnection httpURLConnection = (HttpURLConnection) url
+							.openConnection();
+					httpURLConnection.setConnectTimeout(5000);
+					httpURLConnection.connect();
+					if (httpURLConnection.getResponseCode() == 200) {
+						InputStream inputStream = httpURLConnection
+								.getInputStream();
+						// 获取输入流，相应内容
+						BufferedReader bufferedReader = new BufferedReader(
+								new InputStreamReader(inputStream));
+						String line = bufferedReader.readLine();
+						while (line != null && line.length() > 0) {
+							builder.append(line);
+							line = bufferedReader.readLine();
+						}
+						bufferedReader.close();
+						inputStream.close();
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				Log.i("httppost===>Data", builder.toString());
+				if (type == 2) {
+					getJsonData(builder.toString());
+				} else if (type == 1) {
+					getJsonDataForShouCang(builder.toString());
+				}
+			}
+		}).start();
+		
 	}
 
 	public void getJsonData(String data) {
@@ -253,6 +298,40 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 				release.setFabupinglun(count_pinlun);
 				release.setFabupingluntu(R.drawable.comment_tu);
 				listfabu.add(release);
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void getJsonDataForShouCang(String data) {
+		try {
+			JSONArray jsonArray = new JSONArray(data);
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject jsonObject2 = jsonArray.getJSONObject(i);
+				String author_name = jsonObject2.get("author_name").toString();
+				String content_title = jsonObject2.getString("content_title")
+						.toString();
+				String content_time = jsonObject2.getString("content_time")
+						.toString();
+				String count_browse = jsonObject2.getString("count_browse")
+						.toString();
+				String count_zan = jsonObject2.getString("count_zan")
+						.toString();
+				String count_pinlun = jsonObject2.getString("count_pinlun")
+						.toString();
+				Collect collect = new Collect();
+				collect.setTuxiang(R.drawable.collect_iconone);
+				collect.setName(author_name);
+				collect.setShiwuname(content_title);
+				collect.setView(R.id.colorview);
+				collect.setDaytime(content_time);
+				collect.setLiulan(count_browse);
+				collect.setZan(R.drawable.da_xin);
+				collect.setZannumb(count_zan);
+				collect.setCommection(R.drawable.comment_tu);
+				collect.setCommnumb(count_pinlun);
+				list.add(collect);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

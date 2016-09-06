@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+     <string name="action_settings">Settings</string>
+	<string-array name="week_name">
+		<item>日</item>
+		<item>一</item>
+		<item>二</item>
+		<item>三</item>
+		<item>四</item>
+		<item>五</item>
+		<item>六</item>
+	</string-array>
     <string name="homepage">首页</string>
     <string name="community">社区</string>
     <string name="message">消息</string>

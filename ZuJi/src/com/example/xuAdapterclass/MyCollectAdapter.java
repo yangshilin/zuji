@@ -68,7 +68,7 @@ public class MyCollectAdapter extends BaseAdapter {
 			name.setText(collect.getName());
 			shiwuname.setText(collect.getShiwuname());
 			daytime.setText(collect.getDaytime());
-			liulan.setText(collect.getLiulan());
+			liulan.setText(collect.getLiulan()+"次浏览");
 			zan.setImageResource(collect.getZan());
 			zannumb.setText(collect.getZannumb());
 			commection.setImageResource(collect.getCommection());
