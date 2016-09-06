@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/real_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/real_logo" />
+
+        <TextView
+            android:id="@+id/kittyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/real_logo"
+            android:text="足迹小编kitty"
+            android:textColor="#7A7A7A"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/fabutime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kittyname"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/real_logo"
+            android:text="一小时前"
+            android:textColor="#7A7A7A"
+            android:textSize="10sp" />
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#Efefef"/>
+
+    <TextView
+        
+        android:id="@+id/title_name"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="有个地方叫米甲"
+        android:textColor="#7A7A7A"
+        android:textSize="10sp" />
+
+</LinearLayout>

@@ -69,6 +69,8 @@
         </activity>
         <activity android:name="com.example.xuactivity.MinefocusActivity" >
         </activity>
+        <activity android:name="com.example.xuactivity.Mine_collect_activity" >
+        </activity>
         <activity android:name="com.example.xuactivity.TimefusiondeletesActivity" >
         </activity>
         <activity android:name="com.example.xuactivity.Timeinthepast_activity" >

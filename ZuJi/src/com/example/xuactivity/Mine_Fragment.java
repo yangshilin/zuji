@@ -16,13 +16,14 @@ import org.json.JSONObject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -30,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.xuAdapterclass.Collect;
@@ -75,6 +77,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 			}
 		});
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
+		shoucang_listview.setOnItemClickListener(listener);//收藏中的跳转页面监听
 		fabu_gridview = (GridView) v.findViewById(R.id.fabu_gridview);
 		getDataFabu();
 		getData();
@@ -118,6 +121,27 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 		guanzhushu.setOnClickListener(this);
 		return v;
 	}
+	
+	
+	
+	
+	OnItemClickListener listener=new OnItemClickListener() {//收藏中的跳转页面监听
+
+		@Override
+		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+				long arg3) {
+			RelativeLayout relativeLayout=(RelativeLayout)arg1.findViewById(R.id.collect_ting);
+			relativeLayout.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {//收藏中的跳转页面
+					startActivity(new Intent(getActivity(),Mine_collect_activity.class));
+					
+				}
+			});
+		}
+
+	};
 
 	@Override
 	public void onClick(View v) {
