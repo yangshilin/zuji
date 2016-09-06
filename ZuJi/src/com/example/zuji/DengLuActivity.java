@@ -1,5 +1,4 @@
 package com.example.zuji;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -49,6 +48,8 @@ public class DengLuActivity extends Activity {
 				startActivity(intent);
 				break;
 			case R.id.denglu_zhuce:
+				Intent intent3=new Intent(DengLuActivity.this,ZhuCeActivity.class);
+				startActivity(intent3);
 				break;
 			case R.id.denglu_denglu:
 				Intent intent2=new Intent(DengLuActivity.this,BottonNavigationActivity.class);

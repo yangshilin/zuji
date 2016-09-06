@@ -32,7 +32,10 @@
         </activity>
          <activity android:name="com.example.zuji.DengLuActivity" >
         </activity>
-        <activity android:name="com.example.zuji.BottonNavigationActivity" >
+        <activity android:name="com.example.zuji.ZhuCeActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.BottonNavigationActivity"
+            android:launchMode="singleTask" >
         </activity>
         <activity android:name="com.example.zuji.GeRenZiLiaoActivity" >
         </activity>
@@ -58,7 +61,7 @@
         </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
+      	<activity android:name="com.example.zuji.GeRenTouXiangActivity" >
         </activity>
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>

@@ -32,18 +32,15 @@ public class Fragment_XiaoXi extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+			Bundle savedInstanceState){
 		View v = inflater.inflate(R.layout.xiaoxi, null);
-		
 		listview = (ListView) v.findViewById(R.id.listview_xiaoxi);
-
 		header = View.inflate(getActivity(), R.layout.xiaoxi_listview_head,
 				null);
 		pinglunText = (LinearLayout) header.findViewById(R.id.pinglun_xiaoxi);
 		dianzantext = (LinearLayout) header.findViewById(R.id.dianzan_xiaoxi);
 		tongzhitext = (LinearLayout) header.findViewById(R.id.tongzhi_xiaoxi);
 		tidaotext = (LinearLayout) header.findViewById(R.id.tidao_xiaoxi);
-		
 		listview.addHeaderView(header);// 添加头视图
 		getData();
 		adapter = new XiaoXiAdapter(getActivity(), xiaoxiList,

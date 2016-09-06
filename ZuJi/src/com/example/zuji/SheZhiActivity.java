@@ -8,13 +8,13 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class SheZhiActivity extends Activity{
 	
 	ImageButton shizhiReturn;
-	
+	TextView tuichu;
 	CheckBox weizhibtn,shoucangbtn;
 	LinearLayout ziliao,guangli,huancun,guanyu,gengxing,yijian;
 	@Override
@@ -33,7 +33,7 @@ public class SheZhiActivity extends Activity{
 		guanyu=(LinearLayout)findViewById(R.id.guanyu_linear);
 		gengxing=(LinearLayout)findViewById(R.id.gengxin_linear);
 		yijian=(LinearLayout)findViewById(R.id.fankiu_linear);
-		
+		tuichu=(TextView)findViewById(R.id.tuichu_shezhi);
 		
 		shizhiReturn.setOnClickListener(onClickListener);
 		weizhibtn.setOnClickListener(onClickListener);
@@ -44,6 +44,7 @@ public class SheZhiActivity extends Activity{
 		guanyu.setOnClickListener(onClickListener);
 		gengxing.setOnClickListener(onClickListener);
 		yijian.setOnClickListener(onClickListener);
+		tuichu.setOnClickListener(onClickListener);
 	}
 	OnClickListener onClickListener=new OnClickListener(){
 		@Override
@@ -77,12 +78,16 @@ public class SheZhiActivity extends Activity{
 				startActivity(intent5);
 				break;
 			case R.id.gengxin_linear:
-				Intent intent6=new Intent(SheZhiActivity.this,BottonNavigationActivity.class);
-				startActivity(intent6);
+				
 				break;
 			case R.id.fankiu_linear:
 				Intent intent7=new Intent(SheZhiActivity.this,YiJianFanKiuActivity.class);
 				startActivity(intent7);
+			case R.id.tuichu_shezhi:
+				Intent intent8=new Intent(SheZhiActivity.this,DengLuActivity.class);
+				startActivity(intent8);
+				break;
+			default:
 				break;
 			}
 		}
