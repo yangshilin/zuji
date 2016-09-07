@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -35,11 +34,11 @@ import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.dsw.datepicker.MonthDateView;
 import com.dsw.datepicker.MonthDateView.DateClick;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
+
 
 public class TimefusiondeletesActivity extends Activity implements
 		OnClickListener {
@@ -125,6 +124,8 @@ public class TimefusiondeletesActivity extends Activity implements
 				public void onClick(View v) {// 分享
 					Toast.makeText(TimefusiondeletesActivity.this, "分享成功",
 							Toast.LENGTH_SHORT).show();
+					share();
+					//startActivity(new Intent(TimefusiondeletesActivity.this,Mine_collect_activity.class));
 				}
 			});
 			timepaizhao.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +148,22 @@ public class TimefusiondeletesActivity extends Activity implements
 			});
 		}
 	};
+	/**
+	 * 安装包地址
+	 */
+	String linkPath = "https://github.com/maomao123456/Pet.git";
+	// 分享
+	public void share() {
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("image/*");
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_SUBJECT, linkPath);
+		intent.putExtra(Intent.EXTRA_TEXT, linkPath);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(Intent.createChooser(intent, getTitle()));
+	}
+
+		
 	private ImageView iv_left;
 	private ImageView iv_right;
 	private TextView tv_date;
