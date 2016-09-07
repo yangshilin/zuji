@@ -15,14 +15,14 @@ public class GongNrngJieShaoActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.gerentouxiang_gridview);
-		jieshaoReturn=(ImageButton)findViewById(R.id.gerenziliao_aihao);
+		setContentView(R.layout.gongengjieshao);
+		jieshaoReturn=(ImageButton)findViewById(R.id.gongneng_return);
 		jieshaoReturn.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if(v.getId()==R.id.gengxin_linear){
+				if(v.getId()==R.id.gongneng_return){
 					Intent intent=new Intent(GongNrngJieShaoActivity.this,GuanYuZuJiActivity.class);
 					startActivity(intent);
 				}
