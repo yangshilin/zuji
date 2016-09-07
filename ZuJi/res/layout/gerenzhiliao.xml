@@ -87,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:singleLine="true"
             android:gravity="center_vertical|right"
             android:onClick="true"
             android:padding="10dp"
@@ -148,6 +149,8 @@
             android:gravity="center_vertical|right"
             android:onClick="true"
             android:padding="10dp"
+            android:maxLength="20"
+            android:singleLine="true"
             android:text="@string/chongqing"
             android:textColor="@color/gray_white" />
     </LinearLayout>
@@ -174,12 +177,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:ems="10"
             android:gravity="center_vertical|right"
             android:inputType="number"
             android:onClick="true"
             android:padding="10dp"
+            android:singleLine="true"
             android:text="24"
-            android:textColor="@color/gray_white" />
+            android:maxLength="2"
+            android:textColor="@color/gray_white" >
+
+            <requestFocus />
+        </EditText>
+
     </LinearLayout>
 
     <LinearLayout
@@ -209,6 +219,7 @@
             android:onClick="true"
             android:padding="10dp"
             android:maxLength="25"
+            android:singleLine="true"
             android:text="@string/aihaoleixing"
             android:textColor="@color/gray_white"
              android:textColorHint="@color/gray_white"/>

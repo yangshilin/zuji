@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_green" >
+
+        <ImageButton
+            android:id="@+id/zhuce_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            style="@style/dingbudaohangliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/zhuce" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/zhece_zhanghao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/username"
+        android:drawablePadding="20dp"
+        android:hint="@string/shurushoujihao"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/password" />
+
+        <EditText
+            android:id="@+id/zhuce_mima"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/shurumima"
+            android:padding="10dp"
+            android:inputType="textWebPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_white" />
+
+        <CheckBox
+            android:id="@+id/zhuce_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:button="@null"
+            android:drawableLeft="@drawable/zhuce_yanjing"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="3dp"
+            style="@style/textSize"
+            android:textColor="@color/black"
+            android:text="@string/yanzhengma" />
+
+        <EditText
+            android:id="@+id/zhuce_yanzhengma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/shuruyanzhengma"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_white" />
+
+        <Button
+            android:id="@+id/zhuce_fasong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_green"
+            android:padding="5dp"
+            android:text="@string/fasongyanzhengma" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/zhuce_zhuce"
+        style="@style/dingbudaohangliang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/zhuce_background"
+        android:gravity="center"
+        android:text="@string/zhuce" />
+
+</LinearLayout>

@@ -23,9 +23,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.example.zuji.BottonNavigationActivity"
-            android:launchMode="singleTask" 
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:name="com.example.zuji.YinDaoYeActivity"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,12 +33,18 @@
         </activity>
         <activity android:name="com.example.zuji.DianZanActivity" >
         </activity>
+         <activity android:name="com.example.zuji.DengLuActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.ZhuCeActivity" >
+        </activity>
+        <activity android:name="com.example.zuji.BottonNavigationActivity"
+            android:launchMode="singleTask" >
+        </activity>
         <activity android:name="com.example.zuji.GeRenZiLiaoActivity" >
         </activity>
         <activity android:name="com.example.zuji.PingLunActivity" >
         </activity>
-        <activity android:name="com.example.zuji.ZuJiActivity" 
-            >
+        <activity android:name="com.example.zuji.ZuJiActivity" >
         </activity>
         <activity android:name="com.example.zuji.TiDaoActivity" >
         </activity>
@@ -59,7 +64,7 @@
         </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
+      	<activity android:name="com.example.zuji.GeRenTouXiangActivity" >
         </activity>
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>
