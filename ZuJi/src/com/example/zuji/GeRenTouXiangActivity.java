@@ -43,8 +43,7 @@ public class GeRenTouXiangActivity extends Activity {
 		touxiangReturn = (ImageButton) findViewById(R.id.touxiang_return);
 		xuanzedialog = (LinearLayout) findViewById(R.id.caidan_touxiang);
 		touxiangImage = (ImageView) findViewById(R.id.touxiang_image);
-		
-		
+
 		xuanzedialog.setOnClickListener(onClickListener);
 		touxiangReturn.setOnClickListener(onClickListener);
 		
@@ -86,6 +85,7 @@ public class GeRenTouXiangActivity extends Activity {
 				break;
 			case R.id.paizhao_touxiang:
 				 getPhoto(v);
+				
 				break;
 			case R.id.cong_touxiang:
 				break;

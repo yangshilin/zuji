@@ -77,7 +77,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 			}
 		});
 		shoucang_listview = (ListView) v.findViewById(R.id.shoucang_listview);
-		shoucang_listview.setOnItemClickListener(listener);//收藏中的跳转页面监听
+		shoucang_listview.setOnItemClickListener(listener);// 收藏中的跳转页面监听
 		fabu_gridview = (GridView) v.findViewById(R.id.fabu_gridview);
 		getDataFabu();
 		getData();
@@ -121,24 +121,26 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 		guanzhushu.setOnClickListener(this);
 		return v;
 	}
-	
-	
-	
-	
-	OnItemClickListener listener=new OnItemClickListener() {//收藏中的跳转页面监听
+
+	OnItemClickListener listener = new OnItemClickListener() {// 收藏中的跳转页面监听
 
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
-			RelativeLayout relativeLayout=(RelativeLayout)arg1.findViewById(R.id.collect_ting);
-			relativeLayout.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {//收藏中的跳转页面
-					startActivity(new Intent(getActivity(),Mine_collect_activity.class));
-					
-				}
-			});
+			if (arg2 == 0) {
+
+				RelativeLayout relativeLayout = (RelativeLayout) arg1
+						.findViewById(R.id.collect_ting);
+				relativeLayout.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {// 收藏中的跳转页面
+						startActivity(new Intent(getActivity(),
+								Mine_collect_activity.class));
+
+					}
+				});
+			}
 		}
 
 	};
@@ -216,8 +218,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 		httpUrlConn(httpHost, param, type);
 	}
 
-	public  void httpUrlConn(String httpHost, String param,
-			final int type) {
+	public void httpUrlConn(String httpHost, String param, final int type) {
 		final String newHttpHost = httpHost;
 		final String newParam = param;
 		new Thread(new Runnable() {
@@ -259,13 +260,14 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 		}).start();
 
 	}
+
 	public synchronized void httpUrlConn1(String httpHost, String param,
 			final int type) {
 		final String newHttpHost = httpHost;
 		final String newParam = param;
 		new Thread(new Runnable() {
 			StringBuilder builder = new StringBuilder();
-			
+
 			@Override
 			public void run() {
 				try {
@@ -300,7 +302,7 @@ public class Mine_Fragment extends Fragment implements OnClickListener {
 				}
 			}
 		}).start();
-		
+
 	}
 
 	public void getJsonData(String data) {
