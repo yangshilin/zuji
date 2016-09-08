@@ -12,8 +12,6 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
@@ -33,11 +31,12 @@
         </activity>
         <activity android:name="com.example.zuji.DianZanActivity" >
         </activity>
-         <activity android:name="com.example.zuji.DengLuActivity" >
+        <activity android:name="com.example.zuji.DengLuActivity" >
         </activity>
         <activity android:name="com.example.zuji.ZhuCeActivity" >
         </activity>
-        <activity android:name="com.example.zuji.BottonNavigationActivity"
+        <activity
+            android:name="com.example.zuji.BottonNavigationActivity"
             android:launchMode="singleTask" >
         </activity>
         <activity android:name="com.example.zuji.GeRenZiLiaoActivity" >
@@ -64,7 +63,7 @@
         </activity>
         <activity android:name="com.example.zuji.DynamicSiBuSheYingActivity" >
         </activity>
-      	<activity android:name="com.example.zuji.GeRenTouXiangActivity" >
+        <activity android:name="com.example.zuji.GeRenTouXiangActivity" >
         </activity>
         <activity android:name="com.example.zuji.GuanYuZuJiActivity" >
         </activity>
@@ -98,6 +97,7 @@
         </activity>
         <activity android:name="com.example.zuiji.homepage.CameraDongtaiActivity" >
         </activity>
+        
     </application>
 
 </manifest>
