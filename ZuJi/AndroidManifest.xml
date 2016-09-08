@@ -93,6 +93,16 @@
         </activity>
         <activity android:name="com.example.zuiji.homepage.CameraDongtaiActivity" >
         </activity>
+         <activity android:name="com.example.zuiji.homepage.SceneryCommentTwoActivity" >
+        </activity>
+         <activity android:name="com.example.zuiji.homepage.SceneryCommentThreeActivity" >
+        </activity>
+         <activity android:name="com.example.zuiji.homepage.SceneryCommentFourActivity" >
+        </activity>
+         <activity android:name="com.example.zuiji.homepage.SceneryCommentFiveActivity" >
+        </activity>
+         <activity android:name="com.example.zuiji.homepage.SceneryCommentSixActivity" >
+        </activity>
     </application>
 
 </manifest>

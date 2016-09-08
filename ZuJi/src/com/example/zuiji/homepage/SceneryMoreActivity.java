@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.xuAdapterclass.SceneryMoreAdapter;
 import com.example.zuji.BottonNavigationActivity;
@@ -26,6 +29,7 @@ public class SceneryMoreActivity extends Activity {
 	GridView gridview;
 	List<SceneryMore> lists;
 	SceneryMore sm;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -33,20 +37,62 @@ public class SceneryMoreActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);// 取消运行时的顶部标题
 		setContentView(R.layout.activity_scenery_more);
 		fanhuiBtn = (ImageButton) findViewById(R.id.scenery_comment_content_fanhuiBtn);
-		guanzhuBtn = (ImageButton)findViewById(R.id.hot_guanzhu);
-	
-		gridview = (GridView)findViewById(R.id.scenery_comment_content_gview);
+		guanzhuBtn = (ImageButton) findViewById(R.id.hot_guanzhu);
+
+		gridview = (GridView) findViewById(R.id.scenery_comment_content_gview);
+		/**
+		 * 内部内，监听
+		 */
+		gridview.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override									//视图		//下标位置
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				//Toast.makeText(SceneryMoreActivity.this, arg2 + "", 0).show();//获取位子提示
+				switch (arg2) {
+				case 0:
+					Intent intent1 = new Intent(SceneryMoreActivity.this,SceneryCommentTwoActivity.class);
+					startActivity(intent1);
+					break;
+				case 1:
+					Intent intent2 = new Intent(SceneryMoreActivity.this,SceneryCommentActivity.class);
+					startActivity(intent2);
+					break;
+				case 2:
+					Intent intent3 = new Intent(SceneryMoreActivity.this,SceneryCommentThreeActivity.class);
+					startActivity(intent3);
+					break;
+				case 3:
+					Intent intent4 = new Intent(SceneryMoreActivity.this,SceneryCommentFourActivity.class);
+					startActivity(intent4);
+					break;
+				case 4:
+					Intent intent5 = new Intent(SceneryMoreActivity.this,SceneryCommentFiveActivity.class);
+					startActivity(intent5);
+					break;
+				case 5:
+					Intent intent6 = new Intent(SceneryMoreActivity.this,SceneryCommentSixActivity.class);
+					startActivity(intent6);
+					break;
+
+				default:
+					break;
+				}
+			}
+		});
 		fanhuiBtn.setOnClickListener(onclicklistener);
 		getDate();
 	}
+
 	/**
 	 * GridView添加数据
 	 */
 	private void getDate() {
 		// TODO Auto-generated method stub
-		lists = new ArrayList<SceneryMore>();//数组列表集合参数
-	
-		SceneryMore sm = new SceneryMore();//实例化参数对象
+		lists = new ArrayList<SceneryMore>();// 数组列表集合参数
+
+		SceneryMore sm = new SceneryMore();// 实例化参数对象
 		sm.setTupian(R.drawable.teita);
 		sm.setTouxiang(R.drawable.touxiang);
 		sm.setTitle("普通菇凉");
@@ -58,105 +104,76 @@ public class SceneryMoreActivity extends Activity {
 		sm.setXin(R.drawable.xin);
 		sm.setZanshu("278");
 		lists.add(sm);// 列表添加参数
-		
-		 sm = new SceneryMore();//实例化参数对象
-			sm.setTupian(R.drawable.koubei_work_image);
-			sm.setTouxiang(R.drawable.logo_1);
-			sm.setTitle("flalf");
-			sm.setShizhong(R.drawable.shijian);
-			sm.setRiqi("3-10");
-			sm.setShijian("10:15");
-			sm.setPingyu(R.drawable.xiao_pinglun);
-			sm.setPingyushu("52");
-			sm.setXin(R.drawable.xin);
-			sm.setZanshu("432");
-			lists.add(sm);// 列表添加参数
-			
-			 sm = new SceneryMore();//实例化参数对象
-				sm.setTupian(R.drawable.tag2);
-				sm.setTouxiang(R.drawable.logo_2);
-				sm.setTitle("kt-mi");
-				sm.setShizhong(R.drawable.shijian);
-				sm.setRiqi("3-10");
-				sm.setShijian("10:15");
-				sm.setPingyu(R.drawable.xiao_pinglun);
-				sm.setPingyushu("522");
-				sm.setXin(R.drawable.xin);
-				sm.setZanshu("412");
-				lists.add(sm);// 列表添加参数
-				
-				 sm = new SceneryMore();//实例化参数对象
-					sm.setTupian(R.drawable.tag3);
-					sm.setTouxiang(R.drawable.logo_7);
-					sm.setTitle("小虾米");
-					sm.setShizhong(R.drawable.shijian);
-					sm.setRiqi("3-10");
-					sm.setShijian("10:15");
-					sm.setPingyu(R.drawable.xiao_pinglun);
-					sm.setPingyushu("520");
-					sm.setXin(R.drawable.xin);
-					sm.setZanshu("42");
-					lists.add(sm);// 列表添加参数
-					
-					
-					 sm = new SceneryMore();//实例化参数对象
-						sm.setTupian(R.drawable.xiaobian2);
-						sm.setTouxiang(R.drawable.logo_8);
-						sm.setTitle("秋风");
-						sm.setShizhong(R.drawable.shijian);
-						sm.setRiqi("2-8");
-						sm.setShijian("15:15");
-						sm.setPingyu(R.drawable.xiao_pinglun);
-						sm.setPingyushu("1204");
-						sm.setXin(R.drawable.xin);
-						sm.setZanshu("742");
-						lists.add(sm);// 列表添加参数
-						
-						
-						 sm = new SceneryMore();//实例化参数对象
-							sm.setTupian(R.drawable.xiaobian3);
-							sm.setTouxiang(R.drawable.logo_5);
-							sm.setTitle("雨滴");
-							sm.setShizhong(R.drawable.shijian);
-							sm.setRiqi("2-7");
-							sm.setShijian("13:15");
-							sm.setPingyu(R.drawable.xiao_pinglun);
-							sm.setPingyushu("43");
-							sm.setXin(R.drawable.xin);
-							sm.setZanshu("763");
-							lists.add(sm);// 列表添加参数
-							
-							
-							 sm = new SceneryMore();//实例化参数对象
-								sm.setTupian(R.drawable.homepage_koubei_image2);
-								sm.setTouxiang(R.drawable.logo_1);
-								sm.setTitle("东方红");
-								sm.setShizhong(R.drawable.shijian);
-								sm.setRiqi("1-10");
-								sm.setShijian("16:15");
-								sm.setPingyu(R.drawable.xiao_pinglun);
-								sm.setPingyushu("45");
-								sm.setXin(R.drawable.xin);
-								sm.setZanshu("7432");
-								lists.add(sm);// 列表添加参数
-								
-								
-								 sm = new SceneryMore();//实例化参数对象
-									sm.setTupian(R.drawable.homepage_hot_photo_album_image3);
-									sm.setTouxiang(R.drawable.logo_1);
-									sm.setTitle("阿甘铪");
-									sm.setShizhong(R.drawable.shijian);
-									sm.setRiqi("1-10");
-									sm.setShijian("12:13");
-									sm.setPingyu(R.drawable.xiao_pinglun);
-									sm.setPingyushu("42");
-									sm.setXin(R.drawable.xin);
-									sm.setZanshu("745");
-									lists.add(sm);// 列表添加参数
-			
-		SceneryMoreAdapter smAdapter = new SceneryMoreAdapter(SceneryMoreActivity.this,
+
+		sm = new SceneryMore();// 实例化参数对象
+		sm.setTupian(R.drawable.erhai);
+		sm.setTouxiang(R.drawable.logo_1);
+		sm.setTitle("左手倒影");
+		sm.setShizhong(R.drawable.shijian);
+		sm.setRiqi("3-10");
+		sm.setShijian("10:15");
+		sm.setPingyu(R.drawable.xiao_pinglun);
+		sm.setPingyushu("52");
+		sm.setXin(R.drawable.xin);
+		sm.setZanshu("432");
+		lists.add(sm);// 列表添加参数
+
+		sm = new SceneryMore();// 实例化参数对象
+		sm.setTupian(R.drawable.xianggang);
+		sm.setTouxiang(R.drawable.logo_2);
+		sm.setTitle("约定");
+		sm.setShizhong(R.drawable.shijian);
+		sm.setRiqi("3-10");
+		sm.setShijian("10:15");
+		sm.setPingyu(R.drawable.xiao_pinglun);
+		sm.setPingyushu("522");
+		sm.setXin(R.drawable.xin);
+		sm.setZanshu("412");
+		lists.add(sm);// 列表添加参数
+
+		sm = new SceneryMore();// 实例化参数对象
+		sm.setTupian(R.drawable.changcheng);
+		sm.setTouxiang(R.drawable.logo_7);
+		sm.setTitle("浮生物语");
+		sm.setShizhong(R.drawable.shijian);
+		sm.setRiqi("3-10");
+		sm.setShijian("10:15");
+		sm.setPingyu(R.drawable.xiao_pinglun);
+		sm.setPingyushu("520");
+		sm.setXin(R.drawable.xin);
+		sm.setZanshu("42");
+		lists.add(sm);// 列表添加参数
+
+		sm = new SceneryMore();// 实例化参数对象
+		sm.setTupian(R.drawable.aiji);
+		sm.setTouxiang(R.drawable.logo_8);
+		sm.setTitle("纯洁美青柠");
+		sm.setShizhong(R.drawable.shijian);
+		sm.setRiqi("2-8");
+		sm.setShijian("15:15");
+		sm.setPingyu(R.drawable.xiao_pinglun);
+		sm.setPingyushu("1204");
+		sm.setXin(R.drawable.xin);
+		sm.setZanshu("742");
+		lists.add(sm);// 列表添加参数
+
+		sm = new SceneryMore();// 实例化参数对象
+		sm.setTupian(R.drawable.jinfoshan);
+		sm.setTouxiang(R.drawable.logo_5);
+		sm.setTitle("此女子不温柔不体贴");
+		sm.setShizhong(R.drawable.shijian);
+		sm.setRiqi("2-7");
+		sm.setShijian("13:15");
+		sm.setPingyu(R.drawable.xiao_pinglun);
+		sm.setPingyushu("43");
+		sm.setXin(R.drawable.xin);
+		sm.setZanshu("763");
+		lists.add(sm);// 列表添加参数
+
+		SceneryMoreAdapter smAdapter = new SceneryMoreAdapter(
+				SceneryMoreActivity.this,
 				R.layout.activity_scenery_more_gridview, lists);
-		gridview.setAdapter(smAdapter);//listView设置Adapter
+		gridview.setAdapter(smAdapter);// listView设置Adapter
 	}
 
 	OnClickListener onclicklistener = new OnClickListener() {
