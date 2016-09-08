@@ -3,7 +3,6 @@ package com.example.zuji.adapter;
 import java.util.List;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.xuactivity.Mine_Fragment;
 import com.example.zuji.R;
 import com.example.zuji.javaclass.TongZhi;
 

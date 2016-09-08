@@ -5,9 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.example.zuji.BottonNavigationActivity;
-import com.example.zuji.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +14,9 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.example.zuji.BottonNavigationActivity;
+import com.example.zuji.R;
 
 public class MinefocusActivity extends Activity implements OnClickListener {
 	ImageButton ibhanhui;

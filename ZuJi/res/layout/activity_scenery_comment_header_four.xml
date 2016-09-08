@@ -17,13 +17,13 @@
         android:background="@color/white">
 
         <ImageView
-            android:id="@+id/scenery_comment_fabutouxiang"
+            android:id="@+id/scenery_comment_fabutouxiang_four"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@null"
-            android:padding="5dp"
-            android:src="@drawable/focus_icon1" />
+            android:padding="7dp"
+            android:src="@drawable/logo_7" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,13 +34,13 @@
             >
 
             <TextView
-                android:id="@+id/scenery_comment_user_name"
+                android:id="@+id/scenery_comment_user_name_four"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/comment_name"
+                android:text="浮生物语"
                 android:textColor="@color/black"
                 android:textSize="12sp" />
 
@@ -51,7 +51,7 @@
                 android:layout_weight="1" >
 
                 <ImageButton
-                    android:id="@+id/clock_icon"
+                    android:id="@+id/clock_icon_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -60,50 +60,50 @@
                     android:src="@drawable/shijian" />
 
                 <TextView
-                    android:id="@+id/scenery_comment_fabu_date"
+                    android:id="@+id/scenery_comment_fabu_date_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/clock_icon"
+                    android:layout_alignBottom="@id/clock_icon_four"
                     android:layout_marginLeft="3dp"
-                    android:layout_toRightOf="@id/clock_icon"
-                    android:text="3-10"
+                    android:layout_toRightOf="@id/clock_icon_four"
+                    android:text="2016-3-11"
                     android:textColor="@color/deepgray"
                     android:textSize="8sp" />
 
                 <TextView
-                    android:id="@+id/scenery_comment_fabu_time"
+                    android:id="@+id/scenery_comment_fabu_time_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/scenery_comment_fabu_date"
+                    android:layout_alignBottom="@id/scenery_comment_fabu_date_four"
                     android:layout_marginLeft="3dp"
-                    android:layout_toRightOf="@id/scenery_comment_fabu_date"
-                    android:text="13:50"
+                    android:layout_toRightOf="@id/scenery_comment_fabu_date_four"
+                    android:text="17:08"
                     android:textColor="@color/deepgray"
                     android:textSize="8sp" />
 
                 <TextView
-                    android:id="@+id/scenery_comment_dianzan"
+                    android:id="@+id/scenery_comment_dianzan_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginRight="5dp"
                     android:drawableLeft="@drawable/xin"
                     android:drawablePadding="3dp"
-                    android:text="193"
+                    android:text="121"
                     android:textColor="@color/deepgray"
                     android:textSize="8sp" />
 
                 <TextView
-                    android:id="@+id/scenery_comment_pingyu"
+                    android:id="@+id/scenery_comment_pingyu_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
-                    android:layout_toLeftOf="@id/scenery_comment_dianzan"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/scenery_comment_dianzan_four"
                     android:drawableLeft="@drawable/xiao_pinglun"
                     android:drawablePadding="3dp"
-                    android:text="10"
+                    android:text="9"
                     android:textColor="@color/deepgray"
                     android:textSize="8sp" />
             </RelativeLayout>
@@ -111,12 +111,12 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/scenery_comment_content_view"
+        android:id="@+id/scenery_comment_content_view_four"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
         android:scaleType="centerCrop"
-        android:src="@drawable/erhai"
+        android:src="@drawable/changcheng"
         android:layout_marginBottom="10dp" />
     </LinearLayout>
     

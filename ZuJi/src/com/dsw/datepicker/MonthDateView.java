@@ -3,7 +3,6 @@ package com.dsw.datepicker;
 import java.util.Calendar;
 import java.util.List;
 
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;

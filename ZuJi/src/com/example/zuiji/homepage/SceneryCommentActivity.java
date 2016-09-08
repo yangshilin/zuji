@@ -53,7 +53,7 @@ public class SceneryCommentActivity extends Activity {
 		 * Fragment用【getActivity()】方法。
 		 */
 		header = LayoutInflater.from(SceneryCommentActivity.this).inflate(
-				R.layout.activity_publicpraise_scenery_comment_header, null);
+				R.layout.activity_scenery_comment_header_two, null);
 		/**
 		 * 头视图内控件
 		 */
@@ -80,9 +80,10 @@ public class SceneryCommentActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.scenery_comment_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
-				Intent intent = new Intent(SceneryCommentActivity.this,
-						BottonNavigationActivity.class);
-				startActivity(intent);// start开始 执行Intent意图【跳转】
+				/*Intent intent = new Intent(SceneryCommentActivity.this,
+						SceneryMoreActivity.class);
+				startActivity(intent);// start开始 执行Intent意图【跳转】*/	
+				finish();//返回上一页面
 				break;
 
 			default:

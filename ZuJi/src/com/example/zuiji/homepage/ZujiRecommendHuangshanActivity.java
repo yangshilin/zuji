@@ -8,18 +8,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.xuAdapterclass.ZujiHuangheAdapter;
 import com.example.xuAdapterclass.ZujiHuangshanAdapter;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
-import com.example.zuji.javaclass.ZujiHuangheSetget;
 import com.example.zuji.javaclass.ZujiHuangshan;
 
 public class ZujiRecommendHuangshanActivity extends Activity{

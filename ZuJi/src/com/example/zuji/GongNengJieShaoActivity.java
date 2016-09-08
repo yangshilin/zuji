@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 
-public class GongNrngJieShaoActivity extends Activity{
+public class GongNengJieShaoActivity extends Activity{
 	ImageButton jieshaoReturn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class GongNrngJieShaoActivity extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				if(v.getId()==R.id.gongneng_return){
-					Intent intent=new Intent(GongNrngJieShaoActivity.this,GuanYuZuJiActivity.class);
+					Intent intent=new Intent(GongNengJieShaoActivity.this,GuanYuZuJiActivity.class);
 					startActivity(intent);
 				}
 			}

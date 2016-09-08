@@ -2,10 +2,6 @@ package com.example.xuAdapterclass;
 
 import java.util.List;
 
-import com.example.zuji.R;
-import com.example.zuji.javaclass.SceneryCommentSetget;
-import com.example.zuji.javaclass.ZujiHuangheSetget;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.zuji.R;
+import com.example.zuji.javaclass.ZujiHuangheSetget;
 
 public class ZujiHuangheAdapter extends BaseAdapter{
 	LayoutInflater inflater;//布局填充器
