@@ -1,7 +1,5 @@
 package com.example.xuactivity;
 
-import com.example.zuji.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
+
+import com.example.zuji.R;
 
 public class Timeinthepast_activity extends Activity implements OnClickListener{
 	

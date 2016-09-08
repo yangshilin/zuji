@@ -1,18 +1,18 @@
 package com.example.zuiji.homepage;
 
-import com.example.zuji.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.zuji.R;
 
 public class HomepageFragment extends Fragment{
 	ImageView title;

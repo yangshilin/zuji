@@ -8,11 +8,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.example.xuAdapterclass.Release;
 
 import android.app.Activity;
 import android.content.Intent;

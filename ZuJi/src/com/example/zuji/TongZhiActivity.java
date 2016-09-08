@@ -14,7 +14,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.example.xuactivity.Mine_Fragment;
 import com.example.zuji.adapter.TongZhiAdapter;
 import com.example.zuji.javaclass.TongZhi;
 

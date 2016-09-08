@@ -1,16 +1,13 @@
 package com.example.zuji;
 
-import com.example.xuactivity.Mine_Fragment;
-
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+
+import com.example.xuactivity.Mine_Fragment;
 
 public class MainActivity extends FragmentActivity {
 	Mine_Fragment mine_Fragment = new Mine_Fragment();

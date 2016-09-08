@@ -3,11 +3,6 @@ package com.example.zuiji.homepage;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.xuAdapterclass.HotAdapter;
-import com.example.zuji.BottonNavigationActivity;
-import com.example.zuji.R;
-import com.example.zuji.javaclass.HotData;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +12,11 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ListView;
+
+import com.example.xuAdapterclass.HotAdapter;
+import com.example.zuji.BottonNavigationActivity;
+import com.example.zuji.R;
+import com.example.zuji.javaclass.HotData;
 
 
 public class HotPhotoalbumActivity extends Activity{

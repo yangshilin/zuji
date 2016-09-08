@@ -34,6 +34,9 @@ import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.onekeyshare.OnekeyShare;
+
 import com.dsw.datepicker.MonthDateView;
 import com.dsw.datepicker.MonthDateView.DateClick;
 import com.example.zuji.BottonNavigationActivity;
@@ -61,6 +64,7 @@ public class TimefusiondeletesActivity extends Activity implements
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.time_fusiondeletes);
+		 ShareSDK.initSDK(this);
 		inflater=this.getLayoutInflater();
 		intView();
 		time_listviews.setOnItemClickListener(itemClickListener);
@@ -116,16 +120,13 @@ public class TimefusiondeletesActivity extends Activity implements
 			ivxiugai = (ImageView) arg1.findViewById(R.id.ivxiugai);
 			TextView timedelete = (TextView) arg1.findViewById(R.id.timedelete);
 			final int a = arg2;
-			Toast.makeText(TimefusiondeletesActivity.this, "" + arg2,
-					Toast.LENGTH_SHORT).show();
+			
 			timeshare.setOnClickListener(new View.OnClickListener() {
 
 				@Override
 				public void onClick(View v) {// 分享
-					Toast.makeText(TimefusiondeletesActivity.this, "分享成功",
-							Toast.LENGTH_SHORT).show();
-					share();
-					//startActivity(new Intent(TimefusiondeletesActivity.this,Mine_collect_activity.class));
+					showShare();		
+					//share();
 				}
 			});
 			timepaizhao.setOnClickListener(new View.OnClickListener() {
@@ -148,21 +149,38 @@ public class TimefusiondeletesActivity extends Activity implements
 			});
 		}
 	};
-	/**
-	 * 安装包地址
-	 */
-	String linkPath = "https://github.com/maomao123456/Pet.git";
-	// 分享
-	public void share() {
-		Intent intent = new Intent(Intent.ACTION_SEND);
-		intent.setType("image/*");
-		intent.setType("text/plain");
-		intent.putExtra(Intent.EXTRA_SUBJECT, linkPath);
-		intent.putExtra(Intent.EXTRA_TEXT, linkPath);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		startActivity(Intent.createChooser(intent, getTitle()));
-	}
+	
+	
+	private void showShare() {//分享
+		 ShareSDK.initSDK(this);
+		 OnekeyShare oks = new OnekeyShare();
+		 //关闭sso授权
+		 oks.disableSSOWhenAuthorize(); 
 
+		// 分享时Notification的图标和文字  2.5.9以后的版本不调用此方法
+		 //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
+		 // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
+		 oks.setTitle(getString(R.string.app_version));
+		 // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
+		// oks.setTitleUrl("http://sharesdk.cn");
+		 // text是分享文本，所有平台都需要这个字段
+		 oks.setText("我是分享文本");
+		 //分享网络图片，新浪微博分享网络图片需要通过审核后申请高级写入接口，否则请注释掉测试新浪微博
+		 oks.setImageUrl("http://f1.sharesdk.cn/imgs/2014/02/26/owWpLZo_638x960.jpg");
+		 // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+		 //oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
+		 // url仅在微信（包括好友和朋友圈）中使用
+		// oks.setUrl("http://sharesdk.cn");
+		 // comment是我对这条分享的评论，仅在人人网和QQ空间使用
+		 oks.setComment("我是测试评论文本");
+		 // site是分享此内容的网站名称，仅在QQ空间使用
+		 oks.setSite(getString(R.string.app_name));
+		 // siteUrl是分享此内容的网站地址，仅在QQ空间使用
+		oks.setSiteUrl("http://sharesdk.cn");
+
+		// 启动分享GUI
+		 oks.show(this);
+		 }
 		
 	private ImageView iv_left;
 	private ImageView iv_right;
@@ -230,6 +248,7 @@ public class TimefusiondeletesActivity extends Activity implements
 				+ File.separator + "image.png";
 		File file = new File(path);
 		uri = Uri.fromFile(file);
+		startPhotoZoom(uri);
 		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);// 定义调用相机并取回图片的Intent意图
 		intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
 		intent.putExtra("return-data", true);
@@ -237,11 +256,27 @@ public class TimefusiondeletesActivity extends Activity implements
 		this.startActivityForResult(intent, 1);
 
 	}
-
+	public void startPhotoZoom(Uri uri) {
+		Intent intent = new Intent("com.android.camera.action.CROP");
+		intent.setDataAndType(uri, "image/*");
+		// 设置裁剪
+		intent.putExtra("crop", "true");
+		// aspectX aspectY 是宽高的比例
+		intent.putExtra("aspectX", 1.2);
+		intent.putExtra("aspectY", 1);
+		// outputX outputY 是裁剪图片宽高
+		intent.putExtra("outputX", 50);
+		intent.putExtra("outputY", 60);
+		/*intent.putExtra("return-data", true);
+		startActivityForResult(intent, 2);*/
+	}
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-
+		
+		
+		
+		
 		if (resultCode == Activity.RESULT_OK) {
 			Bitmap bitmap;
 			try {
@@ -250,10 +285,8 @@ public class TimefusiondeletesActivity extends Activity implements
 				simpleAdapter.notifyDataSetChanged();
 				ivxiugai.setImageBitmap(bitmap);
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			// Bitmap bitmap=(Bitmap)data.getExtras().get("data");
 			
 
 		}
