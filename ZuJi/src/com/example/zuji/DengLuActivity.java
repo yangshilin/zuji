@@ -169,8 +169,11 @@ public class DengLuActivity extends Activity {
 							BottonNavigationActivity.class);
 					startActivity(intent2);
 				} else {
-					if(message.equals("password wrong")){message="密码错误，请重新输入！";}
-					else if(message.equals("usernum not exists")){message="用户名不存在！";}
+					if (message.equals("password wrong")) {
+						message = "密码错误，请重新输入！";
+					} else if (message.equals("usernum not exists")) {
+						message = "用户名不存在！";
+					}
 					Toast.makeText(DengLuActivity.this, message, 1).show();
 					mima.setText("");
 				}
