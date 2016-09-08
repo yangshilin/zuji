@@ -38,75 +38,80 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        
-        android:src="@drawable/login_icon" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="30dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="30dp" >
 
-        <EditText
-            android:id="@+id/denglu_zhanghao"
-            style="@style/textSize3"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@null"
-            android:singleLine="true"
-            android:drawableBottom="@drawable/login_line"
-            android:drawableLeft="@drawable/login_user"
-            android:drawablePadding="10dp"
-            android:hint="@string/shoujihao2"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white" />
-     
-    <EditText
-        android:id="@+id/denglu_mima"
-        style="@style/textSize3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@null"
-        android:singleLine="true"
-        android:layout_marginTop="15dp"
-        android:drawableBottom="@drawable/login_line"
-        android:drawableLeft="@drawable/mima_suo"
-        android:drawablePadding="10dp"
-        android:hint="@string/mima2"
-        android:inputType="textPassword"
-        android:textColor="@color/white" 
-        android:textColorHint="@color/white" />
-     
-		<TextView
-		    android:id="@+id/denglu_denglu"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_marginTop="40dp"
-		    android:layout_gravity="center"
-		    android:gravity="center"
-		    style="@style/dingbudaohangliang"
-		    android:background="@drawable/denglu_background"
-		    android:text="@string/denglu"/>
-		<TextView
-		    android:id="@+id/denglu_wangjimima"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:textColor="@color/white"
-		    android:textSize="15sp"
-		    android:layout_marginTop="18dp"
-		    android:text="@string/wangjimima"/>
-		 </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/login_icon" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp" >
+
+            <EditText
+                android:id="@+id/denglu_zhanghao"
+                style="@style/textSize3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableBottom="@drawable/login_line"
+                android:drawableLeft="@drawable/login_user"
+                android:drawablePadding="10dp"
+                android:hint="@string/shoujihao2"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/denglu_mima"
+                style="@style/textSize3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@null"
+                android:drawableBottom="@drawable/login_line"
+                android:drawableLeft="@drawable/mima_suo"
+                android:drawablePadding="10dp"
+                android:hint="@string/mima2"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <TextView
+                android:id="@+id/denglu_denglu"
+                style="@style/dingbudaohangliang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/denglu_background"
+                android:gravity="center"
+                android:text="@string/denglu" />
+
+            <TextView
+                android:id="@+id/denglu_wangjimima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/wangjimima"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

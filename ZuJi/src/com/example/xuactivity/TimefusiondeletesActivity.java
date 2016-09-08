@@ -1,9 +1,10 @@
 package com.example.xuactivity;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,28 +13,37 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.WindowManager.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.dsw.datepicker.MonthDateView;
+import com.dsw.datepicker.MonthDateView.DateClick;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 
+
 public class TimefusiondeletesActivity extends Activity implements
 		OnClickListener {
+	CheckBox pull_down;
+	TextView shijian;
 	ImageButton btfhmine;
 	ImageView ivxiugai;
 	Button bt_inpast;
@@ -41,19 +51,38 @@ public class TimefusiondeletesActivity extends Activity implements
 	SimpleAdapter simpleAdapter;
 	List<Map<String, Object>> list;
 	Uri uri;
+	LayoutInflater inflater;
+	SimpleDateFormat formatter = new SimpleDateFormat ("yyyy年MM月dd日"); 
+	Date curDate = new Date(System.currentTimeMillis());//获取当前时间 
+	String str = formatter.format(curDate); 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.time_fusiondeletes);
+		inflater=this.getLayoutInflater();
 		intView();
 		time_listviews.setOnItemClickListener(itemClickListener);
 	}
 
 	// 初始化
 	public void intView() {
-
+		pull_down=(CheckBox) findViewById(R.id.pull_down);
+		shijian=(TextView)findViewById(R.id.cltime);
+		shijian.setText(str);
+		pull_down.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (pull_down.isChecked()) {
+					initPopWindow();
+				}else{
+					if(popWindow!=null){
+						popWindow.dismiss();
+					}
+				}
+			}
+		});
 		btfhmine = (ImageButton) findViewById(R.id.btfhmine);
 		btfhmine.setOnClickListener(this);
 		bt_inpast = (Button) findViewById(R.id.bt_inpast);
@@ -75,6 +104,7 @@ public class TimefusiondeletesActivity extends Activity implements
 
 	}
 
+
 	OnItemClickListener itemClickListener = new OnItemClickListener() {
 
 		@Override
@@ -94,6 +124,8 @@ public class TimefusiondeletesActivity extends Activity implements
 				public void onClick(View v) {// 分享
 					Toast.makeText(TimefusiondeletesActivity.this, "分享成功",
 							Toast.LENGTH_SHORT).show();
+					share();
+					//startActivity(new Intent(TimefusiondeletesActivity.this,Mine_collect_activity.class));
 				}
 			});
 			timepaizhao.setOnClickListener(new View.OnClickListener() {
@@ -101,8 +133,7 @@ public class TimefusiondeletesActivity extends Activity implements
 				@Override
 				public void onClick(View v) {
 					getPhoto(v);
-					// Toast.makeText(Timefusiondeletes.this, "拍照",
-					// Toast.LENGTH_SHORT).show();
+					
 				}
 			});
 			timedelete.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +148,82 @@ public class TimefusiondeletesActivity extends Activity implements
 			});
 		}
 	};
+	/**
+	 * 安装包地址
+	 */
+	String linkPath = "https://github.com/maomao123456/Pet.git";
+	// 分享
+	public void share() {
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("image/*");
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_SUBJECT, linkPath);
+		intent.putExtra(Intent.EXTRA_TEXT, linkPath);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(Intent.createChooser(intent, getTitle()));
+	}
 
+		
+	private ImageView iv_left;
+	private ImageView iv_right;
+	private TextView tv_date;
+	private TextView tv_week;
+	private TextView tv_today;
+	private MonthDateView monthDateView;
+	PopupWindow popWindow;
+	public void initPopWindow(){//日历
+		View view = inflater.inflate(R.layout.activity_date, null);
+		iv_left = (ImageView)view. findViewById(R.id.iv_left);
+		iv_right = (ImageView) view.findViewById(R.id.iv_right);
+		monthDateView = (MonthDateView) view. findViewById(R.id.monthDateView);
+		tv_date = (TextView) view. findViewById(R.id.date_text);
+		tv_week  =(TextView) view. findViewById(R.id.week_text);
+		tv_today = (TextView) view. findViewById(R.id.tv_today);
+		monthDateView.setTextView(tv_date,tv_week);
+		popWindow = new PopupWindow(view,
+               LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, true);
+		  popWindow.setOutsideTouchable(true);
+		  popWindow.setBackgroundDrawable(new BitmapDrawable());
+		  popWindow.showAsDropDown(pull_down, 0, 0);//气泡的位置
+		  //日历的点击位置
+		  popWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+			@Override
+			public void onDismiss() {
+				pull_down.setChecked(false);
+			}
+		});
+		  monthDateView.setDateClick(new DateClick() {
+				@Override
+				public void onClickOnDate() {
+					int numb=monthDateView.getmSelDay();
+					if(numb!=0){
+						shijian.setText(tv_date.getText().toString()+numb+"日");
+					}
+				}
+			});
+			setOnlistener();
+	}
+	private void setOnlistener(){
+		 iv_left.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					monthDateView.onLeftClick();
+				}
+			});
+			iv_right.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					monthDateView.onRightClick();
+				}
+			});
+			tv_today.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					monthDateView.setTodayToView();
+			
+				}
+			});
+	}
 	// 调用相机功能照相
 	public void getPhoto(View v) {
 		String path = Environment.getExternalStorageDirectory()

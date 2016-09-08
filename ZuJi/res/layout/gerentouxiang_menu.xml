@@ -43,7 +43,7 @@
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/quexiao_touxiang"
+        android:id="@+id/quxiao_touxiang"
         style="@style/textSize2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
