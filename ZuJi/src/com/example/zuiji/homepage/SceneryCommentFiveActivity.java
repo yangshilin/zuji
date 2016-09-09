@@ -20,7 +20,7 @@ import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
 import com.example.zuji.javaclass.SceneryCommentSetget;
 
-public class SceneryCommentActivity extends Activity {
+public class SceneryCommentFiveActivity extends Activity {
 	ImageButton fanhuiBtn;
 	/**
 	 * 添加头视图
@@ -45,29 +45,29 @@ public class SceneryCommentActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);// 取消运行时的顶部标题
-		setContentView(R.layout.activity_publicpraise_scenery_comment);
-		fanhuiBtn = (ImageButton) findViewById(R.id.scenery_comment_fanhuiBtn);
+		setContentView(R.layout.activity_scenery_comment_five);
+		fanhuiBtn = (ImageButton) findViewById(R.id.scenery_comment_fanhuiBtn_five);
 		/**
 		 * 头视图 Activity和Fragment有差异
 		 * Activity是上文[本文名]【SceneryCommentActivity.this】
 		 * Fragment用【getActivity()】方法。
 		 */
-		header = LayoutInflater.from(SceneryCommentActivity.this).inflate(
-				R.layout.activity_scenery_comment_header_two, null);
+		header = LayoutInflater.from(SceneryCommentFiveActivity.this).inflate(
+				R.layout.activity_scenery_comment_header_five, null);
 		/**
 		 * 头视图内控件
 		 */
-		touxiang = (ImageView) header.findViewById(R.id.scenery_comment_fabutouxiang);
-		name = (TextView) header.findViewById(R.id.scenery_comment_user_name);
-		shizhong = (ImageButton) header.findViewById(R.id.clock_icon);
-		riqi = (TextView) header.findViewById(R.id.scenery_comment_fabu_date);
-		shijian = (TextView) header.findViewById(R.id.scenery_comment_fabu_time);
-		pingyu = (TextView) header.findViewById(R.id.scenery_comment_pingyu);
-		zan = (TextView) header.findViewById(R.id.scenery_comment_dianzan);
+		touxiang = (ImageView) header.findViewById(R.id.scenery_comment_fabutouxiang_five);
+		name = (TextView) header.findViewById(R.id.scenery_comment_user_name_five);
+		shizhong = (ImageButton) header.findViewById(R.id.clock_icon_five);
+		riqi = (TextView) header.findViewById(R.id.scenery_comment_fabu_date_five);
+		shijian = (TextView) header.findViewById(R.id.scenery_comment_fabu_time_five);
+		pingyu = (TextView) header.findViewById(R.id.scenery_comment_pingyu_five);
+		zan = (TextView) header.findViewById(R.id.scenery_comment_dianzan_five);
 		/**
 		 * listview数据添加
 		 */
-		listview = (ListView) findViewById(R.id.scenery_comment_listview);
+		listview = (ListView) findViewById(R.id.scenery_comment_listview_five);
 		listview.addHeaderView(header);// listview添加头视图 少了这一步头视图将不会移动。
 		fanhuiBtn.setOnClickListener(onClickListener);
 		getDate();
@@ -79,11 +79,10 @@ public class SceneryCommentActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.scenery_comment_fanhuiBtn:// id执行 //当前上下文//跳转指定的界面
-				/*Intent intent = new Intent(SceneryCommentActivity.this,
+			case R.id.scenery_comment_fanhuiBtn_five:// id执行 //当前上下文//跳转指定的界面
+				Intent intent = new Intent(SceneryCommentFiveActivity.this,
 						SceneryMoreActivity.class);
-				startActivity(intent);// start开始 执行Intent意图【跳转】*/	
-				finish();//返回上一页面
+				startActivity(intent);// start开始 执行Intent意图【跳转】
 				break;
 
 			default:
@@ -101,7 +100,7 @@ public class SceneryCommentActivity extends Activity {
 		lists = new ArrayList<SceneryCommentSetget>();// 数组列表集合参数
 		SceneryCommentSetget scs = new SceneryCommentSetget();// 实例化参数对象
 		scs.setTouxiang(R.drawable.touxiang);
-		scs.setName("冰梦一痕");
+		scs.setName("kjfh");
 		scs.setTime("13分钟前");
 		scs.setContent("好屌的样子");
 		lists.add(scs);// 列表添加参数
@@ -114,7 +113,7 @@ public class SceneryCommentActivity extends Activity {
 			scs.setContent("还不错");
 			lists.add(scs);
 			
-			SceneryCommentAdapter scsAdapter = new SceneryCommentAdapter(SceneryCommentActivity.this,
+			SceneryCommentAdapter scsAdapter = new SceneryCommentAdapter(SceneryCommentFiveActivity.this,
 					R.layout.actvity_homepage_listview_punglun,lists);
 			listview.setAdapter(scsAdapter);//listView设置Adapter
 		}

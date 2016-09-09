@@ -43,17 +43,14 @@ public class HomepageFragment extends Fragment{
 		title = (ImageView)view.findViewById(R.id.homepage_window_image);
 		edt = (EditText)view.findViewById(R.id.homepage_edit_text);
 		//风景口碑
-		fengjing =(TextView)view.findViewById(R.id.homepage_fengjing);
 		fengjing1 =(ImageView)view.findViewById(R.id.homepage_koubei_viewone);
 		fengjing2 =(ImageView)view.findViewById(R.id.homepage_koubei_viewtwo);
 		fengjing3 =(ImageView)view.findViewById(R.id.homepage_koubei_viewthree);		
 		gengduofengjing = (TextView)view.findViewById(R.id.homepage_gengduo_fengjing);
 		gengduoBtn = (ImageView)view.findViewById(R.id.homepage_genduo_koubei_Btn);
 		//足迹推荐
-		tuijian = (TextView)view.findViewById(R.id.homepage_tuijian);
 		huangshan = (ImageView)view.findViewById(R.id.homepage_tuijian_view);
 		//影集
-		yingji =(TextView)view.findViewById(R.id.homepage_hot);
 		yingji2 =(ImageView)view.findViewById(R.id.homepage_hot_one);
 		yingji3 =(ImageView)view.findViewById(R.id.homepage_hot_two);
 		yingji4 =(ImageView)view.findViewById(R.id.homepage_hot_three);
@@ -64,17 +61,14 @@ public class HomepageFragment extends Fragment{
 		title.setOnClickListener(onClickListener);
 		edt.setOnClickListener(onClickListener);
 		//风景口碑
-		fengjing.setOnClickListener(onClickListener);
 		fengjing1.setOnClickListener(onClickListener);
 		fengjing2.setOnClickListener(onClickListener);
 		fengjing3.setOnClickListener(onClickListener);
 		gengduofengjing.setOnClickListener(onClickListener);
 		gengduoBtn.setOnClickListener(onClickListener);
 		//足迹推荐
-		tuijian.setOnClickListener(onClickListener);
 		huangshan.setOnClickListener(onClickListener);
 		//影集
-		yingji.setOnClickListener(onClickListener);
 		yingji2.setOnClickListener(onClickListener);
 		yingji3.setOnClickListener(onClickListener);
 		yingji4.setOnClickListener(onClickListener);
@@ -100,20 +94,16 @@ public class HomepageFragment extends Fragment{
 				startActivity(sousuo);
 				break;
 				//风景口碑
-			case R.id.homepage_fengjing:// id执行 //当前上下文//跳转指定的界面
-				Intent fengjing = new Intent(getActivity(),SceneryCommentActivity.class);
-				startActivity(fengjing);//start开始 执行Intent意图【跳转】
-				break;
-			case R.id.homepage_koubei_viewone:
-				Intent fengjing1 = new Intent(getActivity(),SceneryCommentActivity.class);
-				startActivity(fengjing1);
+			case R.id.homepage_koubei_viewone:// id执行 //当前上下文//跳转指定的界面
+				Intent fengjing1 = new Intent(getActivity(),SceneryCommentTwoActivity.class);
+				startActivity(fengjing1);//start开始 执行Intent意图【跳转】
 				break;
 			case R.id.homepage_koubei_viewtwo:
 				Intent fengjing2 = new Intent(getActivity(),SceneryCommentActivity.class);
 				startActivity(fengjing2);
 				break;
 			case R.id.homepage_koubei_viewthree:
-				Intent fengjing3 = new Intent(getActivity(),SceneryCommentActivity.class);
+				Intent fengjing3 = new Intent(getActivity(),SceneryCommentThreeActivity.class);
 				startActivity(fengjing3);
 				break;
 			case R.id.homepage_gengduo_fengjing:
@@ -125,19 +115,11 @@ public class HomepageFragment extends Fragment{
 				startActivity(gengduoBtn);
 				break;
 				//足迹推荐
-			case R.id.homepage_tuijian:
-				Intent tuijian = new Intent(getActivity(),ZujiRecommendHuangheActivity.class);
-				startActivity(tuijian);
-				break;
 			case R.id.homepage_tuijian_view:
 				Intent huangshan = new Intent(getActivity(),ZujiRecommendHuangshanActivity.class);
 				startActivity(huangshan);
 				break;
 				//影集
-			case R.id.homepage_hot:
-				Intent yingji = new Intent(getActivity(),HotPhotoalbumActivity.class);
-				startActivity(yingji);
-				break;
 			case R.id.homepage_hot_one:
 				Intent yingji2 = new Intent(getActivity(),HotPhotoalbumActivity.class);
 				startActivity(yingji2);
