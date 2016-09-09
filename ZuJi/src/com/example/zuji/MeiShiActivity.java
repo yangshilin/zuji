@@ -16,7 +16,6 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 public class MeiShiActivity extends Activity {
 	NotScrollListView list_left;

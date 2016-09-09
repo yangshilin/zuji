@@ -15,11 +15,9 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.xuAdapterclass.SceneryCommentAdapter;
 import com.example.xuAdapterclass.ZujiHuangheAdapter;
 import com.example.zuji.BottonNavigationActivity;
 import com.example.zuji.R;
-import com.example.zuji.javaclass.SceneryCommentSetget;
 import com.example.zuji.javaclass.ZujiHuangheSetget;
 
 public class ZujiRecommendHuangheActivity extends Activity{
