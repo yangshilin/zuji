@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.example.xuactivity.Mine_Fragment;
@@ -21,7 +22,7 @@ import com.example.zuiji.homepage.HomepageFragment;
 
 @SuppressLint("NewApi")
 public class BottonNavigationActivity extends FragmentActivity {
-
+	private int backPressedTimes = 0;
 	RadioGroup radioGroup;
 	RadioButton btn_homepage;// 首页
 	RadioButton btn_community;// 社交
@@ -183,8 +184,9 @@ public class BottonNavigationActivity extends FragmentActivity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.navigation_camera_btn:
-				Intent intent = new Intent(BottonNavigationActivity.this,CameraActivity.class);
-				startActivity(intent);	
+				Intent intent = new Intent(BottonNavigationActivity.this,
+						CameraActivity.class);
+				startActivity(intent);
 				break;
 
 			default:
@@ -193,5 +195,32 @@ public class BottonNavigationActivity extends FragmentActivity {
 		}
 
 	};
+
+	@Override
+	public void onBackPressed() {
+		if (backPressedTimes == 0) {
+			Toast.makeText(BottonNavigationActivity.this, "再按一次退出程序", 1).show();
+			backPressedTimes = 1;
+			new Thread() {
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					try {
+						this.sleep(2000);
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						backPressedTimes = 0;
+					}
+
+				}
+			}.start();
+			return;
+		} else {
+			finish();
+			System.exit(0);
+		}
+
+	}
 
 }
