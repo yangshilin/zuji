@@ -76,7 +76,8 @@ public class DengLuActivity extends Activity {
 				String zhanghao_content = zhanghao.getText().toString();
 				String mima_content = mima.getText().toString();
 				login(zhanghao_content, mima_content);
-				
+				// startActivity(new Intent(DengLuActivity.this,
+				// BottonNavigationActivity.class));
 				break;
 			case R.id.denglu_wangjimima:
 				break;
