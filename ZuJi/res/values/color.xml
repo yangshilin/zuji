@@ -456,5 +456,7 @@
 
     <color name="danhuise">#efefef</color>
     <!-- 淡灰色 -->
-
+    
+	<color name="dengbulan">#2EB8C2</color>
+	<!-- 本身绿 -->
 </resources>
